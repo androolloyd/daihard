@@ -1,0 +1,18 @@
+- content_box_file = '../apps/_content_support_dashboard.slim'
+
+- no_breadcrumbs = true
+- all_solid_bg = true
+- show_top_bar = true
+/ - selected_link = 'apps_bank.html'
+- menu_has_selected_link = false
+
+- custom_top_bar_settings = Hash.new
+- custom_top_bar_settings['color_scheme'] = 'light'
+- custom_top_bar_settings['show_support_selector'] = true
+
+// Menu Settings variables
+- custom_menu_settings = Hash.new
+- custom_menu_settings['color_scheme'] = 'light' #dark|light
+- custom_menu_settings['color_style'] = 'default' #bright|default|transparent
+
+include ../_partials/_template.slim

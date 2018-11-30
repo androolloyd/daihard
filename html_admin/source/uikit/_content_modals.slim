@@ -1,0 +1,195 @@
+.element-wrapper
+  h6.element-header Examples of Modals
+  .element-box
+    h5.form-header 
+      | New Onboarding Modals 
+      span.badge.badge-danger New
+    .form-desc Built specifically for this template, these onboarding modals are a great way to introduce your customers to your web app or collect additional information from them. We have two layouts available: wide, with media and text side by side and narrow one with media above text. Each can also have multiple slides inside them.
+    h6.form-header Media Above Text
+    .mb-4
+      /! Button trigger modal
+      button.mr-2.mb-2.btn.btn-primary data-target="#onboardingSlideModal" data-toggle="modal" type="button" 
+        | Multistep modal with slider
+      #onboardingSlideModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+        .modal-dialog.modal-centered role="document" 
+          .modal-content.text-center
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span.close-label Skip Intro
+              span.os-icon.os-icon-close
+            .onboarding-slider-w
+              .onboarding-slide
+                include ../_partials/onboarding/slides/_form.slim
+              .onboarding-slide
+                include ../_partials/onboarding/slides/_features_list.slim
+              .onboarding-slide
+                include ../_partials/onboarding/slides/_text_only.slim
+      button.mr-2.mb-2.btn.btn-primary data-target="#onboardingFormModal" data-toggle="modal" type="button" 
+        | Modal with form
+      #onboardingFormModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+        .modal-dialog.modal-centered role="document" 
+          .modal-content.text-center
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span.close-label Skip Intro
+              span.os-icon.os-icon-close
+            include ../_partials/onboarding/slides/_form.slim
+
+      button.mr-2.mb-2.btn.btn-primary data-target="#onboardingFeaturesModal" data-toggle="modal" type="button" 
+        | Modal with feature list
+      #onboardingFeaturesModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+        .modal-dialog.modal-centered role="document" 
+          .modal-content.text-center
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span.close-label Skip Intro
+              span.os-icon.os-icon-close
+            include ../_partials/onboarding/slides/_features_list.slim
+
+      button.mr-2.mb-2.btn.btn-primary data-target="#onboardingTextModal" data-toggle="modal" type="button" 
+        | Modal with text only
+      #onboardingTextModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+        .modal-dialog.modal-centered role="document" 
+          .modal-content.text-center
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span.close-label Skip Intro
+              span.os-icon.os-icon-close
+            include ../_partials/onboarding/slides/_text_only.slim
+
+
+
+    h6.form-header Media on Left, Content on Right
+    /! Button trigger modal
+    button.mr-2.mb-2.btn.btn-primary data-target="#onboardingWideSlideModal" data-toggle="modal" type="button" 
+      | Multistep modal with slider
+    #onboardingWideSlideModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-lg.modal-centered role="document" 
+        .modal-content.text-center
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span.close-label Skip Intro
+            span.os-icon.os-icon-close
+          .onboarding-slider-w
+            .onboarding-slide
+              .onboarding-side-by-side
+                include ../_partials/onboarding/slides/_form.slim
+            .onboarding-slide
+              .onboarding-side-by-side
+                include ../_partials/onboarding/slides/_features_list.slim
+            .onboarding-slide
+              .onboarding-side-by-side
+                include ../_partials/onboarding/slides/_text_only.slim
+    button.mr-2.mb-2.btn.btn-primary data-target="#onboardingWideFormModal" data-toggle="modal" type="button" 
+      | Modal with form
+    #onboardingWideFormModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-lg.modal-centered role="document" 
+        .modal-content.text-center
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span.close-label Skip Intro
+            span.os-icon.os-icon-close
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_form.slim
+
+    button.mr-2.mb-2.btn.btn-primary data-target="#onboardingWideFeaturesModal" data-toggle="modal" type="button" 
+      | Modal with feature list
+    #onboardingWideFeaturesModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-lg.modal-centered role="document" 
+        .modal-content.text-center
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span.close-label Skip Intro
+            span.os-icon.os-icon-close
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_features_list.slim
+
+    button.mr-2.mb-2.btn.btn-primary data-target="#onboardingWideTextModal" data-toggle="modal" type="button" 
+      | Modal with text only
+    #onboardingWideTextModal.onboarding-modal.modal.fade.animated aria-hidden="true" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-lg.modal-centered role="document" 
+        .modal-content.text-center
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span.close-label Skip Intro
+            span.os-icon.os-icon-close
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_text_only.slim
+
+  .element-box
+    h5.form-header Regular Modals
+    .form-desc Modals are streamlined, but flexible dialog prompts powered by JavaScript. They support a number of use cases from user notification to completely custom content and feature a handful of helpful subcomponents, sizes, and more. You can read full bootstrap documentation about Modals by <a href="https://v4-alpha.getbootstrap.com/components/modal/" target="_blank">clicking here</a>
+    h6.form-header Regular Modal
+    /! Button trigger modal
+    button.btn.btn-primary data-target="#exampleModal1" data-toggle="modal" type="button" 
+      | Launch demo modal
+    #exampleModal1.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" 
+      .modal-dialog role="document" 
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Modal title
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span aria-hidden="true"  &times;
+          .modal-body
+            form
+              .form-group
+                label for=""  Email address
+                input.form-control placeholder=("Enter email") type="email" /
+              .row
+                .col-sm-6
+                  .form-group
+                    label for=""  Password
+                    input.form-control placeholder="Password" type="password" /
+                .col-sm-6
+                  .form-group
+                    label for="" Confirm Password
+                    input.form-control placeholder="Password" type="password" /
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Close
+            button.btn.btn-primary type="button"  Save changes
+  .element-box
+    h5.form-header Optional Sizes
+    .form-desc <p>Modals have two optional sizes, available via modifier classes to be placed on a <code class="highlighter-rouge">.modal-dialog</code>. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.</p>
+    
+    /! Large modal
+    button.mr-2.mb-2.btn.btn-primary data-target=".bd-example-modal-lg" data-toggle="modal"  Large modal
+    .modal.fade.bd-example-modal-lg aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Modal title
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span aria-hidden="true"  &times;
+          .modal-body
+            form
+              .form-group
+                label for=""  Email address
+                input.form-control placeholder=("Enter email") type="email" /
+              .row
+                .col-sm-6
+                  .form-group
+                    label for=""  Password
+                    input.form-control placeholder="Password" type="password" /
+                .col-sm-6
+                  .form-group
+                    label for="" Confirm Password
+                    input.form-control placeholder="Password" type="password" /
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Close
+            button.btn.btn-primary type="button"  Save changes
+    /! Small modal
+    button.btn.btn-primary data-target=".bd-example-modal-sm" data-toggle="modal" type="button"  Small modal
+    .modal.fade.bd-example-modal-sm aria-hidden="true" aria-labelledby="mySmallModalLabel" role="dialog" tabindex="-1" 
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Modal title
+            button.close aria-label="Close" data-dismiss="modal" type="button" 
+              span aria-hidden="true"  &times;
+          .modal-body
+            form
+              .form-group
+                label for=""  Email address
+                input.form-control placeholder=("Enter email") type="email" /
+              .form-group
+                label for=""  Password
+                input.form-control placeholder="Password" type="password" /
+              .form-group
+                label for="" Confirm Password
+                input.form-control placeholder="Password" type="password" /
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Close
+            button.btn.btn-primary type="button"  Save changes
+

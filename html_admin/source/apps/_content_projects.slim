@@ -1,0 +1,128 @@
+/! START - Control panel above projects
+.os-tabs-w.mx-4
+  .os-tabs-controls
+    ul.nav.nav-tabs.upper
+      li.nav-item
+        a.nav-link aria-expanded="false" data-toggle="tab" href="#tab_overview"  Active
+      li.nav-item
+        a.nav-link aria-expanded="false" data-toggle="tab" href="#tab_sales"  Overview
+      li.nav-item
+        a.nav-link aria-expanded="false" data-toggle="tab" href="#tab_sales"  Closed
+      li.nav-item
+        a.nav-link.active aria-expanded="true" data-toggle="tab" href="#tab_sales"  Required
+    ul.nav.nav-pills.smaller.d-none.d-lg-flex
+      li.nav-item
+        a.nav-link data-toggle="tab" href="#"  Today
+      li.nav-item
+        a.nav-link.active data-toggle="tab" href="#"  7 Days
+      li.nav-item
+        a.nav-link data-toggle="tab" href="#"  14 Days
+      li.nav-item
+        a.nav-link data-toggle="tab" href="#"  Last Month
+/! END - Control panel above projects
+.row
+  .col-lg-7
+    .padded-lg
+      /! START - Projects list
+      .projects-list
+        - projects = [['title' => 'Website Redesign', 'users' => ['avatar3.jpg', 'avatar1.jpg', 'avatar5.jpg', 'avatar2.jpg'], 'tasks' => 15, 'contributors' => 24, 'progress' => 72],
+                      ['title' => 'Marketing Text', 'users' => ['avatar7.jpg', 'avatar6.jpg', 'avatar4.jpg', 'avatar1.jpg'], 'tasks' => 27, 'contributors' => 12, 'progress' => 56],
+                      ['title' => 'Sales Directions', 'users' => ['avatar6.jpg', 'avatar4.jpg', 'avatar3.jpg', 'avatar7.jpg'], 'tasks' => 45, 'contributors' => 37, 'progress' => 32],
+                      ['title' => 'New Hiring', 'users' => ['avatar2.jpg', 'avatar3.jpg', 'avatar1.jpg', 'avatar5.jpg'], 'tasks' => 32, 'contributors' => 17, 'progress' => 85]]
+        - projects.each do |project|
+          .project-box
+            .project-head
+              .project-title
+                h5= project[0]['title']
+              .project-users
+                - project[0]['users'].each do |user|
+                  .avatar
+                    img src="img/#{user}" alt=""/
+                .more + 5 More
+            .project-info
+              .row.align-items-center
+                .col-sm-5
+                  .row
+                    .col-6
+                      .el-tablo.highlight
+                        .label Open tasks
+                        .value= project[0]['tasks']
+                    .col-6
+                      .el-tablo.highlight
+                        .label Contributors
+                        .value= project[0]['contributors']
+                .col-sm-5.offset-sm-2
+                  .os-progress-bar.primary
+                    .bar-labels
+                      .bar-label-left
+                        span Progress
+                        span.positive +10
+                      .bar-label-right
+                        span.info #{project[0]['progress']}/100
+                    .bar-level-1[style="width: 100%"]
+                      .bar-level-2[style="width: #{project[0]['progress']}%"]
+                        .bar-level-3[style="width: #{project[0]['progress'] / 2}%"]
+      /! END - Projects list
+  .col-lg-5.b-l-lg
+    .padded-lg
+      /! START - Projects Statistics
+      .element-wrapper
+        .element-actions
+          form.form-inline.justify-content-sm-end
+            select.form-control.form-control-sm.rounded
+              option value="Pending" Today
+              option value="Active" Last Week 
+              option value="Cancelled" Last 30 Days
+        h6.element-header Project Statistics
+        .element-box
+          .padded.m-b
+            .centered-header
+              h6 Period Statistics
+            .row
+              .col-6.b-r.b-b
+                .el-tablo.centered.padded-v-big.highlight.bigger
+                  .label Users
+                  .value 24
+              .col-6.b-b
+                .el-tablo.centered.padded-v-big.highlight.bigger
+                  .label Tasks
+                  .value 251
+          .padded.m-b
+            .centered-header
+              h6 Completions
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Progress
+                  span.positive +12
+                .bar-label-right
+                  span.info 72/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 72%"]
+                  .bar-level-3[style="width: 25%"]
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Progress
+                  span.negative -5
+                .bar-label-right
+                  span.info 54/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 54%"]
+                  .bar-level-3[style="width: 25%"]
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Progress
+                  span.positive +5
+                .bar-label-right
+                  span.info 86/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 86%"]
+                  .bar-level-3[style="width: 25%"]
+          .padded
+            .centered-header
+              h6 Tasks Closed
+            .el-chart-w
+              canvas#liteLineChart width="300" height="130"
+      /! END - Projects Statistics

@@ -1,0 +1,77 @@
+/!
+  ------------------
+  START - Support Agents
+  ------------------
+- support_agents = [['name' => 'John Mayers', 'status' => 'Online Now', 'tickets' => '12', 'response' => '2 hours', 'btn_class' => 'success', 'avatar' => 'avatar1.jpg'],
+                  ['name' => 'Ben Gossman', 'status' => 'Offline', 'tickets' => '9', 'response' => '3 hours', 'btn_class' => 'secondary', 'avatar' => 'avatar3.jpg']]
+.element-wrapper
+  h6.element-header Support Agents
+  .element-box-tp
+    - support_agents.each do |agent|
+      .profile-tile
+        a.profile-tile-box href="users_profile_small.html"
+          .pt-avatar-w
+            img src="img/#{agent[0]['avatar']}" alt=""/
+          .pt-user-name= agent[0]['name']
+        .profile-tile-meta
+          ul
+            li
+              | Last Login:
+              strong= agent[0]['status']
+            li
+              | Tickets:
+              strong
+                a href="apps_support_index.html"
+                  = agent[0]['tickets']
+            li
+              | Response Time:
+              strong= agent[0]['response']
+          .pt-btn
+            a[class="btn btn-#{agent[0]['btn_class']} btn-sm" href="apps_full_chat.html"] Send Message
+/!
+  ------------------
+  END - Support Agents
+  ------------------
+.element-wrapper
+    h6.element-header Team Members
+    .element-box-tp
+      .input-search-w
+
+        input class="form-control rounded bright" type="search" placeholder="Search team members..."
+      .users-list-w
+        .user-w.with-status.status-green
+          .user-avatar-w
+            .user-avatar
+              img src="img/avatar1.jpg" alt=""/
+          .user-name
+            h6.user-title John Mayers
+            .user-role Account Manager
+          .user-action
+            .os-icon.os-icon-email-forward
+        .user-w.with-status.status-green
+          .user-avatar-w
+            .user-avatar
+              img src="img/avatar2.jpg" alt=""/
+          .user-name
+            h6.user-title Ben Gossman
+            .user-role Administrator
+          .user-action
+            .os-icon.os-icon-email-forward
+        .user-w.with-status.status-red
+          .user-avatar-w
+            .user-avatar
+              img src="img/avatar3.jpg" alt=""/
+          .user-name
+            h6.user-title Phil Nokorin
+            .user-role HR Manger
+          .user-action
+            .os-icon.os-icon-email-forward
+        .user-w.with-status.status-green
+          .user-avatar-w
+            .user-avatar
+              img src="img/avatar4.jpg" alt=""/
+          .user-name
+            h6.user-title Jenny Miksa
+            .user-role Lead Developer
+          .user-action
+            .os-icon.os-icon-email-forward

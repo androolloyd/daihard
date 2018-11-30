@@ -1,0 +1,120 @@
+.element-wrapper
+  h6.element-header Examples of Progress Bars
+  .element-box
+    h5.form-header Progress
+    .form-desc 
+      | Use our custom progress component for displaying simple or complex progress bars. Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. 
+      ul
+        li We use the <code class="highlighter-rouge">.progress</code> as a wrapper to indicate the max value of the progress bar.
+        li We use the inner <code class="highlighter-rouge">.progress-bar</code> to indicate the progress so far.
+        li The <code class="highlighter-rouge">.progress-bar</code> requires an inline style, utility class, or custom CSS to set their width.
+        li The <code class="highlighter-rouge">.progress-bar</code> also requires some <code class="highlighter-rouge">role</code> and <code class="highlighter-rouge">aria</code> attributes to make it accessible.
+      | Learn more about Bootstrap progress bars by <a href="https://v4-alpha.getbootstrap.com/components/progress/" target="_blank">Clicking here</a>. Put that all together, and you have the following examples.
+    .element-box-content.example-content
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" 
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar" style=("width: 25%") 
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" role="progressbar" style=("width: 50%") 
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: 75%") 
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" style=("width: 100%") 
+
+  .element-box
+    h5.form-header Labels
+    .form-desc Add labels to your progress bars by placing text within the <code class="highlighter-rouge">.progress-bar</code>
+    .element-box-content.example-content
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar" style=("width: 25%;")  25%
+
+  .element-box
+    h5.form-header Backgrounds
+    .form-desc Use background utility classes to change the appearance of individual progress bars.
+    .element-box-content.example-content
+      .progress
+        .progress-bar.bg-success aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar" style=("width: 25%") 
+      .progress
+        .progress-bar.bg-info aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" role="progressbar" style=("width: 50%") 
+      .progress
+        .progress-bar.bg-warning aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: 75%") 
+      .progress
+        .progress-bar.bg-danger aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" style=("width: 100%") 
+
+
+  .element-box
+    h5.form-header Multiple Bars
+    .form-desc Include multiple progress bars in a progress component if you need.
+    .element-box-content.example-content
+      .progress
+        .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" role="progressbar" style=("width: 15%") 
+        .progress-bar.bg-success aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" role="progressbar" style=("width: 30%") 
+        .progress-bar.bg-info aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" style=("width: 20%") 
+
+
+  .element-box
+    h5.form-header Striped
+    .form-desc Add <code class="highlighter-rouge">.progress-bar-striped</code> to any <code class="highlighter-rouge">.progress-bar</code> to apply a stripe via CSS gradient over the progress bar’s background color.
+    .element-box-content.example-content
+      .progress
+        .progress-bar.progress-bar-striped aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar" style=("width: 10%") 
+      .progress
+        .progress-bar.progress-bar-striped.bg-success aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar" style=("width: 25%") 
+      .progress
+        .progress-bar.progress-bar-striped.bg-info aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" role="progressbar" style=("width: 50%") 
+      .progress
+        .progress-bar.progress-bar-striped.bg-warning aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: 75%") 
+      .progress
+        .progress-bar.progress-bar-striped.bg-danger aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" style=("width: 100%") 
+
+  .element-box
+    h5.form-header Custom Made
+    .form-desc We've also created our own progress bar type with multiple progress levels inside with ability to add progress information and labels.
+    .element-box-content.example-content
+      .row
+        .col-sm-6
+          .os-progress-bar.primary
+            .bar-labels
+              .bar-label-left
+                span Progress
+                span.positive +12
+              .bar-label-right
+                span.info 72/100
+            .bar-level-1[style="width: 100%"]
+              .bar-level-2[style="width: 72%"]
+                .bar-level-3[style="width: 25%"]
+        .col-sm-6
+          .os-progress-bar.warning
+            .bar-labels
+              .bar-label-left
+                span Progress
+                span.positive +12
+              .bar-label-right
+                span.info 72/100
+            .bar-level-1[style="width: 100%"]
+              .bar-level-2[style="width: 72%"]
+                .bar-level-3[style="width: 25%"]
+      .row
+        .col-sm-6
+          .os-progress-bar.danger
+            .bar-labels
+              .bar-label-left
+                span Progress
+                span.positive +12
+              .bar-label-right
+                span.info 72/100
+            .bar-level-1[style="width: 100%"]
+              .bar-level-2[style="width: 72%"]
+                .bar-level-3[style="width: 25%"]
+        .col-sm-6
+          .os-progress-bar.success
+            .bar-labels
+              .bar-label-left
+                span Progress
+                span.positive +12
+              .bar-label-right
+                span.info 72/100
+            .bar-level-1[style="width: 100%"]
+              .bar-level-2[style="width: 72%"]
+                .bar-level-3[style="width: 25%"]

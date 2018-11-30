@@ -1,0 +1,210 @@
+.app-email-w
+  .app-email-i
+    /!
+      ------------------
+      START - Email Side menu
+      ------------------
+    .ae-side-menu
+      .aem-head
+        a.ae-side-menu-toggler href="#"
+          i.os-icon.os-icon-hamburger-menu-2
+      ul.ae-main-menu
+        li.active
+          a href="#"
+            i.os-icon.os-icon-phone-21
+            span Inbox
+        li
+          a href="#"
+            i.os-icon.os-icon-ui-92
+            span Sent
+        li
+          a href="#"
+            i.os-icon.os-icon-documents-03
+            span Draft
+        li
+          a href="#"
+            i.os-icon.os-icon-ui-15
+            span Trash
+        li
+          a href="#"
+            i.os-icon.os-icon-ui-44
+            span Archive
+      .ae-labels
+        .ae-labels-header
+          i.os-icon.os-icon-ui-54
+          span Labels
+        a.ae-label.ae-label-red href="#" 
+          span.label-pin
+          span.label-value Corporate
+        a.ae-label.ae-label-green href="#" 
+          span.label-pin
+          span.label-value Personal
+        a.ae-label.ae-label-blue href="#" 
+          span.label-pin
+          span.label-value Statements
+        a.ae-label.ae-label-yellow href="#" 
+          span.label-pin
+          span.label-value Projects
+
+    /!
+      ------------------
+      END - Email Side menu
+      ------------------
+
+    /!
+      ------------------
+      START - Email Messages List
+      ------------------
+    .ae-list-w
+      .ael-head
+        .actions-left
+          select
+            option Sort by date
+        .actions-right
+          a href="#"
+            i.os-icon.os-icon-ui-37
+          a href="#"
+            i.os-icon.os-icon-grid-18
+      .ae-list
+        - emails = [['avatar' => 'avatar1.jpg', 'status' => 'green', 'time' => '1:25pm', 'title' => 'James Morgan', 'sub_title' => 'Create new profile request', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar2.jpg', 'status' => 'green', 'time' => '11:12am', 'title' => 'Kyle Jefferson', 'sub_title' => 'Document Verification', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar3.jpg', 'status' => 'red', 'time' => '9:07am', 'title' => 'Matt Wallas', 'sub_title' => 'Booking Confirmation', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar4.jpg', 'status' => 'green', 'time' => '6:34am', 'title' => 'Kimerley Markson', 'sub_title' => 'Your Statement is available', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar5.jpg', 'status' => 'blue', 'time' => 'Yesterday', 'title' => 'Lora Miller', 'sub_title' => 'New comment on your blog post', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar6.jpg', 'status' => 'blue', 'time' => 'Yesterday', 'title' => 'Ivan Moskovits', 'sub_title' => 'Diagnostics validation', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar7.jpg', 'status' => 'green', 'time' => 'Yesterday', 'title' => 'Sheldon Kooper', 'sub_title' => 'Your trial has ended', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar1.jpg', 'status' => 'yellow', 'time' => '2 days ago', 'title' => 'Mesut Ozil', 'sub_title' => 'New comment received', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar4.jpg', 'status' => 'red', 'time' => '3 days ago', 'title' => 'Andres Iniesta', 'sub_title' => 'Certificate is issued', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],['avatar' => 'avatar5.jpg', 'status' => 'blue', 'time' => 'Yesterday', 'title' => 'Lora Miller', 'sub_title' => 'New comment on your blog post', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar6.jpg', 'status' => 'blue', 'time' => 'Yesterday', 'title' => 'Ivan Moskovits', 'sub_title' => 'Diagnostics validation', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar7.jpg', 'status' => 'green', 'time' => 'Yesterday', 'title' => 'Sheldon Kooper', 'sub_title' => 'Your trial has ended', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar1.jpg', 'status' => 'yellow', 'time' => '2 days ago', 'title' => 'Mesut Ozil', 'sub_title' => 'New comment received', 'text' => 'When the equation, first to ability the forwards, the a but travelling'],
+                    ['avatar' => 'avatar2.jpg', 'status' => 'green', 'time' => '1 week ago', 'title' => 'Anthony Tailor', 'sub_title' => 'Create new profile request', 'text' => 'When the equation, first to ability the forwards, the a but travelling']]
+        - emails.each_with_index do |email, index|
+          - active_class = (index == 2) ? 'active' : ''
+          .ae-item.with-status class="#{active_class} status-#{email[0]['status']}"
+            .aei-image
+              .user-avatar-w
+                img alt="" src="img/#{email[0]['avatar']}"
+            .aei-content
+              .aei-timestamp #{email[0]['time']}
+              h6.aei-title #{email[0]['title']}
+              .aei-sub-title #{email[0]['sub_title']}
+              .aei-text When the equation, first to ability the forwards, the a but travelling
+      a.ae-load-more href="#" 
+        span Load More Messages
+    /!
+      ------------------
+      END - Email Messages List
+      ------------------
+    .ae-content-w
+      /!
+        ------------------
+        START - Email Content Header
+        ------------------
+      .aec-head
+        .actions-left
+            a.highlight href="#"
+              i.os-icon.os-icon-ui-02
+        .actions-right
+          .aeh-actions
+            a href="#"
+              i.os-icon.os-icon-ui-44
+            a.separate href="#"
+              i.os-icon.os-icon-ui-15
+            a href="#"
+              i.os-icon.os-icon-common-07
+            a href="#"
+              i.os-icon.os-icon-mail-19
+          .user-avatar
+            img alt="" src="img/avatar3.jpg"
+      /!
+        ------------------
+        END - Email Content Header
+        ------------------
+      /!
+        ------------------
+        START - Email Content
+        ------------------
+      .ae-content
+        .older-pack
+          .aec-full-message-w
+            .aec-full-message
+              .message-head
+                .user-w.with-status.status-green
+                  .user-avatar-w
+                    .user-avatar
+                      img alt="" src="img/avatar1.jpg"
+                  .user-name
+                    h6.user-title Bryan Kinskey
+                    .user-role 
+                      | Registration Question
+                      span < bryan@solutions.com >
+
+                .message-info
+                  | February 7th, 2017
+                  br/
+                  | 2:27pm
+              .message-content
+                | Greetings Bryan,
+                br/
+                br/
+                | Classes of there been temple. Rung quite head the may devious usual. A century thing if but support turn start he a subject if what live was become write that suspicion case fundamentals office his her. Earnestly a the and on a phase samples examples, tone.
+                br/
+                br/
+                | Regards,
+                br/
+                | Mike Mayers
+        .aec-full-message-w.show-pack
+          .more-messages 7 Earlier Messages
+          .aec-full-message
+            .message-head
+              .user-w.with-status.status-green
+                .user-avatar-w
+                  .user-avatar
+                    img alt="" src="img/avatar1.jpg"
+                .user-name
+                  h6.user-title John Mayers
+                  .user-role 
+                    | Account Manager
+                    span < john@solutions.com >
+
+              .message-info
+                | January 12th, 2017
+                br/
+                | 1:24pm
+            .message-content
+              | Hi Mike,
+              br/
+              br/
+              | When the equation, first to ability the forwards, the a but travelling, outlines sentinels bad expand to goodness. Behind if have at the even I and how work, completely deference who boss actually designer; Monstrous with geared from far and these, morals, phase rome; Class. Called get amidst of next.
+              br/
+              br/
+              | Regards,
+              br/
+              | Mike Mayers
+              .message-attachments
+                .attachments-heading Attachments
+                .attachments-docs
+                  a href="#"
+                    i.os-icon.os-icon-ui-51
+                    span Excel Document
+                  a href="#"
+                    i.os-icon.os-icon-documents-07
+                    span Image File
+        .aec-reply
+          .reply-header
+            h5 Reply to <span>John Mayers</span>
+          textarea#ckeditorEmail cols="80" name="ckeditor1" rows="5"
+          .buttons-w
+            .actions-left
+              a href="#" class="btn btn-link"
+                i.os-icon.os-icon-ui-51
+                span Add Attachment
+            .actions-right
+              a href="#" class="btn btn-success"
+                i.os-icon.os-icon-mail-18
+                span Send Message
+      /!
+        ------------------
+        END - Email Content
+        ------------------

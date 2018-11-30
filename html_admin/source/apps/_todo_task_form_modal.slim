@@ -1,0 +1,45 @@
+#taskModal.modal.fade aria-hidden="true" role="dialog" tabindex="-1" 
+  .modal-dialog role="document" 
+    .modal-content
+      .modal-header.faded.smaller
+        .modal-title
+          span Assigned to:
+          img class="avatar" src="img/avatar1.jpg" alt=""/
+          span Due Date: 
+          strong Sep 12th, 2017
+        button.close aria-label="Close" data-dismiss="modal" type="button" 
+          span aria-hidden="true"  &times;
+      .modal-body
+        form
+          .form-group
+            label for="" Name
+            input.form-control placeholder="Enter task name" type="text" value="Visit Home Depot to find out what is needed to rebuild backyard patio" /
+          .form-group
+            label for="" Description
+            textarea.form-control name="" rows="3"
+              | The similar diesel only tell deference and likewise, thought, nonetheless, for ahead school. The were organization.
+          .form-group
+            label for="" Media Attached
+            .attached-media-w
+              img src="img/portfolio9.jpg"
+              img src="img/portfolio2.jpg"
+              img src="img/portfolio12.jpg"
+              a href="#" class="attach-media-btn"
+                i.os-icon.os-icon-ui-22
+                span Add Photos
+          .row
+            .col-sm-6
+              .form-group
+                label for=""  Due Date
+                .date-input
+                  input.single-daterange.form-control placeholder="Date of birth" type="text" value="04/12/1978" /
+            .col-sm-6
+              .form-group
+                label for="" Priority
+                select.form-control
+                  option High Priority
+                  option Normal Priority
+                  option Low Priority
+      .modal-footer.buttons-on-left
+        button.btn.btn-teal type="button"  Save changes
+        button.btn.btn-link data-dismiss="modal" type="button"  Cancel

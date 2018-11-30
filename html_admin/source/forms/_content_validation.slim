@@ -1,0 +1,78 @@
+.row
+  .col-sm-12
+    .element-wrapper
+      .element-box
+        form#formValidate
+          h5.form-header Form Validation
+          .form-desc Validation of the form is made possible using powerful validator plugin for bootstrap. <a href="http://1000hz.github.io/bootstrap-validator/" target="_blank">Learn more about Bootstrap Validator</a>
+          .form-group
+            label for=""  Email address
+            input.form-control placeholder=("Enter email") type="email" required="required" data-error="Your email address is invalid" /
+            .help-block.form-text.with-errors.form-control-feedback
+          .row
+            .col-sm-6
+              .form-group
+                label for=""  Password
+                input.form-control placeholder="Password" type="password" required="required" data-minlength="6" /
+                .help-block.form-text.text-muted.form-control-feedback Minimum of 6 characters
+            .col-sm-6
+              .form-group
+                label for="" Confirm Password
+                input.form-control placeholder="Confirm Password" type="password" required="required" data-match-error="Passwords don't match" /
+                .help-block.form-text.with-errors.form-control-feedback
+          .form-group
+            label for=""  Regular select
+            select.form-control
+              option value="New York" New York
+              option value="California" California
+              option value="Boston" Boston
+              option value="Texas" Texas
+              option value="Colorado" Colorado
+          .form-group
+            label for=""  Multiselect
+            select.form-control.select2 multiple="true"
+              option selected="true" New York
+              option selected="true" California
+              option Boston
+              option Texas
+              option Colorado
+
+          fieldset.form-group
+            legend 
+              span Section Example
+            .row
+              .col-sm-6
+                .form-group
+                  label for=""  First Name
+                  input.form-control placeholder="First Name" type="text" required="required" data-error="Please input your First Name" /
+                  .help-block.form-text.with-errors.form-control-feedback
+              .col-sm-6
+                .form-group
+                  label for="" Last Name
+                  input.form-control placeholder="Last Name" type="text" required="required" data-error="Please input your Last Name" /
+                  .help-block.form-text.with-errors.form-control-feedback
+            .row
+              .col-sm-6
+                .form-group
+                  label for=""  Date of Birth
+                  input.single-daterange.form-control placeholder="Date of birth" type="text" value="04/12/1978" /
+              .col-sm-6
+                .form-group
+                  label for="" Twitter Username
+                  .input-group
+                    .input-group-prepend
+                      .input-group-text @
+                    input.form-control placeholder="Twitter Username" type="text" /
+            .form-group
+              label for="" Date Range Picker
+              input.multi-daterange.form-control type="text" value="03/31/2017 - 04/06/2017"/
+            .form-group
+              label  Example textarea
+              textarea.form-control rows="3" 
+
+          .form-check
+            label.form-check-label
+              input.form-check-input type="checkbox" /
+              | I agree to terms and conditions
+          .form-buttons-w
+            button.btn.btn-primary type="submit"  Submit

@@ -1,0 +1,24 @@
+doctype html
+html
+  include ../_partials/_header_meta.slim
+  body.auth-wrapper
+    .all-wrapper.menu-side.with-pattern
+      .auth-box-w.wider.centered
+        .logo-w
+          a href="index.html"
+            img src="img/logo-big.png" alt=""/
+        
+        h5.auth-header Welcome Back
+        .logged-user-w
+          .avatar-w
+            img src="img/avatar1.jpg" alt=""/
+          .logged-user-name Maria Gomez
+          .logged-user-role Administrator
+        form action=""
+          .form-group
+            label for="" Enter your password to access admin
+            input.form-control placeholder=("Enter your password") type="password" /
+            .pre-icon.os-icon.os-icon-fingerprint
+          .buttons-w
+            button.btn.btn-primary Log me in
+            a.btn.btn-link href="/auth/login.html" Login as different user

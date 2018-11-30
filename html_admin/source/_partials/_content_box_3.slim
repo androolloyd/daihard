@@ -1,0 +1,283 @@
+.row
+  .col-sm-12
+    .element-wrapper
+      h6.element-header Dashboard Box
+      .element-box
+        .element-info
+          .row.align-items-center
+            .col-sm-8
+              .element-info-with-icon
+                .element-info-icon
+                  .os-icon.os-icon-wallet-loaded
+                .element-info-text
+                  h5.element-inner-header Sales Statistics
+                  .element-inner-desc Discharge best employed your phase each the of shine. Be met even.
+            .col-sm-4
+              .element-search
+                input type="text" placeholder="Type to search for products..."/
+        .row
+          .col-md-6.col-xl-4
+            .row
+              .col-sm-6.b-r.b-b
+                .el-tablo.centered.padded
+                  .value 3814
+                  .label Products Sold
+              .col-sm-6.b-b
+                .el-tablo.centered.padded
+                  .value 47.5K
+                  .label Followers
+            .row
+              .col-sm-6.b-r
+                .el-tablo.centered.padded
+                  .value $95
+                  .label Daily Earnings
+              .col-sm-6
+                .el-tablo.centered.padded
+                  .value 12
+                  .label Products
+          .col-md-6.col-xl-4
+            .padded.b-l.b-r-xl
+              .element-info-with-icon.smaller
+                .element-info-icon
+                  .os-icon.os-icon-bar-chart-stats-up
+                .element-info-text
+                  h5.element-inner-header Monthly Revenue
+                  .element-inner-desc Calculated every month
+              .os-progress-bar.primary
+                .bar-labels
+                  .bar-label-left
+                    span Accessories
+                    span.positive +10
+                  .bar-label-right
+                    span.info 72/100
+                .bar-level-1[style="width: 100%"]
+                  .bar-level-2[style="width: 60%"]
+                    .bar-level-3[style="width: 20%"]
+              .os-progress-bar.primary
+                .bar-labels
+                  .bar-label-left
+                    span Shoe Sales
+                    span.negative -5
+                  .bar-label-right
+                    span.info 62/100
+                .bar-level-1[style="width: 100%"]
+                  .bar-level-2[style="width: 40%"]
+                    .bar-level-3[style="width: 10%"]
+              .os-progress-bar.primary
+                .bar-labels
+                  .bar-label-left
+                    span New Customers
+                    span.positive +12
+                  .bar-label-right
+                    span.info 78/100
+                .bar-level-1[style="width: 100%"]
+                  .bar-level-2[style="width: 80%"]
+                    .bar-level-3[style="width: 50%"]
+          .d-none.d-xl-block.col-xl-4
+            .padded
+              .el-tablo.bigger
+                .value 245
+                .trending.trending-up
+                  span 12%
+                  i.os-icon.os-icon-arrow-up2
+                .label Products Sold
+              .el-chart-w
+                canvas#liteLineChart width="300" height="100"
+.row
+  .col-sm-4.col-lg-3.col-xxl-2
+    .element-wrapper
+      h6.element-header Top Selling Today
+      .element-box
+        .el-chart-w
+          canvas#donutChart width="120" height="120"
+          .inside-donut-chart-label
+            strong 142
+            span Total Orders
+        .el-legend
+          .legend-value-w
+            .legend-pin style="background-color: #6896f9;"
+            .legend-value Processed
+          .legend-value-w
+            .legend-pin style="background-color: #85c751;"
+            .legend-value Cancelled
+          .legend-value-w
+            .legend-pin style="background-color: #d97b70;"
+            .legend-value Pending
+          .legend-value-w
+            .legend-pin style="background-color: #f2cd49;"
+            .legend-value Refunds
+  .col-sm-8.col-lg-9.col-xl-6.col-xxl-7
+    .element-wrapper
+      h6.element-header New Orders
+      .element-box
+        .table-responsive
+          table.table.table-lightborder
+            thead
+              tr
+                th Customer Name
+                th Products Ordered
+                th.text-center Status
+                th.text-right Order Total
+            tbody
+              tr
+                td.nowrap John Mayers
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio9.jpg)"
+                    .cell-img style="background-image: url(img/portfolio2.jpg)"
+                    .cell-img style="background-image: url(img/portfolio12.jpg)"
+                    .cell-img-more + 5 more
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $354
+              tr
+                td.nowrap Kelly Brans
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio14.jpg)"
+                    .cell-img style="background-image: url(img/portfolio8.jpg)"
+                
+                td.text-center 
+                  .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+                td.text-right $94
+              tr
+                td.nowrap Tim Howard
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio16.jpg)"
+                    .cell-img style="background-image: url(img/portfolio14.jpg)"
+                    .cell-img style="background-image: url(img/portfolio5.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $156
+              tr
+                td.nowrap Joe Trulli
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio1.jpg)"
+                    .cell-img style="background-image: url(img/portfolio5.jpg)"
+                    .cell-img style="background-image: url(img/portfolio6.jpg)"
+                    .cell-img-more + 2 more
+                
+                td.text-center 
+                  .status-pill.yellow data-toggle="tooltip" data-title="Pending"
+                td.text-right $1,120
+              tr
+                td.nowrap Jerry Lingard
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio9.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $856
+              tr
+                td.nowrap Tim Howard
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio16.jpg)"
+                    .cell-img style="background-image: url(img/portfolio14.jpg)"
+                    .cell-img style="background-image: url(img/portfolio5.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $156
+
+
+  .col-sm-6.col-lg-4.col-xl-3
+    .element-wrapper
+      h6.element-header Support Agents
+      .element-box-tp
+        .profile-tile
+          a.profile-tile-box href="users_profile_small.html"
+            .pt-avatar-w
+              img src="img/avatar1.jpg" alt=""/
+            .pt-user-name Mark Parson
+          .profile-tile-meta
+            ul
+              li
+                | Last Login:
+                strong Online Now
+              li
+                | Tickets:
+                strong 12
+              li
+                | Response Time:
+                strong 17 hours
+            .pt-btn
+              a.btn.btn-success.btn-sm href="apps_full_chat.html" Send Message
+        .profile-tile
+          a.profile-tile-box href="users_profile_small.html"
+            .pt-avatar-w
+              img src="img/avatar2.jpg" alt=""/
+            .pt-user-name John Mayers
+          .profile-tile-meta
+            ul
+              li
+                | Last Login:
+                strong Online Now
+              li
+                | Tickets:
+                strong 18
+              li
+                | Response Time:
+                strong 2 hours
+            .pt-btn
+              a.btn.btn-secondary.btn-sm href="apps_full_chat.html" Send Message
+  
+        .profile-tile.d-sm-none.d-xl-flex
+          a.profile-tile-box href="users_profile_small.html"
+            .pt-avatar-w
+              img src="img/avatar3.jpg" alt=""/
+            .pt-user-name Mark Parson
+          .profile-tile-meta
+            ul
+              li
+                | Last Login:
+                strong Online Now
+              li
+                | Tickets:
+                strong 24
+              li
+                | Response Time:
+                strong 4 hours
+            .pt-btn
+              a.btn.btn-success.btn-sm href="apps_full_chat.html" Send Message
+
+  .col-sm-6.col-lg-8.col-xl-12.col-xxl-6
+    .element-wrapper
+      h6.element-header Unique Visitors Graph
+      .element-box
+        .os-tabs-w
+          .os-tabs-controls
+            ul.nav.nav-tabs.smaller
+              li.nav-item
+                a.nav-link.active data-toggle="tab" href="#tab_overview" Overview
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#tab_sales" Sales
+            ul.nav.nav-pills.smaller.d-none.d-xl-flex
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" Today
+              li.nav-item
+                a.nav-link.active data-toggle="tab" href="#" 7 Days
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" 14 Days
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" Last Month
+
+          .tab-content
+            #tab_overview.tab-pane.active
+              .el-tablo.bigger
+                .label Unique Visitors
+                .value 12,537
+              .el-chart-w
+                canvas#lineChart width="600px" height="150px"
+            #tab_sales.tab-pane
+            #tab_conversion.tab-pane
+  .col-sm-12.col-xxl-6
+    .element-wrapper
+      h6.element-header Recent Orders
+      .element-box-tp
+        include ../_partials/tables/_table_with_actions.slim

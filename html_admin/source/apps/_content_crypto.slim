@@ -1,0 +1,282 @@
+.os-tabs-w
+  .os-tabs-controls.os-tabs-complex
+    ul.nav.nav-tabs
+      li.nav-item
+        a.nav-link.active aria-expanded="false" data-toggle="tab" href="#tab_overview"  
+          span.tab-label Your Portfolio
+          span.badge.badge-success
+            i.os-icon.os-icon-arrow-up6
+            span 22%
+      li.nav-item
+        a.nav-link aria-expanded="false" data-toggle="tab" href="#tab_sales"  
+          span.tab-label Bitcoin
+          span.tab-value $7,839.23
+          span.badge.badge-success
+            i.os-icon.os-icon-arrow-up6
+            span 25%
+      li.nav-item.d-none.d-xl-block
+        a.nav-link aria-expanded="false" data-toggle="tab" href="#tab_sales"  
+          span.tab-label Etherium
+          span.tab-value $839.11
+          span.badge.badge-danger
+            i.os-icon.os-icon-arrow-down6
+            span 5%
+      li.nav-item.d-none.d-xxxl-block
+        a.nav-link aria-expanded="true" data-toggle="tab" href="#tab_sales"  
+          span.tab-label Litecoin
+          span.tab-value $1,434.12
+          span.badge.badge-success
+            i.os-icon.os-icon-arrow-up6
+            span 12%
+      li.nav-item.nav-actions.d-none.d-sm-block
+        a.btn.btn-grey href="#"
+          i.os-icon.os-icon-plus-circle
+          span Add Wallet
+.row
+  .col-sm-12.col-lg-8.col-xxl-6
+    .element-balances.justify-content-between.mobile-full-width
+      .balance.balance-v2
+        .balance-title Your Portfolio Balance
+        .balance-value 
+          span.d-xxl-none $72,245
+          span.d-none.d-xxl-inline-block $171,473
+          span.trending.trending-down-basic
+            span %12
+            i.os-icon.os-icon-arrow-2-down
+      .balance-table.pl-sm-2
+        table.table.table-lightborder.table-bordered.table-v-compact.mb-0
+          tr
+            td
+              strong 2.34
+              .balance-label.smaller.lighter.text-nowrap Bitcoins BTC
+            td
+              strong 1.74
+              .balance-label.smaller.lighter.text-nowrap Ripple RPX
+            td.d-sm-none.d-xxxxl-table-cell.d-md-table-cell.d-xxl-none
+              strong 4.82
+              .balance-label.smaller.lighter.text-nowrap Newcoin NCN
+          tr
+            td
+              strong 1.22
+              .balance-label.smaller.lighter.text-nowrap Litecoin LTC
+            td
+              strong 1.87
+              .balance-label.smaller.lighter.text-nowrap Etherium ETH
+            td.d-sm-none.d-xxxxl-table-cell.d-md-table-cell.d-xxl-none
+              strong 1.02
+              .balance-label.smaller.lighter.text-nowrap Dogecoin DGC
+    .element-wrapper.pb-4.mb-4.border-bottom
+      .element-box-tp
+        a.btn.btn-primary href="#"
+          i.os-icon.os-icon-refresh-ccw
+          span Deposit Money
+        a.btn.btn-grey href="#"
+          i.os-icon.os-icon-log-out
+          span Withdraw
+        a.btn.btn-grey.d-none.d-sm-inline-block href="#"
+          i.os-icon.os-icon-plus-circle
+          span Add Wallet
+    .element-wrapper.compact
+      .element-box-tp
+        .element-actions.d-none.d-sm-block
+          form.form-inline.justify-content-sm-end
+            label.smaller for="" Show Period:
+            select.form-control.form-control-sm.form-control-faded
+              option selected="true" Last 30 days
+              option This Week
+              option This Month
+              option Today
+        h6.element-box-header Balance History
+        .el-chart-w
+          canvas#liteLineChartV3 width="300" height="50" data-chart-data="13,28,19,24,43,49,40,35,42,46,38,32,45"
+  .col-sm-2.d-none.d-xxl-block
+    include ../_partials/elements/_donut_chart_1.slim
+  .col-sm-4.d-none.d-lg-block
+    include ../_partials/elements/_cta_1.slim
+.row.pt-2
+  .col-6.col-sm-3.col-xxl-2
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Bitcoin Price
+      .value $7.484
+      .trending.trending-up
+        span 12%
+        i.os-icon.os-icon-arrow-up6
+  .col-6.col-sm-3.col-xxl-2
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Last Month
+      .value.text-danger -$3,248
+      .trending.trending-down
+        span 12%
+        i.os-icon.os-icon-arrow-down6
+  .col-6.col-sm-3.col-xxl-2
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Etherium Price
+      .value $784.12
+      .trending.trending-up
+        span 12%
+        i.os-icon.os-icon-arrow-up6
+  .col-6.col-sm-3.col-xxl-2
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Ripple Price
+      .value $1,284
+      .trending.trending-up
+        span 12%
+        i.os-icon.os-icon-arrow-up6
+  .col-6.col-xxl-2.d-sm-none.d-xxl-block
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Litecoin Price
+      .value -$3,473
+      .trending.trending-down
+        span 5%
+        i.os-icon.os-icon-arrow-down6
+  .col-6.col-xxl-2.d-sm-none.d-xxl-block
+    a.element-box.el-tablo.centered.trend-in-corner.smaller href="#"
+      .label Last Month
+      .value -$3,248
+      .trending.trending-down
+        span 12%
+        i.os-icon.os-icon-arrow-down6
+.row
+  .col-sm-8
+    .element-wrapper.compact.pt-4
+      .element-actions.d-none.d-sm-block
+        a.btn.btn-primary.btn-sm href="#"
+          i.os-icon.os-icon-ui-22
+          span Add Account
+        a.btn.btn-success.btn-sm href="#"
+          i.os-icon.os-icon-grid-10
+          span Make Payment
+      h6.element-header Send Money To
+      .element-box-tp
+
+        - support_agents = [{'name' => 'Kelly<br/> Neymayers', 'avatar' => 'avatar1.jpg', 'column_class' => 'col-4 col-sm-3 col-xxl-2'},
+                          {'name' => 'Ben<br/> Gossman', 'avatar' => 'avatar3.jpg', 'column_class' => 'col-4 col-sm-3 col-xxl-2'},
+                          {'name' => 'Kimson<br/> Broker', 'avatar' => 'avatar1.jpg', 'column_class' => 'col-4 col-sm-3 col-xxl-2'},
+                          {'name' => 'Jake<br/> Gilbertson', 'avatar' => 'avatar2.jpg', 'column_class' => 'col-4 d-sm-none d-xxl-block col-xxl-2'},
+                          {'name' => 'Mary<br/> Clintons', 'avatar' => 'avatar7.jpg', 'column_class' => 'col-4 d-sm-none d-xxl-block col-xxl-2'}]
+        .inline-profile-tiles
+          .row
+            .col-4.col-sm-3.col-xxl-2
+              .profile-tile.profile-tile-inlined
+                a.profile-tile-box.faded href="users_profile_small.html"
+                  .pt-new-icon
+                    i.os-icon.os-icon-plus
+                  .pt-user-name New<br/> Account
+            - support_agents.each do |agent|
+              div[class="#{agent['column_class']}"]
+                .profile-tile.profile-tile-inlined
+                  a.profile-tile-box href="users_profile_small.html"
+                    .pt-avatar-w
+                      img src="img/#{agent['avatar']}" alt=""/
+                    .pt-user-name== agent['name']
+
+    .row
+      .col-12.col-xxl-8
+        .element-wrapper.compact.pt-4
+          .element-actions.d-none.d-sm-block
+            form.form-inline.justify-content-sm-end
+              label.smaller for="" News For
+              select.form-control.form-control-sm.form-control-faded
+                option value="Pending" Bitcoin
+                option value="Active" Etherium 
+                option value="Cancelled" Litecoin
+          h6.element-header Crypto News
+          .element-box-tp
+            .post-box
+              .post-media style="background-image: url(img/portfolio1.jpg)"
+              .post-content
+                h6.post-title Is Crypto the Future of Film Funding?
+                .post-text Curiously, view both tone emerged. There should which yards two and concepts amidst liabilities sitting of and, parents it wait 
+                .post-foot
+                  .post-tags
+                    .badge.badge-primary BTC
+                    .badge.badge-primary Crypto
+                  a.post-link href="#"
+                    span Read Full Story
+                    i.os-icon.os-icon-arrow-right7
+            .post-box
+              .post-media style="background-image: url(img/portfolio2.jpg)"
+              .post-content
+                h6.post-title Is Crypto the Future of Film Funding?
+                .post-text Curiously, view both tone emerged. There should which yards two and concepts amidst liabilities sitting of and, parents it wait 
+                .post-foot
+                  .post-tags
+                    .badge.badge-primary BTC
+                    .badge.badge-primary Crypto
+                  a.post-link href="#"
+                    span Read Full Story
+                    i.os-icon.os-icon-arrow-right7
+            a.centered-load-more-link href="#" 
+              span Read Our Blog
+      .col-12.d-sm-none.d-xxl-block.col-xxl-4
+        include ../_partials/elements/_cta_2.slim
+  .col-sm-4
+    .element-wrapper.compact.pt-4
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          label.smaller for="" Order By
+          select.form-control.form-control-sm.form-control-faded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Transactions
+      .element-box-tp
+        table.table.table-clean
+          tr
+            td
+              .value Amazon Store
+              span.sub-value Books
+            td.text-right
+              .value -$28.34
+              span.sub-value 12 Feb 2018
+          tr
+            td
+              .value Dunkin Donuts
+              span.sub-value Food & Restaurants
+            td.text-right
+              .value -$7.15
+              span.sub-value 10 Feb 2018
+          tr
+            td
+              .value Refund from Sephora
+              span.sub-value Health & Beauty
+            td.text-right
+              .value.text-success $128.11
+              span.sub-value 10 Feb 2018
+          tr
+            td
+              .value Amazon Store
+              span.sub-value Books
+            td.text-right
+              .value -$28.34
+              span.sub-value 12 Feb 2018
+          tr
+            td
+              .value Dunkin Donuts
+              span.sub-value Food & Restaurants
+            td.text-right
+              .value -$7.15
+              span.sub-value 10 Feb 2018
+          tr
+            td
+              .value Refund from Google Store
+              span.sub-value Health & Beauty
+            td.text-right
+              .value.text-success $15.23
+              span.sub-value 9 Feb 2018
+          tr
+            td
+              .value Amazon Store
+              span.sub-value Books
+            td.text-right
+              .value -$28.34
+              span.sub-value 8 Feb 2018
+          tr
+            td
+              .value Dunkin Donuts
+              span.sub-value Food & Restaurants
+            td.text-right
+              .value -$7.15
+              span.sub-value 8 Feb 2018
+        a.centered-load-more-link href="#" 
+          span Load More Messages

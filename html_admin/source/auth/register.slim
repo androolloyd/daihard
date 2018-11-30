@@ -1,0 +1,28 @@
+doctype html
+html
+  include ../_partials/_header_meta.slim
+  body
+    .all-wrapper.menu-side.with-pattern
+      .auth-box-w.wider
+        .logo-w
+          a href="index.html"
+            img src="img/logo-big.png" alt=""/
+        
+        h4.auth-header Create new account
+        form action=""
+          .form-group
+            label for=""  Email address
+            input.form-control placeholder=("Enter email") type="email" /
+            .pre-icon.os-icon.os-icon-email-2-at2
+          .row
+            .col-sm-6
+              .form-group
+                label for=""  Password
+                input.form-control placeholder="Password" type="password" /
+                .pre-icon.os-icon.os-icon-fingerprint
+            .col-sm-6
+              .form-group
+                label for="" Confirm Password
+                input.form-control placeholder="Password" type="password" /
+          .buttons-w
+            button.btn.btn-primary Register Now

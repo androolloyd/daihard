@@ -1,0 +1,29 @@
+.element-wrapper
+  h6.element-header Tables Examples
+  .element-box
+    h5.form-header Table in white box
+    .form-desc You can put a table tag inside an <code>.element-box</code> class wrapper and add <code>.table</code> class to it to get something like this:
+    include ../_partials/tables/_controls_above_table.slim
+    .table-responsive
+      - extra_table_class = 'table-lightborder'
+      include ../_partials/tables/_table_basic.slim
+.element-wrapper
+  .element-box-tp
+    h5.form-header Table without wrapper
+    .form-desc You can put a table tag inside an <code>.element-box-tp</code> class wrapper and add <code>.table</code> class to it to get something like this:
+    .element-box-tp
+      include ../_partials/tables/_table_with_actions.slim
+.element-wrapper
+  .element-box
+    h5.form-header Table Striped
+    .form-desc You can add class <code>.table-striped</code> and <code>.table</code> to a table element to get striped table:
+    .table-responsive
+      - extra_table_class = 'table-striped'
+      include ../_partials/tables/_table_basic.slim
+.element-wrapper
+  .element-box
+    h5.form-header Bordered and Striped Table
+    .form-desc You can add class <code>.table-bordered</code>, <code>.table-striped</code> and <code>.table</code> to a table element to get striped table:
+    .table-responsive
+      - extra_table_class = 'table-striped table-bordered'
+      include ../_partials/tables/_table_basic.slim

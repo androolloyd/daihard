@@ -1,0 +1,274 @@
+.row
+  .col-sm-12
+    .element-wrapper
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          select.form-control.form-control-sm.rounded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Sales Dashboard
+      .element-content
+        .row
+          .col-sm-4.col-xxxl-3
+            a.element-box.el-tablo href="#"
+              .label Products Sold
+              .value 57
+              .trending.trending-up-basic
+                span 12%
+                i.os-icon.os-icon-arrow-up2
+          .col-sm-4.col-xxxl-3
+            a.element-box.el-tablo href="#"
+              .label Gross Profit
+              .value $457
+              .trending.trending-down-basic
+                span 12%
+                i.os-icon.os-icon-arrow-down
+          .col-sm-4.col-xxxl-3
+            a.element-box.el-tablo href="#"
+              .label New Customers
+              .value 125
+              .trending.trending-down-basic
+                span 9%
+                i.os-icon.os-icon-arrow-down
+          .d-none.d-xxxl-block.col-xxxl-3
+            a.element-box.el-tablo href="#"
+              .label Refunds Processed
+              .value $294
+              .trending.trending-up-basic
+                span 12%
+                i.os-icon.os-icon-arrow-up2
+.row
+  .col-sm-8.col-xxxl-6
+    .element-wrapper
+      h6.element-header New Orders
+      .element-box
+        .table-responsive
+          table.table.table-lightborder
+            thead
+              tr
+                th Customer
+                th Products
+                th.text-center Status
+                th.text-right Total
+            tbody
+              tr
+                td.nowrap John Mayers
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio9.jpg)"
+                    .cell-img style="background-image: url(img/portfolio2.jpg)"
+                    .cell-img style="background-image: url(img/portfolio12.jpg)"
+                    .cell-img-more + 5 more
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $354
+              tr
+                td.nowrap Kelly Brans
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio14.jpg)"
+                    .cell-img style="background-image: url(img/portfolio8.jpg)"
+                
+                td.text-center 
+                  .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+                td.text-right $94
+              tr
+                td.nowrap Tim Howard
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio16.jpg)"
+                    .cell-img style="background-image: url(img/portfolio14.jpg)"
+                    .cell-img style="background-image: url(img/portfolio5.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $156
+              tr
+                td.nowrap Joe Trulli
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio1.jpg)"
+                    .cell-img style="background-image: url(img/portfolio5.jpg)"
+                    .cell-img style="background-image: url(img/portfolio6.jpg)"
+                    .cell-img-more + 2 more
+                
+                td.text-center 
+                  .status-pill.yellow data-toggle="tooltip" data-title="Pending"
+                td.text-right $1,120
+              tr
+                td.nowrap Jerry Lingard
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio9.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $856
+
+  .col-sm-4.d-xxxl-none
+    /! START - Top Selling Chart
+    .element-wrapper
+      h6.element-header Top Selling Today
+      .element-box
+        .el-chart-w
+          canvas#donutChart width="120" height="120"
+          .inside-donut-chart-label
+            strong 142
+            span Total Orders
+        .el-legend.condensed
+          .row
+            .col-auto.col-xxxxl-6.ml-sm-auto.mr-sm-auto.col-6
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #6896f9;"
+                .legend-value 
+                  span Prada
+                  .legend-sub-value 14 Pairs
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #85c751;"
+                .legend-value 
+                  span Maui Jim
+                  .legend-sub-value 26 Pairs
+            .col-6.d-lg-none.d-xxl-block
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #806ef9;"
+                .legend-value 
+                  span Gucci
+                  .legend-sub-value 17 Pairs
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #d97b70;"
+                .legend-value 
+                  span Armani
+                  .legend-sub-value 12 Pairs
+    /! END - Top Selling Chart
+
+  .d-none.d-xxxl-block.col-xxxl-6
+    /! START - Questions per Product
+    .element-wrapper
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          select.form-control.form-control-sm.rounded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Inventory Stats
+      .element-box
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Eyeglasses
+            .bar-label-right
+              span.info 25 items / 10 remaining
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 70%"]
+              .bar-level-3[style="width: 40%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Outwear
+            .bar-label-right
+              span.info 18 items / 7 remaining
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 40%"]
+              .bar-level-3[style="width: 20%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Shoes
+            .bar-label-right
+              span.info 15 items / 12 remaining
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 60%"]
+              .bar-level-3[style="width: 30%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Jeans
+            .bar-label-right
+              span.info 12 items / 4 remaining
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 30%"]
+              .bar-level-3[style="width: 10%"]
+        div.mt-4.border-top.pt-3
+          .element-actions.d-none.d-sm-block
+            form.form-inline.justify-content-sm-end
+              select.form-control.form-control-sm.form-control-faded
+                option selected="true" Last 30 days
+                option This Week
+                option This Month
+                option Today
+          h6.element-box-header Inventory History
+          .el-chart-w
+            canvas#liteLineChartV3 width="300" height="50" data-chart-data="13,28,19,24,43,49,40,35,42,46,38,32,45"
+    /! END - Questions per product                  
+.row
+  .col-sm-12.col-xxxl-9
+    .element-wrapper
+      h6.element-header Unique Visitors Graph
+      .element-box
+        .os-tabs-w
+          .os-tabs-controls
+            ul.nav.nav-tabs.smaller
+              li.nav-item
+                a.nav-link.active data-toggle="tab" href="#tab_overview" Overview
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#tab_sales" Sales
+            ul.nav.nav-pills.smaller.d-none.d-md-flex
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" Today
+              li.nav-item
+                a.nav-link.active data-toggle="tab" href="#" 7 Days
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" 14 Days
+              li.nav-item
+                a.nav-link data-toggle="tab" href="#" Last Month
+
+          .tab-content
+            #tab_overview.tab-pane.active
+              .el-tablo.bigger
+                .label Unique Visitors
+                .value 12,537
+              .el-chart-w
+                canvas#lineChart width="600px" height="150px"
+            #tab_sales.tab-pane
+            #tab_conversion.tab-pane
+  .d-none.d-xxxl-block.col-xxxl-3
+    .element-wrapper
+      h6.element-header Visitors by Browser
+      .element-box.less-padding
+        .el-chart-w
+          canvas#donutChart1 width="120" height="120"
+          .inside-donut-chart-label
+            strong 1,248
+            span Visitors
+        .el-legend.condensed
+          .row
+            .col-auto.col-xxxxl-6.ml-sm-auto.mr-sm-auto
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #6896f9;"
+                .legend-value 
+                  span Safari
+                  .legend-sub-value 17%, 12 Visits
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #85c751;"
+                .legend-value 
+                  span Chrome
+                  .legend-sub-value 22%, 763 Visits
+            .col-sm-6.d-none.d-xxxxl-block
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #806ef9;"
+                .legend-value 
+                  span Firefox
+                  .legend-sub-value 3%, 7 Visits
+              .legend-value-w
+                .legend-pin.legend-pin-squared style="background-color: #d97b70;"
+                .legend-value 
+                  span Explorer
+                  .legend-sub-value 15%, 45 Visits
+.row
+  .col-sm-12
+    .element-wrapper
+      h6.element-header Recent Orders
+      .element-box-tp
+        include ../_partials/tables/_table_with_actions.slim

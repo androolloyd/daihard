@@ -1,0 +1,87 @@
+.section-heading.centered
+  h1 Pricing Plans Demos
+  p Here is a set of demos of pricing plans table, we are planning on bringing more cool pricing plans layout in the near future so stay tuned.
+
+- plans = [['column_class' => 'col-sm-3', 'name' => 'Starter', 'img' => 'plan1.png', 'price' => '$10', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']],
+           ['column_class' => 'col-sm-3', 'name' => 'Developer', 'img' => 'plan2.png', 'price' => '$20', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans', 'Booking Functions', 'Neural Networks']],
+           ['column_class' => 'col-sm-3', 'name' => 'Enterprize', 'img' => 'plan3.png', 'price' => '$45', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']],
+           ['column_class' => 'col-sm-3', 'name' => 'Custom Plan', 'img' => 'plan4.png', 'price' => 'Call', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']]]
+.pricing-plans.row.no-gutters
+  - plans.each do |plan|
+    .pricing-plan class="#{plan[0]['column_class']}"
+      .plan-head
+        .plan-image
+          img src="img/#{plan[0]['img']}" alt=""/
+        .plan-name= plan[0]['name']
+      .plan-body
+        .plan-price-w
+          .price-value= plan[0]['price']
+          .price-label For Price
+        .plan-btn-w
+          a.btn.btn-primary.btn-rounded href="#" Contact Us
+      .plan-description
+        h6 Quick Description
+        p= plan[0]['description']
+        h6 Features
+        ul
+          - plan[0]['features'].each do |feature|
+            li= feature
+
+
+.section-heading.centered
+  h1 Highlight One Plan
+  p Here is a set of demos of pricing plans table, we are planning on bringing more cool pricing plans layout in the near future so stay tuned.
+
+- plans = [['column_class' => 'col-sm-4', 'name' => 'Starter', 'img' => 'plan1.png', 'price' => '$10', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']],
+           ['column_class' => 'col-sm-4 highlight', 'name' => 'Developer', 'img' => 'plan2.png', 'price' => '$20', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans', 'Booking Functions', 'Neural Networks']],
+           ['column_class' => 'col-sm-4', 'name' => 'Custom Plan', 'img' => 'plan4.png', 'price' => 'Call', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']]]
+.pricing-plans.row.no-gutters
+  - plans.each do |plan|
+    .pricing-plan class="#{plan[0]['column_class']}"
+      .plan-head
+        .plan-image
+          img src="img/#{plan[0]['img']}" alt=""/
+        .plan-name= plan[0]['name']
+      .plan-body
+        .plan-price-w
+          .price-value= plan[0]['price']
+          .price-label For Price
+        .plan-btn-w
+          a.btn.btn-primary.btn-rounded href="#" Contact Us
+      .plan-description
+        h6 Quick Description
+        p= plan[0]['description']
+        h6 Features
+        ul
+          - plan[0]['features'].each do |feature|
+            li= feature
+
+
+.section-heading.centered
+  h1 Hover Effect on Plans
+  p Here is a set of demos of pricing plans table, we are planning on bringing more cool pricing plans layout in the near future so stay tuned.
+
+- plans = [['column_class' => 'col-sm-3 with-hover-effect', 'name' => 'Starter', 'img' => 'plan1.png', 'price' => '$10', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']],
+           ['column_class' => 'col-sm-3 with-hover-effect', 'name' => 'Developer', 'img' => 'plan2.png', 'price' => '$20', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans', 'Booking Functions', 'Neural Networks']],
+           ['column_class' => 'col-sm-3 with-hover-effect', 'name' => 'Enterprize', 'img' => 'plan3.png', 'price' => '$45', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']],
+           ['column_class' => 'col-sm-3 with-hover-effect', 'name' => 'Custom Plan', 'img' => 'plan4.png', 'price' => 'Call', 'description' => 'Pane, problem that millions lay up as and but antiquity in that officers. Was at survey is be behavioural how behavioural writing arrange trial.', 'features' => ['User Profiles', 'File Manager', 'Pricing Plans']]]
+.pricing-plans.row.no-gutters
+  - plans.each do |plan|
+    .pricing-plan class="#{plan[0]['column_class']}"
+      .plan-head
+        .plan-image
+          img src="img/#{plan[0]['img']}" alt=""/
+        .plan-name= plan[0]['name']
+      .plan-body
+        .plan-price-w
+          .price-value= plan[0]['price']
+          .price-label For Price
+        .plan-btn-w
+          a.btn.btn-primary.btn-rounded href="#" Contact Us
+      .plan-description
+        h6 Quick Description
+        p= plan[0]['description']
+        h6 Features
+        ul
+          - plan[0]['features'].each do |feature|
+            li= feature                        

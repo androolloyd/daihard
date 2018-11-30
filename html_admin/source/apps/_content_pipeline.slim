@@ -1,0 +1,134 @@
+.control-header
+  .row.align-items-center
+    .col-8.col-lg-7
+      form.form-inline action=""
+        .form-group.mr-4
+          label.mr-2 for="" Category
+          select.form-control-sm
+            option Management
+            option Sales Team
+        .form-group.d-none.d-md-flex
+          label.mr-2 for="" Order By
+          select.form-control-sm
+            option Date
+            option Lead Count
+    .col-4.col-lg-5.text-right
+      a.btn.btn-sm.btn-link.btn-upper.mr-4.d-none.d-lg-inline-block href="#"
+        i.os-icon.os-icon-ui-44
+        span Download CSV
+      a.btn.btn-sm.btn-primary.btn-upper href="#"
+        i.os-icon.os-icon-ui-22
+        span Add New Lead
+.pipelines-w
+  .row
+    - pipelines = [['name' => 'Idea Proposed', 
+                    'class' => 'col-lg-4 col-xxl-3',
+                    'value' => '$45,367', 
+                    'leads_count' => '14', 
+                    'leads' => [['avatar' => 'avatar1.jpg', 'company' => 'Better Pharmacy', 'person' => 'John Mayers', 'tags' => ['Production', 'Sales'], 'notes' => 8],
+                               ['avatar' => 'avatar7.jpg', 'company' => 'Goldman', 'person' => 'John Mayers', 'tags' => ['Fashion', 'Stats'], 'notes' => 12],
+                               ['avatar' => 'avatar6.jpg', 'company' => 'Bosing Corp', 'person' => 'John Mayers', 'tags' => ['Assist'], 'notes' => 6]],
+                    'color' => 'white lined-primary'],
+                    ['name' => 'Email Contact', 
+                      'class' => 'col-lg-4 col-xxl-3',
+                      'value' => '$5,743', 
+                      'leads_count' => '7', 
+                      'leads' => [['avatar' => 'avatar3.jpg', 'company' => 'Fennel Inc', 'person' => 'John Mayers', 'tags' => ['Damage', 'Control'], 'notes' => 14],
+                                 ['avatar' => 'avatar1.jpg', 'company' => 'Zillow Farm', 'person' => 'John Mayers', 'tags' => ['Sold Pass'], 'notes' => 4]],
+                      'color' => 'white lined-danger'],
+                    ['name' => 'Approved Lead', 
+                      'class' => 'col-lg-4 col-xxl-3',
+                      'value' => '$12,574', 
+                      'leads_count' => '3', 
+                      'leads' => [['avatar' => 'avatar2.jpg', 'company' => 'Corpus Comp', 'person' => 'John Mayers', 'tags' => ['Master Sonic'], 'notes' => 1],
+                                 ['avatar' => 'avatar4.jpg', 'company' => 'Boiling Roast', 'person' => 'John Mayers', 'tags' => ['Clip', 'Movie'], 'notes' => 5],
+                                 ['avatar' => 'avatar5.jpg', 'company' => 'Ketchup Farm', 'person' => 'John Mayers', 'tags' => ['Coins', 'Keys'], 'notes' => 3],
+                                 ['avatar' => 'avatar3.jpg', 'company' => 'Milk Parade', 'person' => 'John Mayers', 'tags' => ['Zero Fun'], 'notes' => 2],
+                                 ['avatar' => 'avatar1.jpg', 'company' => 'Better Pharmacy', 'person' => 'John Mayers', 'tags' => ['Habits', 'Controls'], 'notes' => 5]],
+                      'color' => 'white lined-success'],
+                    ['name' => 'Contracts', 
+                      'class' => 'col-lg-4 col-xxl-3 d-none d-xxl-block',
+                      'value' => '$2,447', 
+                      'leads_count' => '6', 
+                      'leads' => [['avatar' => 'avatar5.jpg', 'company' => 'Borgia Lime', 'person' => 'John Mayers', 'tags' => ['Production', 'Sales'], 'notes' => 15],
+                                 ['avatar' => 'avatar2.jpg', 'company' => 'Key Stone', 'person' => 'John Mayers', 'tags' => ['Gold', 'Paste'], 'notes' => 7],
+                                 ['avatar' => 'avatar3.jpg', 'company' => 'Faradey Corp', 'person' => 'John Mayers', 'tags' => ['Meat Supply'], 'notes' => 4]],
+                      'color' => 'white lined-warning']]
+    - pipelines.each do |pipeline|
+      div class="#{pipeline[0]['class']}"
+        /!
+          ------------------
+          START - Pipeline
+          ------------------
+        .pipeline class="#{pipeline[0]['color']}"
+          .pipeline-header
+            h5.pipeline-name= pipeline[0]['name']
+            .pipeline-header-numbers
+              .pipeline-value= pipeline[0]['value']
+              .pipeline-count #{pipeline[0]['leads_count']} leads
+            .pipeline-settings.os-dropdown-trigger
+              i.os-icon.os-icon-hamburger-menu-1
+              .os-dropdown
+                .icon-w
+                  i.os-icon.os-icon-ui-46
+                ul
+                  li
+                    a href="#" 
+                      i.os-icon.os-icon-ui-49
+                      span Edit Record
+                  li
+                    a href="#" 
+                      i.os-icon.os-icon-grid-10
+                      span Duplicate Item
+                  li
+                    a href="#" 
+                      i.os-icon.os-icon-ui-15
+                      span Remove Item
+                  li
+                    a href="#" 
+                      i.os-icon.os-icon-ui-44
+                      span Archive Project
+          .pipeline-body
+            - pipeline[0]['leads'].each do |lead|
+              .pipeline-item
+                .pi-controls
+                  .pi-settings.os-dropdown-trigger
+                    i.os-icon.os-icon-ui-46
+                    .os-dropdown
+                      .icon-w
+                        i.os-icon.os-icon-ui-46
+                      ul
+                        li
+                          a href="#" 
+                            i.os-icon.os-icon-ui-49
+                            span Edit Record
+                        li
+                          a href="#" 
+                            i.os-icon.os-icon-grid-10
+                            span Duplicate Item
+                        li
+                          a href="#" 
+                            i.os-icon.os-icon-ui-15
+                            span Remove Item
+                        li
+                          a href="#" 
+                            i.os-icon.os-icon-ui-44
+                            span Archive Project
+                  .status.status-green data-toggle="tooltip" data-placement="top" title="Active Status"
+                .pi-body
+                  .avatar
+                    img src="img/#{lead[0]['avatar']}" alt=""/
+                  .pi-info
+                    .h6.pi-name= lead[0]['company']
+                    .pi-sub= lead[0]['person']
+                .pi-foot
+                  .tags
+                    - lead[0]['tags'].each do |tag|
+                      a.tag href="#"= tag
+                  a.extra-info href="#"
+                    i.os-icon.os-icon-mail-12
+                    span #{lead[0]['notes']} Notes
+        /!
+          ------------------
+          END - Pipeline
+          ------------------

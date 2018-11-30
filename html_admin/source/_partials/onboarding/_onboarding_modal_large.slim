@@ -1,0 +1,16 @@
+.onboarding-modal.modal.fade.animated.show-on-load aria-hidden="true" role="dialog" tabindex="-1" 
+  .modal-dialog.modal-lg.modal-centered role="document" 
+    .modal-content.text-center
+      button.close aria-label="Close" data-dismiss="modal" type="button" 
+        span.close-label Skip Intro
+        span.os-icon.os-icon-close
+      .onboarding-slider-w
+        .onboarding-slide
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_form.slim
+        .onboarding-slide
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_features_list.slim
+        .onboarding-slide
+          .onboarding-side-by-side
+            include ../_partials/onboarding/slides/_text_only.slim

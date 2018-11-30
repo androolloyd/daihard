@@ -1,0 +1,58 @@
+/!
+  ------------------
+  START - Basic Table
+  ------------------
+- extra_table_class = defined?(extra_table_class) ? extra_table_class : ''
+table[class="table #{extra_table_class}"]
+  thead
+    tr
+      th Customer Name
+      th Orders
+      th Location
+      th.text-center Status
+      th.text-right Order Total
+  tbody
+    tr
+      td John Mayers
+      td 12
+      td
+        img src="img/flags-icons/us.png" alt="" width="25px"
+      td.text-center 
+        .status-pill.green data-toggle="tooltip" data-title="Complete"
+      td.text-right $354
+    tr
+      td Kelly Brans
+      td 45
+      td
+        img src="img/flags-icons/ca.png" alt="" width="25px"
+      td.text-center 
+        .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+      td.text-right $94
+    tr
+      td Tim Howard
+      td 112
+      td
+        img src="img/flags-icons/uk.png" alt="" width="25px"
+      td.text-center 
+        .status-pill.green data-toggle="tooltip" data-title="Complete"
+      td.text-right $156
+    tr
+      td Joe Trulli
+      td 1,256
+      td
+        img src="img/flags-icons/es.png" alt="" width="25px"
+      td.text-center 
+        .status-pill.yellow data-toggle="tooltip" data-title="Pending"
+      td.text-right $1,120
+    tr
+      td Fred Kolton
+      td 74
+      td
+        img src="img/flags-icons/fr.png" alt="" width="25px"
+      td.text-center 
+        .status-pill.green data-toggle="tooltip" data-title="Complete"
+      td.text-right $74
+/!
+  ------------------
+  END - Basic Table
+  ------------------

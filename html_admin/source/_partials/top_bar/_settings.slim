@@ -1,0 +1,31 @@
+/!
+  ------------------
+  START - Settings Link in secondary top menu
+  ------------------
+- position_class = (defined?(is_top_bar) && is_top_bar) ? 'os-dropdown-position-left' : 'os-dropdown-position-right'
+div[class="top-icon top-settings os-dropdown-trigger #{position_class}"]
+  i.os-icon.os-icon-ui-46
+  .os-dropdown
+    .icon-w
+      i.os-icon.os-icon-ui-46
+    ul
+      li
+        a href="users_profile_small.html" 
+          i.os-icon.os-icon-ui-49
+          span Profile Settings
+      li
+        a href="users_profile_small.html" 
+          i.os-icon.os-icon-grid-10
+          span Billing Info
+      li
+        a href="users_profile_small.html" 
+          i.os-icon.os-icon-ui-44
+          span My Invoices
+      li
+        a href="users_profile_small.html" 
+          i.os-icon.os-icon-ui-15
+          span Cancel Account
+/!
+  ------------------
+  END - Settings Link in secondary top menu
+  ------------------

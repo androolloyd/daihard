@@ -1,0 +1,22 @@
+head
+  title Admin Dashboard HTML Template Frontend
+  meta charset="utf-8"
+  meta http-equiv="x-ua-compatible" content="ie=edge"
+  meta name="keywords" content="template language"
+  meta name="author" content="Tamerlan Soziev"
+  meta name="description" content="Admin dashboard html template"
+  meta name="viewport" content="width=device-width, initial-scale=1"
+
+  link rel="shortcut icon" href="favicon.png"
+  link rel="apple-touch-icon" href="apple-touch-icon.png"
+  
+  link type="text/css" rel="stylesheet" href="#{fonts_url}"
+
+  link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css"
+  link rel="stylesheet" href="bower_components/ion.rangeSlider/css/ion.rangeSlider.css"
+  link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css"
+
+  link rel="stylesheet" href="css/main.css?version=#{template_version}"
+  - if defined? extra_css_files
+    - extra_css_files.each do |css_file|
+      link rel="stylesheet" href="#{css_file}"

@@ -1,0 +1,230 @@
+
+              /! START - To Do Application
+              .todo-app-w
+                /! START - To Do SIDEBAR
+                .todo-sidebar
+                  .todo-sidebar-section
+                    h4.todo-sidebar-section-header 
+                      | My Projects
+                      a.todo-sidebar-section-toggle href="#"
+                        i.os-icon.os-icon-ui-23
+                    .todo-sidebar-section-contents
+                      ul.projects-list
+                        li 
+                          a href="#" House Renovation
+                        li 
+                          a href="#" App Development
+                        li 
+                          a href="#" Movies to Watch
+                        li.add-new-project
+                          a href="#" Add New Project
+                  .todo-sidebar-section
+                    h4.todo-sidebar-section-header 
+                      span Starred Tasks
+                      i.os-icon.os-icon-ui-02.starred
+                      a.todo-sidebar-section-toggle href="#"
+                        i.os-icon.os-icon-ui-23
+                    .todo-sidebar-section-contents
+                      .todo-sidebar-section-sub-section
+                        .todo-sidebar-section-sub-section-toggler
+                          i.os-icon.os-icon-ui-23
+                        .todo-sidebar-section-sub-header
+                          i.os-icon.os-icon-documents-11
+                          h6 Projects
+                        .todo-sidebar-section-sub-section-content
+                          ul.items-list
+                            li
+                              a href="#" App Development
+                            li
+                              a href="#" Movies to Watch
+                            li
+                              a href="#" Tasty Food Recipes
+                      .todo-sidebar-section-sub-section
+                        .todo-sidebar-section-sub-section-toggler
+                          i.os-icon.os-icon-ui-23
+                        .todo-sidebar-section-sub-header
+                          i.os-icon.os-icon-ui-34
+                          h6 Notes
+                        .todo-sidebar-section-sub-section-content
+                          ul.items-list
+                            li
+                              a href="#" Server Credentials
+                            li
+                              a href="#" Social Connections
+                            li
+                              a href="#" Travel Tips
+                            li
+                              a href="#" John's Story
+                      .todo-sidebar-section-sub-section
+                        .todo-sidebar-section-sub-section-toggler
+                          i.os-icon.os-icon-ui-23
+                        .todo-sidebar-section-sub-header
+                          i.os-icon.os-icon-ui-21
+                          h6 Tasks
+                        .todo-sidebar-section-sub-section-content
+                          ul.items-list
+                            li
+                              a href="#" Rent uhaul truck and order cardboard boxes and other moving supplies
+                            li
+                              a href="#" Order new set of tires from tirerack and schedule appointment
+                            li
+                              a href="#" Visit Home Depot to find out what is needed to rebuild backyard patio
+
+                  .todo-sidebar-section
+                    h4.todo-sidebar-section-header 
+                      span Due Soon
+                      i.os-icon.os-icon-fire.fire
+                      a.todo-sidebar-section-toggle href="#"
+                        i.os-icon.os-icon-ui-23
+                    .todo-sidebar-section-contents
+                      ul.tasks-list
+                        li.danger
+                          a href="#"
+                            strong Order new drills from…
+                            span Due in two days
+                        li.warning
+                          a href="#"
+                            strong Rent uhaul truck and or…
+                            span Due in two days
+                        li.warning
+                          a href="#" 
+                            strong Order new set of tires…
+                            span Due in two days
+                
+                /! END - To Do SIDEBAR
+                .todo-content
+                  h4.todo-content-header 
+                    i.os-icon.os-icon-ui-83
+                    span Next 7 Days
+                  .all-tasks-w
+                    .tasks-section
+                      /! START - TASKS HEADER
+                      .tasks-header-w
+                        a.tasks-header-toggler href="#"
+                          i.os-icon.os-icon-ui-23
+                        h5.tasks-header Today
+                        span.tasks-sub-header Mon, Sep 23th
+                        a.add-task-btn href="#" data-target="#taskModal" data-toggle="modal"
+                          i.os-icon.os-icon-ui-22
+                          span Add Task
+                      /! END - TASKS HEADER
+                      .tasks-list-w
+                        .tasks-list-header High Priority
+                        /! START - Tasks List
+                        ul.tasks-list
+                          li.draggable-task.danger
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Visit Home Depot to find out what is needed to rebuild backyard patio
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.warning
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Order new drills from amazon sale box
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Rent uhaul truck and order cardboard boxes and other moving supplies
+                              include ../apps/_todo_task_buttons.slim
+                        /! END - Tasks List
+                        .tasks-list-header Low Priority
+                        /! START - Tasks List
+                        ul.tasks-list
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Make sure car oil level is checked
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Order new set of tires from tirerack and schedule appointment
+                              include ../apps/_todo_task_buttons.slim
+
+                    /! END - Tasks List
+                    .tasks-section
+                      .tasks-header-w
+                        a.tasks-header-toggler href="#"
+                          i.os-icon.os-icon-ui-23
+                        h5.tasks-header Tomorrow
+                        span.tasks-sub-header Tue, Sep 24th
+                        a.add-task-btn href="#" data-target="#taskModal" data-toggle="modal"
+                          i.os-icon.os-icon-ui-22
+                          span Add Task
+                      /! START - Tasks List
+                      .tasks-list-w
+                        ul.tasks-list
+                          li.draggable-task.danger
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Visit Home Depot to find out what is needed to rebuild backyard patio
+                              include ../apps/_todo_task_buttons.slim
+                            .todo-task-media
+                              img src="img/portfolio9.jpg"
+                              img src="img/portfolio2.jpg"
+                              img src="img/portfolio12.jpg"
+                          li.draggable-task.warning
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Order new drills from amazon sale box
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Make sure car oil level is checked
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.success.favorite
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Order new set of tires from tirerack and schedule appointment
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Rent uhaul truck and order cardboard boxes and other moving supplies
+                              include ../apps/_todo_task_buttons.slim
+                        /! END - Tasks List
+                    .tasks-section
+                      .tasks-header-w
+                        a.tasks-header-toggler href="#"
+                          i.os-icon.os-icon-ui-23
+                        h5.tasks-header Wednesday
+                        span.tasks-sub-header Wed, Sep 25th
+                        a.add-task-btn href="#" data-target="#taskModal" data-toggle="modal"
+                          i.os-icon.os-icon-ui-22
+                          span Add Task
+                      .tasks-list-w
+                        ul.tasks-list
+                          li.draggable-task.danger
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Make sure car oil level is checked
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.success
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Order new set of tires from tirerack and schedule appointment
+                              include ../apps/_todo_task_buttons.slim
+                          li.draggable-task.complete
+                            .todo-task-drag.drag-handle
+                              i.os-icon.os-icon-hamburger-menu-2.drag-handle
+                            .todo-task 
+                              span contenteditable="true" Rent uhaul truck and order cardboard boxes and other moving supplies
+                              include ../apps/_todo_task_buttons.slim
+
+                  /! Modal - Edit Task
+                  include ../apps/_todo_task_form_modal.slim
+              /! END - To Do Application

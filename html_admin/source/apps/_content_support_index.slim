@@ -1,0 +1,192 @@
+.support-index
+	.support-tickets
+		.support-tickets-header
+			.tickets-control
+				h5 Tickets
+				.element-search
+					input placeholder="Type to filter tickets..." type="text"
+			.tickets-filter
+				.form-group.mr-3
+					label.d-none.d-md-inline-block.mr-2 Status
+					select.form-control-sm
+						option Closed
+						option Open
+						option Pending
+				.form-group.mr-1
+					label.d-none.d-md-inline-block.mr-2 Agent
+					select.form-control-sm
+						option John Mayers
+						option Phil Collins
+						option Ray Donovan
+				.form-check.stick-right
+					label.form-check-label
+						span Private
+						input type="checkbox" /
+		- tickets = [['last_update' => 'Today 10:00am', 'active' => '', 'status_label' => 'Active', 'title' => 'School Orders', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'green', 'time' => '1:52am', 'date' => 'Today', 'avatar' => 'img/avatar1.jpg', 'name' => 'John Mayers', 'category' => [['name' => 'Shopping', 'color' => 'success']], 'amount_status' => 'text-success'],
+	  ['last_update' => 'Jan 24th 8:14am', 'active' => '', 'status_label' => 'Closed', 'title' => 'Bug on package opening', 'comment' => 'Please approve this request so we can move...', 'status' => 'red', 'time' => '3:22pm', 'date' => 'Jan 19th', 'avatar' => 'img/avatar2.jpg', 'name' => 'Mike Bishop', 'category' => [['name' => 'Cafe', 'color' => 'danger']], 'amount_status' => 'text-success'],
+	  ['last_update' => 'Jan 12th 7:32am', 'active' => 'active', 'status_label' => 'Pending', 'title' => 'Settings page is not working', 'comment' => 'We will need some login credentials to make...', 'status' => 'yellow', 'time' => '7:45am', 'date' => 'Yesterday', 'avatar' => 'img/avatar3.jpg', 'name' => 'Terry Crews', 'category' => [['name' => 'Restaurants', 'color' => 'warning']], 'amount_status' => 'text-danger'],
+	  ['last_update' => 'Yesterday 9:42am', 'active' => '', 'status_label' => 'Pending', 'title' => 'Portfolio layout broken, help!', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'yellow', 'time' => '2:12pm', 'date' => 'Jan 23rd', 'avatar' => 'img/avatar1.jpg', 'name' => 'Phil Collins', 'category' => [['name' => 'Shopping', 'color' => 'primary']], 'amount_status' => 'text-success'],
+	  ['last_update' => 'Feb 17th 11:42am', 'active' => '', 'status_label' => 'Active', 'title' => 'Change payment information', 'comment' => 'I have tried this solution but it does not open...', 'status' => 'green', 'time' => '9:51am', 'date' => 'Jan 12th', 'avatar' => 'img/avatar4.jpg', 'name' => 'Katy Pilsner', 'category' => [['name' => 'Groceries', 'color' => 'danger']], 'amount_status' => 'text-danger'],
+	  ['last_update' => 'Mar 10th 3:12pm', 'active' => '', 'status_label' => 'Pending', 'title' => 'School Orders', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'yellow', 'time' => '12:45pm', 'date' => 'Jan 9th', 'avatar' => 'img/avatar2.jpg', 'name' => 'Wes Morgan', 'category' => [['name' => 'Business', 'color' => 'primary']], 'amount_status' => 'text-success']]
+		- tickets.each do |ticket|
+			div class="support-ticket #{ticket[0]['active']}"
+				.st-meta
+					div class="badge badge-#{ticket[0]['category'][0][0]['color']}-inverted"= ticket[0]['category'][0][0]['name']
+					i.os-icon.os-icon-ui-09
+					div class="status-pill #{ticket[0]['status']}"
+				.st-body
+					.avatar
+						img src="#{ticket[0]['avatar']}" alt=""
+					.ticket-content
+						h6.ticket-title= ticket[0]['title']
+						.ticket-description I have enabled the software for you, you can try now...
+				.st-foot
+					span.label Agent:
+					a.value.with-avatar href="#"
+						img src="img/avatar1.jpg" alt=""
+						span John Mayers
+					span.label Updated:
+					span.value= ticket[0]['last_update']
+		.load-more-tickets
+			a href="#"
+				span Load More Tickets...
+	.support-ticket-content-w
+		.support-ticket-content
+			.support-ticket-content-header
+				h3.ticket-header School Orders
+
+				a.back-to-index href="#"
+					i.os-icon.os-icon-arrow-left5
+					span Back
+				a.show-ticket-info href="#"
+					span Show Details
+					i.os-icon.os-icon-documents-03
+			.ticket-thread
+				.ticket-reply
+					.ticket-reply-info
+						a.author.with-avatar href="#"
+							img src="img/avatar1.jpg" alt=""
+							span John Mayers
+						span.info-data
+							span.label replied on
+							span.value May 27th, 2017 at 7:42am
+						.actions href="#"
+							i.os-icon.os-icon-ui-46
+							.actions-list
+								a href="#"
+									i.os-icon.os-icon-ui-49
+									span Edit
+								a href="#"
+									i.os-icon.os-icon-ui-09
+									span Mark Private
+								a href="#"
+									i.os-icon.os-icon-ui-03
+									span Favorite
+								a.danger href="#"
+									i.os-icon.os-icon-ui-15
+									span Delete
+					.ticket-reply-content
+						p Hi. For the featured recipe banner feature, I'm able to enable it to show selected recipe and post on the feature recipe banner.
+						p Is there any way the enable the feature banner to show recent recipe and post instead?
+						p Thank you. 
+					.ticket-attachments
+						a.attachment href="#"
+							i.os-icon.os-icon-ui-51
+							span Bug Report.xml
+						a.attachment href="#"
+							i.os-icon.os-icon-documents-07
+							span Sytem Information.txt
+				.ticket-reply.highlight
+					.ticket-reply-info
+						a.author.with-avatar href="#"
+							img src="img/avatar3.jpg" alt=""
+							span Phil Collins
+						span.info-data
+							span.label replied on
+							span.value May 12th, 2017 at 11:23am
+						span.badge.badge-success support agent
+						.actions href="#"
+							i.os-icon.os-icon-ui-46
+							.actions-list
+								a href="#"
+									i.os-icon.os-icon-ui-49
+									span Edit
+								a href="#"
+									i.os-icon.os-icon-ui-09
+									span Mark Private
+								a href="#"
+									i.os-icon.os-icon-ui-03
+									span Favorite
+								a.danger href="#"
+									i.os-icon.os-icon-ui-15
+									span Delete
+					.ticket-reply-content
+						p Hi. For the featured recipe banner feature, I'm able to enable it to show selected recipe and post on the feature recipe banner.
+						p Is there any way the enable the feature banner to show recent recipe and post instead?
+						p Thank you. 
+				.ticket-reply
+					.ticket-reply-info
+						a.author.with-avatar href="#"
+							img src="img/avatar1.jpg" alt=""
+							span John Mayers
+						span.info-data
+							span.label replied on
+							span.value April 9th, 2017 at 7:41am
+						.actions href="#"
+							i.os-icon.os-icon-ui-46
+							.actions-list
+								a href="#"
+									i.os-icon.os-icon-ui-49
+									span Edit
+								a href="#"
+									i.os-icon.os-icon-ui-09
+									span Mark Private
+								a href="#"
+									i.os-icon.os-icon-ui-03
+									span Favorite
+								a.danger href="#"
+									i.os-icon.os-icon-ui-15
+									span Delete
+					.ticket-reply-content
+						p Hi. For the featured recipe banner feature, I'm able to enable it to show selected recipe and post on the feature recipe banner.
+						p Is there any way the enable the feature banner to show recent recipe and post instead?
+						p Thank you. 
+		.support-ticket-info
+			a.close-ticket-info href="#"
+				i.os-icon.os-icon-ui-23
+			.customer
+				.avatar
+					img src="img/avatar1.jpg" alt=""
+				h4.customer-name John Mayers
+				.customer-tickets 12 Tickets
+			h5.info-header Ticket Details
+			.info-section.text-center
+				.label Created:
+				.value Jan 24th, 8:15am
+				.label Category
+				.value
+					.badge.badge-primary Photobook
+			h5.info-header Agents Assigned
+			.info-section
+				ul.users-list.as-tiles
+					li
+						a.author.with-avatar href="#"
+							.avatar style="background-image: url('img/avatar1.jpg')"
+							span John Mayers
+					li
+						a.author.with-avatar href="#"
+							.avatar style="background-image: url('img/avatar3.jpg')"
+							span Phil Collins
+					li
+						a.author.with-avatar href="#"
+							.avatar style="background-image: url('img/avatar4.jpg')"
+							span Carl Lewis
+					li
+						a.author.with-avatar href="#"
+							.avatar style="background-image: url('img/avatar5.jpg')"
+							span Joshua Kim
+					li
+						a.add-agent-btn href="#"
+							i.os-icon.os-icon-ui-22
+							span Add Agent
+					

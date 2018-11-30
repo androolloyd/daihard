@@ -1,0 +1,43 @@
+.menu-mobile.menu-activated-on-click.color-scheme-dark
+  .mm-logo-buttons-w
+    a.mm-logo href="index.html" 
+      img src="img/logo.png"
+      span Clean Admin
+    .mm-buttons
+      .content-panel-open
+        .os-icon.os-icon-grid-circles
+      .mobile-menu-trigger
+        .os-icon.os-icon-hamburger-menu-1
+  .menu-and-user
+    .logged-user-w
+      .avatar-w
+        img src="img/avatar1.jpg" alt=""/
+      .logged-user-info-w
+        .logged-user-name Maria Gomez
+        .logged-user-role Administrator
+    /!
+      ------------------
+      START - Mobile Menu List
+      ------------------
+    ul.main-menu
+      - menu_arr.each do |elem|
+        li[class="#{(elem['items'].count > 0) ? 'has-sub-menu' : ''}"]
+          a href="#{elem['href']}"
+            .icon-w
+              div[class="#{elem['icon']}"]
+            span #{elem['label']}
+          - if (elem['items'].count > 0)
+            ul.sub-menu
+              - elem['items'].each do |sub_elem|
+                li
+                  a href="#{sub_elem['href']}" 
+                    == sub_elem['label']
+    /!
+      ------------------
+      END - Mobile Menu List
+      ------------------
+    .mobile-menu-magic
+      h4 Light Admin
+      p Clean Bootstrap 4 Template
+      .btn-w
+        a.btn.btn-white.btn-rounded href="#{purchase_url}" target="_blank" Purchase Now

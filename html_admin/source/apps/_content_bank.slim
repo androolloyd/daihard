@@ -1,0 +1,135 @@
+.element-wrapper.compact.pt-4
+  .element-actions
+    a.btn.btn-primary.btn-sm href="#"
+      i.os-icon.os-icon-ui-22
+      span Add Account
+    a.btn.btn-success.btn-sm href="#"
+      i.os-icon.os-icon-grid-10
+      span Make Payment
+  h6.element-header Financial Overview
+  .element-box-tp
+    .row
+      .col-lg-7.col-xxl-6
+        /! START - BALANCES
+        .element-balances
+          .balance.hidden-mobile
+            .balance-title Total Balance
+            .balance-value 
+              span $350
+              span.trending.trending-down-basic
+                span %12
+                i.os-icon.os-icon-arrow-2-down
+            .balance-link
+              a.btn.btn-link.btn-underlined href="#"
+                span View Statement
+                i.os-icon.os-icon-arrow-right4
+          .balance
+            .balance-title Credit Available
+            .balance-value $17,800
+            .balance-link
+              a.btn.btn-link.btn-underlined href="#"
+                span Request Increase
+                i.os-icon.os-icon-arrow-right4
+          .balance
+            .balance-title Due Today
+            .balance-value.danger $180
+            .balance-link
+              a.btn.btn-link.btn-underlined.btn-gold href="#"
+                span Pay Now
+                i.os-icon.os-icon-arrow-right4
+        /! END - BALANCES
+      .col-lg-5.col-xxl-6
+        /! START - MESSAGE ALERT
+        .alert.alert-warning.borderless
+          h5.alert-heading Refer Friends. Get Rewarded
+          p You can earn: 15,000 Membership Rewards points for each approved referral – up to 55,000 Membership Rewards points per calendar year.
+          .alert-btn
+            a.btn.btn-white-gold href="#"
+              i.os-icon.os-icon-ui-92
+              span Send Referral
+        /! END - MESSAGE ALERT
+.row
+  .col-lg-7.col-xxl-6
+    /! START - CHART
+    .element-wrapper
+      .element-box
+        .element-actions
+          .form-group
+            select.form-control.form-control-sm
+              option selected="true" Last 30 days
+              option This Week
+              option This Month
+              option Today
+        h5.element-box-header Balance History
+        .el-chart-w
+          canvas#liteLineChartV2 width="300" height="90" data-chart-data="13,28,19,24,43,49,40,35,42,46"
+    /! END - CHART
+  .col-lg-5.col-xxl-6
+    /! START - Money Withdraw Form
+    .element-wrapper
+      .element-box
+        form
+          h5.element-box-header Withdraw Money
+          .row
+            .col-sm-5
+              .form-group
+                label.lighter for="" Select Amount
+                .input-group.mb-2.mr-sm-2.mb-sm-0
+                  input.form-control placeholder="Enter Amount..." type="text" value="0" /
+                  .input-group-append
+                    .input-group-text USD
+            .col-sm-7
+              .form-group
+                label.lighter for="" Transfer to
+                select.form-control
+                  option value="" Citibank *6382
+                  option value="" Chase *8372
+                  option value="" Bank of America *7363
+          .form-buttons-w.text-right.compact
+            a.btn.btn-grey href="#"
+              i.os-icon.os-icon-ui-22
+              span Add Account
+            a.btn.btn-primary href="#"
+              span Transfer
+              i.os-icon.os-icon-grid-18
+    /! END - Money Withdraw Form
+
+- transactions = [['status_label' => 'Complete', 'status' => 'green', 'time' => '1:52am', 'date' => 'Today', 'img' => 'img/company1.png', 'desc' => 'Banana Shakes LLC', 'category' => [['name' => 'Shopping', 'color' => 'success']], 'amount' => '+ 1,250 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Declined', 'status' => 'red', 'time' => '3:22pm', 'date' => 'Jan 19th', 'img' => 'img/company2.png', 'desc' => 'Stripe Payment Processing', 'category' => [['name' => 'Cafe', 'color' => 'danger']], 'amount' => '+ 952.23 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '7:45am', 'date' => 'Yesterday', 'img' => 'img/company3.png', 'desc' => 'MailChimp Services', 'category' => [['name' => 'Restaurants', 'color' => 'warning']], 'amount' => '- 320 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '2:12pm', 'date' => 'Jan 23rd', 'img' => 'img/company1.png', 'desc' => 'Starbucks Cafe', 'category' => [['name' => 'Shopping', 'color' => 'primary']], 'amount' => '+ 17.99 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Complete', 'status' => 'green', 'time' => '9:51am', 'date' => 'Jan 12th', 'img' => 'img/company4.png', 'desc' => 'Ebay Marketplace', 'category' => [['name' => 'Groceries', 'color' => 'danger']], 'amount' => '- 244 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '12:45pm', 'date' => 'Jan 9th', 'img' => 'img/company2.png', 'desc' => 'Envato Templates Inc', 'category' => [['name' => 'Business', 'color' => 'primary']], 'amount' => '+ 340 USD', 'amount_status' => 'text-success']]
+/! START - Transactions Table
+.element-wrapper
+  h6.element-header Recent Transactions
+  .element-box-tp
+    .table-responsive
+      table.table.table-padded
+        thead
+          tr
+            th Status
+            th Date
+            th Description
+            th.text-center Category
+            th.text-right Amount
+        tbody
+          - transactions.each do |t|
+            tr
+              td.nowrap
+                span[class="status-pill smaller #{t[0]['status']}"]
+                span= t[0]['status_label']
+              td
+                span= t[0]['date'] 
+                span.smaller.lighter= t[0]['time']
+              td.cell-with-media
+                img src="#{t[0]['img']}" alt="" style="height: 25px;"/
+                span= t[0]['desc']
+              td.text-center
+                - t[0]['category'].each do |c|
+                    a href="" class="badge badge-#{c[0]['color']}"
+                      = c[0]['name']
+              td.text-right.bolder.nowrap
+                span class="#{t[0]['amount_status']}"
+                  = t[0]['amount']
+/! END - Transactions Table

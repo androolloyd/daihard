@@ -1,0 +1,96 @@
+.element-wrapper
+  h6.element-header Examples of grid system
+  .element-box              
+    h5.form-header Grid Example
+    .form-desc 
+      | Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+    .element-box-content
+      .container-fluid
+        .row
+          - 12.times
+            .example-column.col-1 
+              code .col-1
+        .row
+          - 6.times
+            .example-column.col-2 
+              code .col-2
+        .row
+          - 4.times
+            .example-column.col-3 
+              code .col-3
+        .row
+          - 3.times
+            .example-column.col-4 
+              code .col-4
+        .row
+            .example-column.col-5 
+              code .col-5
+            .example-column.col-7 
+              code .col-7
+        .row
+          - 2.times
+            .example-column.col-6 
+              code .col-6
+        .row
+          .example-column.col-12
+            code .col-12
+  .element-box
+    h5.form-header Grid system
+    .form-desc 
+      | Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. It’s based on a 12 column layout and has multiple tiers, one for each <a href="https://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints">media query range</a>. You can use it with Sass mixins or our predefined classes. You can read more about bootstrap grid by <a href="https://v4-alpha.getbootstrap.com/layout/grid/">clicking here</a>.
+    .element-box-content
+      table.table-v2.table.table-bordered.table-striped.table-responsive
+        thead
+          tr
+            th
+            th.text-center
+              | Extra small
+              br/
+              small &lt;576px
+            th.text-center
+              | Small
+              br/
+              small ≥576px
+            th.text-center
+              | Medium
+              br/
+              small ≥768px
+            th.text-center
+              | Large
+              br/
+              small ≥992px
+            th.text-center
+              | Extra large
+              br/
+              small ≥1200px
+            th.text-center
+              | Double Extra large
+              br/
+              small ≥1450px
+        tbody
+          tr
+            th.text-nowrap scope="row"  Grid behavior
+            td Horizontal at all times
+            td colspan="5"  Collapsed to start, horizontal above breakpoints
+          tr
+            th.text-nowrap scope="row"  Max container width
+            td None (auto)
+            td 540px
+            td 720px
+            td 960px
+            td 1140px
+            td 1440px
+          tr
+            th.text-nowrap scope="row"  Class prefix
+            td
+              code .col-
+            td
+              code .col-sm-
+            td
+              code .col-md-
+            td
+              code .col-lg-
+            td
+              code .col-xl-
+            td
+              code .col-xxl-

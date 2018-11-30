@@ -1,0 +1,73 @@
+- menu_class = "menu-w"
+- menu_class+= defined?(menu_settings['color_scheme']) ? " color-scheme-#{menu_settings['color_scheme']}" : 'color-scheme-light'
+- menu_class+= defined?(menu_settings['color_style']) ? " color-style-#{menu_settings['color_style']}" : ''
+- menu_class+= defined?(menu_settings['position']) ? " menu-position-#{menu_settings['position']}" : 'menu-position-side'
+- menu_class+= (defined?(menu_settings['side']) && (menu_settings['position'] == 'side')) ? " menu-side-#{menu_settings['side']}" : ''
+- menu_class+= defined?(menu_settings['layout']) ? " menu-layout-#{menu_settings['layout']}" : 'menu-layout-full'
+- menu_class+= defined?(menu_settings['sub_menu_style']) ? " sub-menu-style-#{menu_settings['sub_menu_style']}" : 'sub-menu-style-inside'
+- menu_class+= defined?(menu_settings['sub_menu_color']) ? " sub-menu-color-#{menu_settings['sub_menu_color']}" : 'sub-menu-color-light'
+- menu_class+= defined?(menu_settings['selected_menu_color']) ? " selected-menu-color-#{menu_settings['selected_menu_color']}" : 'selected-menu-color-light'
+- menu_class+= defined?(menu_settings['activated_on']) ? " menu-activated-on-#{menu_settings['activated_on']}" : 'menu-activated-on-hover'
+- menu_class+= menu_settings['with_image'] ? " menu-with-image" : ''
+- menu_class+= menu_has_selected_link ? ' menu-has-selected-link' : ''
+
+
+div[class="#{menu_class}"]
+  - if menu_settings['show_logo_in_menu']
+    .logo-w
+      a.logo href="index.html"
+        .logo-element
+        .logo-label Clean Admin
+  - if menu_settings['show_user_in_menu']
+    .logged-user-w.avatar-inline
+      .logged-user-i
+        .avatar-w
+          img src="img/avatar1.jpg" alt=""/
+        .logged-user-info-w
+          .logged-user-name Maria Gomez
+          .logged-user-role Administrator
+        .logged-user-toggler-arrow
+          .os-icon.os-icon-chevron-down
+        include ../_partials/_user_hover_menu.slim
+  - if menu_settings['show_settings_in_menu'] || menu_settings['show_messages_in_menu']       
+    .menu-actions
+      - if menu_settings['show_messages_in_menu']
+        include ../_partials/top_bar/_messages.slim
+      - if menu_settings['show_settings_in_menu']
+        include ../_partials/top_bar/_settings.slim
+      - if menu_settings['show_notifications_in_menu']
+        include ../_partials/top_bar/_notifications.slim
+  - if menu_settings['show_search_in_menu']
+    include ../_partials/top_bar/_search.slim
+  h1.menu-page-header Page Header
+  ul.main-menu
+    - menu_arr.each do |menu_item|
+      - if (defined?(menu_item['group_header']) && menu_item['group_header'])
+        li.sub-header
+          span= menu_item['group_header']
+      - menu_item_class = (menu_item['href'] == selected_link) ? 'selected' : ''
+      - menu_item_class+= (menu_item['items'].count > 0) ? ' has-sub-menu' : ''
+      li[class="#{menu_item_class}"]
+        a href="#{menu_item['href']}"
+          .icon-w
+            div[class="#{menu_item['icon']}"]
+          span #{menu_item['label']}
+        - if (menu_item['items'].count > 0)
+          .sub-menu-w
+            .sub-menu-header == menu_item['label']
+            .sub-menu-icon
+              i[class="#{menu_item['icon']}"]
+            .sub-menu-i
+              ul.sub-menu
+                - per_column = (menu_item['items'].count > 10 || menu_item['items'].count == 6) ? 6 : 5
+                - menu_item['items'].each_with_index do |sub_menu_item, index|
+                  - if ((index % per_column) == 0) && (index != 0)
+                    </ul><ul class="sub-menu">
+                  li
+                    a href="#{sub_menu_item['href']}" 
+                      == sub_menu_item['label']
+  .side-menu-magic
+    h4 Light Admin
+    p Clean Bootstrap 4 Template
+    .btn-w
+      a.btn.btn-white.btn-rounded href="#{purchase_url}" target="_blank" Purchase Now

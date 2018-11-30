@@ -1,0 +1,228 @@
+- purchase_url = 'https://themeforest.net/item/light-admin-clean-bootstrap-dashboard-html-template/19760124?ref=Osetin'
+- demo_url = 'http://light.pinsupreme.com/'
+- fonts_url = 'https://fonts.googleapis.com/css?family=Rubik:300,400,500'
+- google_analytics_id = 'UA-XXXXXXX-9'
+- template_version = '4.4.0'
+
+- unless defined? all_solid_bg
+  - all_solid_bg = true
+  
+- unless defined? template_vars
+  - template_vars = []
+  
+- unless defined? show_top_bar
+  - show_top_bar = true
+  
+- unless defined? full_screen
+  - full_screen = true
+
+- unless defined? menu_has_selected_link
+  - menu_has_selected_link = true
+
+- unless defined? selected_link
+  - selected_link = 'index.html'
+
+- unless defined? show_demo_customizer
+  - show_demo_customizer = true
+
+/* 
+  Setting default menu parameters, available values:
+
+    position:         side|top
+    side:             left|right
+    color_scheme:     dark|light
+    color_style:      bright|default|transparent
+    layout:           full|compact|mini
+    sub_menu_style:   inside|flyout|over
+    sub_menu_color:   bright|dark|light
+    selected_menu_color:   bright|dark|light
+    activated_on:     click|hover
+    show_logo_in_menu:     true|false
+    show_user_in_menu:     true|false
+    show_settings_in_menu: true|false
+    show_messages_in_menu: true|false
+    show_notifications_in_menu: true|false
+    show_search_in_menu: true|false
+    user_menu_popup_color_style:  bright|default|transparent|bright-alt
+
+- menu_settings = {'position' => 'side',
+                  'side' => 'left',
+                  'color_scheme' => 'light',
+                  'color_style' => 'transparent',
+                  'layout' => 'compact',
+                  'sub_menu_style' => 'over',
+                  'sub_menu_color' => 'bright',
+                  'selected_menu_color' => 'light',
+                  'activated_on' => 'hover',
+                  'show_logo_in_menu' => true,
+                  'show_user_in_menu' => true,
+                  'show_settings_in_menu' => true,
+                  'show_messages_in_menu' => true,
+                  'show_notifications_in_menu' => true,
+                  'show_search_in_menu' => true,
+                  'with_image' => false,
+                  'user_menu_popup_color_style' => 'bright'}
+// If custom_menu_settings are defined - override default settings
+- if defined? custom_menu_settings 
+  - menu_settings = menu_settings.merge(custom_menu_settings)                  
+
+
+/*
+  Top Bar Default settings, available values:
+
+    color_scheme:           dark|bright|light
+    above_menu:             true|false
+    show_logo:              true|false
+    show_bank_selector:     true|false
+    show_crypto_selector:     true|false
+    show_support_selector:  true|false
+    show_menu:              true|false
+    show_user_info:         true|false
+    show_settings:          true|false
+    show_messages:          true|false
+    show_search:            true|false
+
+- top_bar_settings = {'color_scheme' => 'transparent',
+                      'above_menu' => false,
+                      'show_logo' => false,
+                      'show_bank_selector' => false,
+                      'show_crypto_selector' => false,
+                      'show_support_selector' => false,
+                      'show_menu' => false,
+                      'show_user_info' => true,
+                      'show_settings' => true,
+                      'show_messages' => true,
+                      'show_search' => true }
+
+// If custom_top_bar_settings are defined - override default settings
+- if defined? custom_top_bar_settings 
+  - top_bar_settings = top_bar_settings.merge(custom_top_bar_settings)  
+
+
+// MENU ITEMS ARRAY
+- menu_arr = [{ 'href' => 'index.html', 
+              'group_header' => 'Layouts',
+              'icon' => 'os-icon os-icon-layout', 
+              'label' => 'Dashboard', 
+              'items' => [{ 'href' => 'index.html', 'icon' => '', 'label' => 'Dashboard 1', 'items' => [] },
+                          { 'href' => 'apps_crypto.html', 'icon' => '', 'label' => 'Crypto Dashboard <strong class="badge badge-danger">Hot</strong>', 'items' => [] },
+                          { 'href' => 'apps_support_dashboard.html', 'icon' => '', 'label' => 'Dashboard 3', 'items' => [] },
+                          { 'href' => 'apps_projects.html', 'icon' => '', 'label' => 'Dashboard 4', 'items' => [] },
+                          { 'href' => 'apps_bank.html', 'icon' => '', 'label' => 'Dashboard 5', 'items' => [] },
+                          { 'href' => 'layouts_menu_top_image.html', 'icon' => '', 'label' => 'Dashboard 6', 'items' => [] }]},
+
+            { 'href' => 'layouts_menu_top_image.html' , 
+              'icon' => 'os-icon os-icon-layers', 
+              'label' => 'Menu Styles', 
+              'items' => [{ 'href' => 'layouts_menu_side_full.html', 'icon' => '', 'label' => 'Side Menu Light', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_full_dark.html', 'icon' => '', 'label' => 'Side Menu Dark', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_transparent.html', 'icon' => '', 'label' => 'Side Menu Transparent <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'apps_pipeline.html', 'icon' => '', 'label' => 'Side &amp; Top Dark', 'items' => [] },
+                          { 'href' => 'apps_projects.html', 'icon' => '', 'label' => 'Side &amp; Top', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_mini.html', 'icon' => '', 'label' => 'Mini Side Menu', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_mini_dark.html', 'icon' => '', 'label' => 'Mini Menu Dark', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_compact.html', 'icon' => '', 'label' => 'Compact Side Menu', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_compact_dark.html', 'icon' => '', 'label' => 'Compact Menu Dark', 'items' => [] },
+                          { 'href' => 'layouts_menu_right.html', 'icon' => '', 'label' => 'Right Menu', 'items' => [] },
+                          { 'href' => 'layouts_menu_top.html', 'icon' => '', 'label' => 'Top Menu Light', 'items' => [] },
+                          { 'href' => 'layouts_menu_top_dark.html', 'icon' => '', 'label' => 'Top Menu Dark', 'items' => [] },
+                          { 'href' => 'layouts_menu_top_image.html', 'icon' => '', 'label' => 'Top Menu Image <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'layouts_menu_sub_style_flyout.html', 'icon' => '', 'label' => 'Sub Menu Flyout', 'items' => [] },
+                          { 'href' => 'layouts_menu_sub_style_flyout_dark.html', 'icon' => '', 'label' => 'Sub Flyout Dark', 'items' => [] },
+                          { 'href' => 'layouts_menu_sub_style_flyout_bright.html', 'icon' => '', 'label' => 'Sub Flyout Bright', 'items' => [] },
+                          { 'href' => 'layouts_menu_side_compact_click.html', 'icon' => '', 'label' => 'Menu Inside Click', 'items' => [] }]},
+
+            { 'href' => 'apps_bank.html', 
+              'group_header' => 'Options',
+              'icon' => 'os-icon os-icon-package', 
+              'label' => 'Applications', 
+              'items' => [{ 'href' => 'apps_email.html', 'icon' => '', 'label' => 'Email Application', 'items' => [] },
+                          { 'href' => 'apps_support_dashboard.html', 'icon' => '', 'label' => 'Support Dashboard', 'items' => [] },
+                          { 'href' => 'apps_support_index.html', 'icon' => '', 'label' => 'Tickets Index', 'items' => [] },
+                          { 'href' => 'apps_crypto.html', 'icon' => '', 'label' => 'Crypto Dashboard <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'apps_projects.html', 'icon' => '', 'label' => 'Projects List', 'items' => [] },
+                          { 'href' => 'apps_bank.html', 'icon' => '', 'label' => 'Banking <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'apps_full_chat.html', 'icon' => '', 'label' => 'Chat Application', 'items' => [] },
+                          { 'href' => 'apps_todo.html', 'icon' => '', 'label' => 'To Do Application <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'misc_chat.html', 'icon' => '', 'label' => 'Popup Chat', 'items' => [] },
+                          { 'href' => 'apps_pipeline.html', 'icon' => '', 'label' => 'CRM Pipeline', 'items' => [] },
+                          { 'href' => 'rentals_index_grid.html', 'icon' => '', 'label' => 'Property Listing <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'misc_calendar.html', 'icon' => '', 'label' => 'Calendar', 'items' => [] }]},
+
+            { 'href' => '#', 
+              'icon' => 'os-icon os-icon-file-text', 
+              'label' => 'Pages', 
+              'items' => [{ 'href' => 'misc_invoice.html', 'icon' => '', 'label' => 'Invoice', 'items' => [] },
+                          { 'href' => 'rentals_index_grid.html', 'icon' => '', 'label' => 'Property Listing <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'misc_charts.html', 'icon' => '', 'label' => 'Charts', 'items' => [] },
+                          { 'href' => 'auth_login.html', 'icon' => '', 'label' => 'Login', 'items' => [] },
+                          { 'href' => 'auth_register.html', 'icon' => '', 'label' => 'Register', 'items' => [] },
+                          { 'href' => 'auth_lock.html', 'icon' => '', 'label' => 'Lock Screen', 'items' => [] },
+                          { 'href' => 'misc_pricing_plans.html', 'icon' => '', 'label' => 'Pricing Plans', 'items' => [] },
+                          { 'href' => 'misc_error_404.html', 'icon' => '', 'label' => 'Error 404', 'items' => [] },
+                          { 'href' => 'misc_error_500.html', 'icon' => '', 'label' => 'Error 500', 'items' => [ ] }]},
+
+            { 'href' => '#' , 
+              'icon' => 'os-icon os-icon-life-buoy', 
+              'label' => 'UI Kit', 
+              'items' => [{ 'href' => 'uikit_modals.html', 'icon' => '', 'label' => 'Modals <strong class="badge badge-danger">New</strong>', 'items' => [] },
+                          { 'href' => 'uikit_alerts.html', 'icon' => '', 'label' => 'Alerts', 'items' => [] },
+                          { 'href' => 'uikit_grid.html', 'icon' => '', 'label' => 'Grid', 'items' => [] },
+                          { 'href' => 'uikit_progress.html', 'icon' => '', 'label' => 'Progress', 'items' => [] },
+                          { 'href' => 'uikit_popovers.html', 'icon' => '', 'label' => 'Popover', 'items' => [] },
+                          { 'href' => 'uikit_tooltips.html', 'icon' => '', 'label' => 'Tooltips', 'items' => [] },
+                          { 'href' => 'uikit_buttons.html', 'icon' => '', 'label' => 'Buttons', 'items' => [] },
+                          { 'href' => 'uikit_dropdowns.html', 'icon' => '', 'label' => 'Dropdowns', 'items' => [] },
+                          { 'href' => 'uikit_typography.html', 'icon' => '', 'label' => 'Typography', 'items' => [] }]},
+
+            { 'href' => '#' , 
+              'group_header' => 'Elements',
+              'icon' => 'os-icon os-icon-mail', 
+              'label' => 'Emails', 
+              'items' => [{ 'href' => 'emails_welcome.html', 'icon' => '', 'label' => 'Welcome Email', 'items' => [] },
+                          { 'href' => 'emails_order.html', 'icon' => '', 'label' => 'Order Confirmation', 'items' => [] },
+                          { 'href' => 'emails_payment_due.html', 'icon' => '', 'label' => 'Payment Due', 'items' => [] },
+                          { 'href' => 'emails_forgot.html', 'icon' => '', 'label' => 'Forgot Password', 'items' => [] },
+                          { 'href' => 'emails_activate.html', 'icon' => '', 'label' => 'Activate Account', 'items' => [] }]},
+
+            { 'href' => '#' , 
+              'icon' => 'os-icon os-icon-users', 
+              'label' => 'Users', 
+              'items' => [{ 'href' => 'users_profile_big.html', 'icon' => '', 'label' => 'Big Profile', 'items' => [] },
+                          { 'href' => 'users_profile_small.html', 'icon' => '', 'label' => 'Compact Profile', 'items' => [] }]},
+
+            { 'href' => '#', 
+              'icon' => 'os-icon os-icon-edit-32', 
+              'label' => 'Forms', 
+              'items' => [{ 'href' => 'forms_regular.html', 'icon' => '', 'label' => 'Regular Forms', 'items' => [] },
+                          { 'href' => 'forms_validation.html', 'icon' => '', 'label' => 'Form Validation', 'items' => [] },
+                          { 'href' => 'forms_wizard.html', 'icon' => '', 'label' => 'Form Wizard', 'items' => [] },
+                          { 'href' => 'forms_uploads.html', 'icon' => '', 'label' => 'File Uploads', 'items' => [] },
+                          { 'href' => 'forms_wisiwig.html', 'icon' => '', 'label' => 'Wisiwig Editor', 'items' => [ ]  }]},
+            
+            { 'href' => '#' , 
+              'icon' => 'os-icon os-icon-grid', 
+              'label' => 'Tables', 
+              'items' => [{ 'href' => 'tables_regular.html', 'icon' => '', 'label' => 'Regular Tables', 'items' => [] },
+                          { 'href' => 'tables_datatables.html', 'icon' => '', 'label' => 'Data Tables', 'items' => [] },
+                          { 'href' => 'tables_editable.html', 'icon' => '', 'label' => 'Editable Tables', 'items' => [ ] }]},
+
+            { 'href' => '#' , 
+              'icon' => 'os-icon os-icon-zap', 
+              'label' => 'Icons', 
+              'items' => [{ 'href' => 'icon_fonts_simple_line_icons.html',    'icon' => '', 'label' => 'Simple Line Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_feather.html',              'icon' => '', 'label' => 'Feather Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_themefy.html',              'icon' => '', 'label' => 'Themefy Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_picons_thin.html',          'icon' => '', 'label' => 'Picons Thin', 'items' => [] },
+                          { 'href' => 'icon_fonts_dripicons.html',            'icon' => '', 'label' => 'Dripicons', 'items' => [] },
+                          { 'href' => 'icon_fonts_eightyshades.html',         'icon' => '', 'label' => 'Eightyshades', 'items' => [] },
+                          { 'href' => 'icon_fonts_entypo.html',               'icon' => '', 'label' => 'Entypo', 'items' => [] },
+                          { 'href' => 'icon_fonts_font_awesome.html',         'icon' => '', 'label' => 'Font Awesome', 'items' => [] },
+                          { 'href' => 'icon_fonts_foundation_icon_font.html', 'icon' => '', 'label' => 'Foundation Icon Font', 'items' => [] },
+                          { 'href' => 'icon_fonts_metrize_icons.html',        'icon' => '', 'label' => 'Metrize Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_picons_social.html',        'icon' => '', 'label' => 'Picons Social', 'items' => [] },
+                          { 'href' => 'icon_fonts_batch_icons.html',          'icon' => '', 'label' => 'Batch Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_dashicons.html',            'icon' => '', 'label' => 'Dashicons', 'items' => [] },
+                          { 'href' => 'icon_fonts_typicons.html',             'icon' => '', 'label' => 'Typicons', 'items' => [] },
+                          { 'href' => 'icon_fonts_weather_icons.html',        'icon' => '', 'label' => 'Weather Icons', 'items' => [] },
+                          { 'href' => 'icon_fonts_light_admin.html',          'icon' => '', 'label' => 'Light Admin', 'items' => [] }]} ]

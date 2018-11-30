@@ -1,0 +1,10 @@
+.element-wrapper
+  .element-box
+    h5.form-header= template_vars[0]['element_header']
+    .form-desc== template_vars[0]['element_desc']
+    ul.demo-icons-list
+      - template_vars[0]['icons'].each do |icon|
+        li
+          a href="#"
+            i[class="#{icon}"]
+            span= icon

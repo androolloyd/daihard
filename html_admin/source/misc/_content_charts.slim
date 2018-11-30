@@ -1,0 +1,60 @@
+.row
+  .col-sm-8
+    .element-wrapper
+      h6.element-header Bar Charts
+      .element-box
+        h5.form-header Powered by Chart.js
+        .form-desc Simple yet flexible JavaScript charting for designers & developers. <a href="http://www.chartjs.org/" target="_blank">Learn More about Chart.js</a>
+        .el-chart-w
+          canvas#barChart1 width="300" height="145"
+  .col-sm-4
+    .element-wrapper
+      h6.element-header Small Infos
+      .element-box.el-tablo
+        .label Products Sold
+        .value 574
+        .trending.trending-up
+          span 12%
+          i.os-icon.os-icon-arrow-up2
+      .element-box.el-tablo
+        .label New Customers
+        .value 12
+        .trending.trending-down-basic
+          span 9%
+          i.os-icon.os-icon-graph-down
+      .element-box.el-tablo
+        .label Gross Profit
+        .value $2,507
+        .trending.trending-down-basic
+          span 12%
+          i.os-icon.os-icon-arrow-2-down
+
+.element-wrapper
+  h6.element-header Line Chart with Tabs
+  .element-box
+    .os-tabs-w
+      .os-tabs-controls
+        ul.nav.nav-tabs.smaller
+          li.nav-item
+            a.nav-link.active data-toggle="tab" href="#tab_overview" Overview
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#tab_sales" Sales
+        ul.nav.nav-pills.smaller
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#" Today
+          li.nav-item
+            a.nav-link.active data-toggle="tab" href="#" 7 Days
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#" 14 Days
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#" Last Month
+
+      .tab-content
+        #tab_overview.tab-pane.active
+          .el-tablo
+            .label Unique Visitors
+            .value 12,537
+          .el-chart-w
+            canvas#lineChart width="600px" height="150px"
+        #tab_sales.tab-pane
+        #tab_conversion.tab-pane

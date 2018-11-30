@@ -1,0 +1,28 @@
+{
+  "name": "html_admin",
+  "version": "3.1.0",
+  "private": true,
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/osetin/light-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/osetin/light-admin#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-slim": "^0.3.0"
+  },
+  "dependencies": {
+    "npm": "^5.6.0"
+  }
+}

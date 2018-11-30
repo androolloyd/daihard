@@ -1,0 +1,40 @@
+- top_bar_class = "top-bar color-scheme-#{top_bar_settings['color_scheme']}"
+- top_bar_class+= (defined?(show_top_bar) && show_top_bar) ? '' : ' d-none'
+/!
+  ------------------
+  START - Top Bar
+  ------------------
+div[class="#{top_bar_class}"]
+  - if top_bar_settings['show_logo']
+    include ../_partials/top_bar/_logo.slim
+  - if top_bar_settings['show_bank_selector']
+    include ../_partials/top_bar/_bank_account_selector.slim
+  - if top_bar_settings['show_crypto_selector']
+    include ../_partials/top_bar/_crypto_account_selector.slim
+  - if top_bar_settings['show_support_selector']
+    include ../_partials/top_bar/_support_account_selector.slim
+  - if top_bar_settings['show_menu']
+    include ../_partials/top_bar/_menu.slim
+  /!
+    ------------------
+    START - Top Menu Controls
+    ------------------
+  .top-menu-controls
+    - is_top_bar = true
+    - if top_bar_settings['show_search']
+      include ../_partials/top_bar/_search.slim
+    - if top_bar_settings['show_messages']
+      include ../_partials/top_bar/_messages.slim
+    - if top_bar_settings['show_settings']
+      include ../_partials/top_bar/_settings.slim
+    - if top_bar_settings['show_user_info']
+      include ../_partials/top_bar/_user_info.slim
+    - is_top_bar = nil
+  /!
+    ------------------
+    END - Top Menu Controls
+    ------------------
+/!
+  ------------------
+  END - Top Bar
+  ------------------

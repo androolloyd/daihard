@@ -1,0 +1,157 @@
+.element-wrapper
+  .user-profile
+    .up-head-w[style="background-image:url(img/profile_bg1.jpg)"]
+
+
+      // SOCIAL ICONS
+
+      .up-social
+        a href="#"
+          i.os-icon.os-icon-twitter
+        a href="#"
+          i.os-icon.os-icon-facebook
+
+
+
+      // MAIN HEADER INFO
+
+      .up-main-info
+        .user-avatar-w
+          .user-avatar
+            img src="img/avatar1.jpg" alt=""/
+        h1.up-header John Mayers
+        h5.up-sub-header Product Designer at Facebook
+      <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g transform="translate(-381.000000, -362.000000)" fill="#FFFFFF">
+          <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+        </g>
+      </svg>
+
+
+
+    // PROFILE CONTROLS 
+
+    .up-controls
+      .row
+        .col-lg-6
+          .value-pair
+            .label Status:
+            .value.badge.badge-pill.badge-success Online    
+          .value-pair
+            .label Member Since:
+            .value 2011
+        .col-lg-6.text-right
+          a.btn.btn-primary.btn-sm href=""
+            i.os-icon.os-icon-link-3
+            span Add to Friends
+          a.btn.btn-secondary.btn-sm href="" 
+            i.os-icon.os-icon-email-forward
+            span Send Message
+
+
+    .up-contents
+
+      // PROFILE STATISTICS
+
+      h5.element-header Profile Statistics
+
+      .row.m-b
+        .col-lg-6
+          .row
+            .col-sm-6.b-r.b-b
+              .el-tablo.centered.padded
+                .value 3814
+                .label Products Sold
+            .col-sm-6.b-b.b-r
+              .el-tablo.centered.padded
+                .value 47.5K
+                .label Followers
+          .row
+            .col-sm-6.b-r
+              .el-tablo.centered.padded
+                .value $95
+                .label Daily Earnings
+            .col-sm-6.b-r
+              .el-tablo.centered.padded
+                .value 12
+                .label Products
+        .col-lg-6
+          .padded
+            .element-info-with-icon.smaller
+              .element-info-icon
+                .os-icon.os-icon-bar-chart-stats-up
+              .element-info-text
+                h5.element-inner-header Monthly Revenue
+                .element-inner-desc Calculated every month
+            .el-chart-w
+              canvas#liteLineChart width="300" height="130"
+
+
+      // TABS
+
+      .os-tabs-w
+        .os-tabs-controls
+          ul.nav.nav-tabs.bigger
+            li.nav-item
+              a.nav-link.active data-toggle="tab" href="#tab_overview" Activity
+            li.nav-item
+              a.nav-link data-toggle="tab" href="#tab_sales" Daily Sales
+          ul.nav.nav-pills.smaller.d-none.d-md-flex
+            li.nav-item
+              a.nav-link data-toggle="tab" href="#" Today
+            li.nav-item
+              a.nav-link.active data-toggle="tab" href="#" 7 Days
+            li.nav-item
+              a.nav-link data-toggle="tab" href="#" 14 Days
+            li.nav-item
+              a.nav-link data-toggle="tab" href="#" Last Month
+
+        .tab-content
+          #tab_overview.tab-pane.active
+            .timed-activities.padded
+              .timed-activity
+                .ta-date 
+                  span 21st Jan, 2017
+                .ta-record-w
+                  .ta-record
+                    .ta-timestamp <strong>11:55</strong> am
+                    .ta-activity Created a post called <a href="#">Register new symbol</a> in Rogue
+                  .ta-record
+                    .ta-timestamp <strong>2:34</strong> pm
+                    .ta-activity Commented on story <a href="#">How to be a leader</a> in <a href="#">Financial</a> category
+                  .ta-record
+                    .ta-timestamp <strong>7:12</strong> pm
+                    .ta-activity Added <a href="#">John Silver</a> as a friend
+                  .ta-record
+                    .ta-timestamp <strong>9:39</strong> pm
+                    .ta-activity Started following user <a href="#">Ben Mosley</a>
+              .timed-activity
+                .ta-date 
+                  span 3rd Feb, 2017
+                .ta-record-w
+                  .ta-record
+                    .ta-timestamp <strong>9:32</strong> pm
+                    .ta-activity Added <a href="#">John Silver</a> as a friend
+                  .ta-record
+                    .ta-timestamp <strong>5:14</strong> pm
+                    .ta-activity Commented on story <a href="#">How to be a leader</a> in <a href="#">Financial</a> category
+              .timed-activity
+                .ta-date 
+                  span 21st Jan, 2017
+                .ta-record-w
+                  .ta-record
+                    .ta-timestamp <strong>11:55</strong> am
+                    .ta-activity Created a post called <a href="#">Register new symbol</a> in Rogue
+                  .ta-record
+                    .ta-timestamp <strong>2:34</strong> pm
+                    .ta-activity Commented on story <a href="#">How to be a leader</a> in <a href="#">Financial</a> category
+                  .ta-record
+                    .ta-timestamp <strong>9:39</strong> pm
+                    .ta-activity Started following user <a href="#">Ben Mosley</a>
+          #tab_sales.tab-pane
+            .el-tablo
+              .label Unique Visitors
+              .value 12,537
+            .el-chart-w
+              canvas#lineChart width="600px" height="150px"
+          #tab_conversion.tab-pane

@@ -1,0 +1,47 @@
+.rentals-list-w
+  include ../rentals/_filter.slim
+  .rentals-list
+    .list-controls
+      .list-info 1,240 Properties found in Brooklyn, NY
+      .list-order
+        label for="" Order By:
+        select
+          option Relevance
+          option Date
+          option Price
+    .property-items[class="#{template_vars[0]['property_index_class']}"]
+
+      - properties = [['price' => '$350', 'img' => 'property2.jpg', 'bedrooms' => '5', 'title' => 'Perfect Located 2BR Aspen Condo', 'reviews' => '12'],
+                      ['price' => '$120', 'img' => 'property3.jpg', 'bedrooms' => '3', 'title' => 'Platinum Aspen Core Luxury Home', 'reviews' => '7'],
+                      ['price' => '$280', 'img' => 'property1.jpg', 'bedrooms' => '1', 'title' => 'Premier ski-out property on Aspen Mtn, beautiful modern finishes', 'reviews' => '9'],
+                      ['price' => '$179', 'img' => 'property2.jpg', 'bedrooms' => '2', 'title' => 'Private Corner Studio in downtown Aspen', 'reviews' => '24'],
+                      ['price' => '$259', 'img' => 'property3.jpg', 'bedrooms' => '5', 'title' => 'Platinum Aspen Core Luxury Home', 'reviews' => '4'],
+                      ['price' => '$280', 'img' => 'property1.jpg', 'bedrooms' => '1', 'title' => 'Premier ski-out property on Aspen Mtn, beautiful modern finishes', 'reviews' => '9'],
+                      ['price' => '$179', 'img' => 'property2.jpg', 'bedrooms' => '2', 'title' => 'Private Corner Studio in downtown Aspen', 'reviews' => '24'],
+                      ['price' => '$120', 'img' => 'property3.jpg', 'bedrooms' => '3', 'title' => 'Platinum Aspen Core Luxury Home', 'reviews' => '7'],
+                      ['price' => '$179', 'img' => 'property2.jpg', 'bedrooms' => '2', 'title' => 'Private Corner Studio in downtown Aspen', 'reviews' => '24'],
+                      ['price' => '$259', 'img' => 'property3.jpg', 'bedrooms' => '5', 'title' => 'Platinum Aspen Core Luxury Home', 'reviews' => '4']]
+      - properties.each do |property|
+        /!
+          ------------------
+          START - Property Item
+          ------------------
+        include ../rentals/_content_index_item.slim
+        /!
+          ------------------
+          END - Property Item
+          ------------------
+    .pagination-w
+      .pagination-info Showing 20-40 Properties found in Brooklyn, NY
+      .pagination-links
+        ul.pagination
+          li.page-item.disabled
+            a.page-link href="#"  Previous
+          li.page-item.active
+            a.page-link href="#"  1
+          li.page-item
+            a.page-link href="#"  2
+          li.page-item
+            a.page-link href="#"  3
+          li.page-item
+            a.page-link href="#"  Next

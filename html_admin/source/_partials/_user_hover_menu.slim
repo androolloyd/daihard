@@ -1,0 +1,32 @@
+- user_popup_menu_class = 'logged-user-menu'
+- user_popup_menu_class+= defined?(menu_settings['user_menu_popup_color_style']) ? " color-style-#{menu_settings['user_menu_popup_color_style']}" : 'color-style-bright'
+div[class="#{user_popup_menu_class}"]
+  .logged-user-avatar-info
+    .avatar-w
+      img src="img/avatar1.jpg" alt=""/
+    .logged-user-info-w
+      .logged-user-name Maria Gomez
+      .logged-user-role Administrator
+  .bg-icon
+    i.os-icon.os-icon-wallet-loaded
+  ul
+    li
+      a href="apps_email.html"
+        i.os-icon.os-icon-mail-01
+        span Incoming Mail
+    li
+      a href="users_profile_big.html"
+        i.os-icon.os-icon-user-male-circle2
+        span Profile Details
+    li
+      a href="users_profile_small.html"
+        i.os-icon.os-icon-coins-4
+        span Billing Details
+    li
+      a href="#"
+        i.os-icon.os-icon-others-43
+        span Notifications
+    li
+      a href="#"
+        i.os-icon.os-icon-signs-11
+        span Logout

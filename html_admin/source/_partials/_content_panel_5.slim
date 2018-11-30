@@ -1,0 +1,100 @@
+.element-wrapper
+  h6.element-header Quick Links
+  .element-box-tp
+    .el-buttons-list.full-width
+      a.btn.btn-white.btn-sm href="#" 
+        i.os-icon.os-icon-delivery-box-2
+        span Create New Product
+      a.btn.btn-white.btn-sm href="#" 
+        i.os-icon.os-icon-window-content
+        span Customer Comments
+      a.btn.btn-white.btn-sm href="#" 
+        i.os-icon.os-icon-wallet-loaded
+        span Store Settings
+/!
+  ------------------
+  START - Support Agents
+  ------------------
+- support_agents = [['name' => 'John Mayers', 'status' => 'Online Now', 'tickets' => '12', 'response' => '2 hours', 'btn_class' => 'success', 'avatar' => 'avatar1.jpg'],
+                  ['name' => 'Ben Gossman', 'status' => 'Offline', 'tickets' => '9', 'response' => '3 hours', 'btn_class' => 'secondary', 'avatar' => 'avatar3.jpg']]
+.element-wrapper
+  h6.element-header Support Agents
+  .element-box-tp
+    - support_agents.each do |agent|
+      .profile-tile
+        a.profile-tile-box href="users_profile_small.html"
+          .pt-avatar-w
+            img src="img/#{agent[0]['avatar']}" alt=""/
+          .pt-user-name= agent[0]['name']
+        .profile-tile-meta
+          ul
+            li
+              | Last Login:
+              strong= agent[0]['status']
+            li
+              | Tickets:
+              strong
+                a href="apps_support_index.html"
+                  = agent[0]['tickets']
+            li
+              | Response Time:
+              strong= agent[0]['response']
+          .pt-btn
+            a[class="btn btn-#{agent[0]['btn_class']} btn-sm" href="apps_full_chat.html"] Send Message
+/!
+  ------------------
+  END - Support Agents
+  ------------------
+/!
+  ------------------
+  START - Recent Activity
+  ------------------
+- recent_activities = [['name' => 'John Mayers', 'action' => 'Opened New Account', 'time' => '10 Min', 'avatar' => 'avatar1.jpg'],
+                      ['name' => 'Ben Gossman', 'action' => 'Posted Comment', 'time' => '2 Hours', 'avatar' => 'avatar2.jpg'],
+                      ['name' => 'Phil Nokorin', 'action' => 'Opened New Account', 'time' => '5 Hours', 'avatar' => 'avatar3.jpg'],
+                      ['name' => 'Jenny Miksa', 'action' => 'Uploaded Image', 'time' => '2 Days', 'avatar' => 'avatar4.jpg']]
+.element-wrapper
+  h6.element-header Recent Activity
+  .element-box-tp
+    .activity-boxes-w
+      - recent_activities.each do |activity|
+        .activity-box-w
+          .activity-time= activity[0]['time']
+          .activity-box
+            .activity-avatar
+              img src="img/#{activity[0]['avatar']}" alt=""/
+            .activity-info
+              .activity-role= activity[0]['name']
+              strong.activity-title= activity[0]['action']
+/!
+  ------------------
+  END - Recent Activity
+  ------------------
+/!
+  ------------------
+  START - Team Members
+  ------------------
+- user_list_users = [['name' => 'John Mayers', 'role' => 'Account Manager', 'status' => 'green', 'avatar' => 'avatar1.jpg'],
+                    ['name' => 'Ben Gossman', 'role' => 'Administrator', 'status' => 'green', 'avatar' => 'avatar2.jpg'],
+                    ['name' => 'Phil Nokorin', 'role' => 'HR Manger', 'status' => 'red', 'avatar' => 'avatar3.jpg'],
+                    ['name' => 'Jenny Miksa', 'role' => 'Lead Developer', 'status' => 'green', 'avatar' => 'avatar4.jpg']]
+.element-wrapper
+  h6.element-header Team Members
+  .element-box-tp
+    .input-search-w
+      input class="form-control rounded bright" type="search" placeholder="Search team members..."
+    .users-list-w
+      - user_list_users.each do |user|
+        div[class="user-w with-status status-#{user[0]['status']}"]
+          .user-avatar-w
+            .user-avatar
+              img src="img/#{user[0]['avatar']}" alt=""/
+          .user-name
+            h6.user-title= user[0]['name']
+            .user-role= user[0]['role']
+          a.user-action href="users_profile_small.html"
+            .os-icon.os-icon-email-forward
+/!
+  ------------------
+  END - Team Members
+  ------------------

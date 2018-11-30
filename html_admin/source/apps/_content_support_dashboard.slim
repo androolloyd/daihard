@@ -1,0 +1,219 @@
+.row.pt-4
+  .col-sm-12
+    /! START - Grid of tablo statistics
+    .element-wrapper
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          select.form-control.form-control-sm.rounded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Support Service Dashboard
+      .element-content
+        .tablo-with-chart
+          .row
+            .col-sm-5.col-xxl-4
+              .tablos
+                .row.mb-xl-2.mb-xxl-3
+                  .col-sm-6
+                    a.element-box.el-tablo.centered.trend-in-corner.padded.bold-label href="apps_support_index.html"
+                      .value 24
+                      .label New Tickets
+                      .trending.trending-up-basic
+                        span 12%
+                        i.os-icon.os-icon-arrow-up2
+                  .col-sm-6
+                    a.element-box.el-tablo.centered.trend-in-corner.padded.bold-label href="apps_support_index.html"
+                      .value 12
+                      .label Closed Today
+                      .trending.trending-down-basic
+                        span 12%
+                        i.os-icon.os-icon-arrow-down
+                .row
+                  .col-sm-6
+                    a.element-box.el-tablo.centered.trend-in-corner.padded.bold-label href="apps_support_index.html"
+                      .value 52
+                      .label Agent Replies
+                      .trending.trending-up-basic
+                        span 12%
+                        i.os-icon.os-icon-arrow-up2
+                  .col-sm-6
+                    a.element-box.el-tablo.centered.trend-in-corner.padded.bold-label href="apps_support_index.html"
+                      .value 7
+                      .label New Replies
+                      .trending.trending-down-basic
+                        span 12%
+                        i.os-icon.os-icon-arrow-down
+            .col-sm-7.col-xxl-8
+              /! START - Chart Box
+              .element-box.pl-xxl-5.pr-xxl-5
+                .el-tablo.bigger.highlight.bold-label
+                  .value 12,537
+                  .label Unique Visitors
+                .el-chart-w
+                  canvas#lineChart width="600px" height="170px"
+              /! END - Chart Box
+    /! END - Grid of tablo statistics
+.row
+  .col-sm-7.col-xxl-6
+    /! START - Customers with most tickets
+    .element-wrapper
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          select.form-control.form-control-sm.rounded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Customers with most tickets
+      .element-box
+
+        .table-responsive
+          table.table.table-lightborder
+            thead
+              tr
+                th Customer Name
+                th Tickets
+                th Location
+                th.text-center Status
+                th.text-right Last Reply
+            tbody
+              tr
+                td
+                  .user-with-avatar 
+                    img src="img/avatar1.jpg" alt=""/
+                    span.d-none.d-xl-inline-block John Mayers
+                td.text-center  15
+                td.text-center 
+                  img src="img/flags-icons/us.png" alt="" width="25px"
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right 
+                  span Today 
+                  span.smaller.lighter 1:52pm
+              tr
+                td 
+                  .user-with-avatar 
+                    img src="img/avatar2.jpg" alt=""/
+                    span.d-none.d-xl-inline-block Kelly Brans
+                td.text-center  12
+                td.text-center 
+                  img src="img/flags-icons/ca.png" alt="" width="25px"
+                td.text-center 
+                  .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+                td.text-right 
+                  span Yesterday 
+                  span.smaller.lighter 5:34pm
+              tr
+                td 
+                  .user-with-avatar 
+                    img src="img/avatar3.jpg" alt=""/
+                    span.d-none.d-xl-inline-block Tim Howard
+                td.text-center  8
+                td.text-center 
+                  img src="img/flags-icons/uk.png" alt="" width="25px"
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right 
+                  span Jan 15th 
+                  span.smaller.lighter 3:14pm
+    /! END - Customers with most tickets
+  .col-sm-5.col-xxl-6
+    /! START - Questions per Product
+    .element-wrapper
+      .element-actions
+        form.form-inline.justify-content-sm-end
+          select.form-control.form-control-sm.rounded
+            option value="Pending" Today
+            option value="Active" Last Week 
+            option value="Cancelled" Last 30 Days
+      h6.element-header Questions per Product
+      .element-box
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger MailGun
+            .bar-label-right
+              span.info 25 Tickets / 10 Pending
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 70%"]
+              .bar-level-3[style="width: 40%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger PhotoBook
+            .bar-label-right
+              span.info 18 Tickets / 7 Pending
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 40%"]
+              .bar-level-3[style="width: 20%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Transferra
+            .bar-label-right
+              span.info 15 Tickets / 12 Pending
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 60%"]
+              .bar-level-3[style="width: 30%"]
+        .os-progress-bar.primary
+          .bar-labels
+            .bar-label-left
+              span.bigger Versioner
+            .bar-label-right
+              span.info 12 Tickets / 4 Pending
+          .bar-level-1[style="width: 100%"]
+            .bar-level-2[style="width: 30%"]
+              .bar-level-3[style="width: 10%"]
+    /! END - Questions per product
+- tickets = [['status_label' => 'Active', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'green', 'time' => '1:52am', 'date' => 'Today', 'avatar' => 'img/avatar1.jpg', 'name' => 'John Mayers', 'category' => [['name' => 'Shopping', 'color' => 'success']], 'amount' => '+ 1,250 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Closed', 'comment' => 'Please approve this request so we can move...', 'status' => 'red', 'time' => '3:22pm', 'date' => 'Jan 19th', 'avatar' => 'img/avatar2.jpg', 'name' => 'Mike Bishop', 'category' => [['name' => 'Cafe', 'color' => 'danger']], 'amount' => '+ 952.23 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Pending', 'comment' => 'We will need some login credentials to make...', 'status' => 'yellow', 'time' => '7:45am', 'date' => 'Yesterday', 'avatar' => 'img/avatar3.jpg', 'name' => 'Terry Crews', 'category' => [['name' => 'Restaurants', 'color' => 'warning']], 'amount' => '- 320 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'yellow', 'time' => '2:12pm', 'date' => 'Jan 23rd', 'avatar' => 'img/avatar1.jpg', 'name' => 'Phil Collins', 'category' => [['name' => 'Shopping', 'color' => 'primary']], 'amount' => '+ 17.99 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Active', 'comment' => 'I have tried this solution but it does not open...', 'status' => 'green', 'time' => '9:51am', 'date' => 'Jan 12th', 'avatar' => 'img/avatar4.jpg', 'name' => 'Katy Pilsner', 'category' => [['name' => 'Groceries', 'color' => 'danger']], 'amount' => '- 244 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'comment' => 'I have enabled the software for you, you can try now...', 'status' => 'yellow', 'time' => '12:45pm', 'date' => 'Jan 9th', 'avatar' => 'img/avatar2.jpg', 'name' => 'Wes Morgan', 'category' => [['name' => 'Business', 'color' => 'primary']], 'amount' => '+ 340 USD', 'amount_status' => 'text-success']]
+.row.pt-4
+  .col-sm-12
+    /! START - Recent Ticket Comments
+    .element-wrapper
+      h6.element-header Recent Ticket Comments
+      .element-box-tp
+        .table-responsive
+          table.table.table-padded
+            thead
+              tr
+                th
+                th Assigned Agent
+                th Last Comment
+                th.text-center Ticket Category
+                th Last Reply Date
+                th Ticket Status
+                th Actions
+            tbody
+              - tickets.each do |t|
+                tr
+                  td.text-center
+                    input type="checkbox" class="form-control"
+                  td
+                    .user-with-avatar 
+                      img src="#{t[0]['avatar']}" alt=""/
+                      span= t[0]['name']
+                  td
+                    .smaller.lighter= t[0]['comment']
+                  td
+                    span= t[0]['date'] 
+                    span.smaller.lighter= t[0]['time']
+                  td.text-center
+                    - t[0]['category'].each do |c|
+                        a href="" class="badge badge-#{c[0]['color']}-inverted"
+                          = c[0]['name']
+                  td.nowrap
+                    span[class="status-pill smaller #{t[0]['status']}"]
+                    span= t[0]['status_label']
+                  td.row-actions
+                    a href="#"
+                      i.os-icon.os-icon-grid-10
+                    a href="#"
+                      i.os-icon.os-icon-ui-44
+                    a.danger href="#"
+                      i.os-icon.os-icon-ui-15
+    /! END - Recent Ticket Comments

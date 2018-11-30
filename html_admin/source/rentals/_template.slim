@@ -1,0 +1,43 @@
+doctype html
+html
+  include ../_partials/_global_variables.slim
+  include ../rentals/_header_meta.slim
+  - body_class = "white rentals-wrapper"
+  - body_class += (defined?(full_screen) && full_screen) ? ' full-screen' : ''
+
+  body[class="#{body_class}"]
+    - all_wrapper_class = 'all-wrapper rentals'
+    - all_wrapper_class += defined?(no_padding) ? ' no-padding-content' : ''
+    div[class="#{all_wrapper_class}"]
+      /!
+        ------------------
+        START - Top Bar
+        ------------------
+      include ../rentals/_top_bar.slim
+      /!
+        ------------------
+        END - Top bar
+        ------------------
+
+      /!
+        ------------------
+        START - Rentals Content
+        ------------------
+      == Slim::Template.new(content_box_file).render(Object.new, 'template_vars' => template_vars)
+      /!
+        ------------------
+        END - Rentals Content
+        ------------------
+
+      /!
+        ------------------
+        START - Footer
+        ------------------
+      include ../rentals/_footer.slim
+      /!
+        ------------------
+        END - Footer
+        ------------------
+    .display-type
+  include ../_partials/_footer.slim
+  script src="js/main_rentals.js?version=#{template_version}"

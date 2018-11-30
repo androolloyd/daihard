@@ -1,0 +1,42 @@
+/!
+  ------------------
+  START - Messages Link in secondary top menu
+  ------------------
+- position_class = (defined?(is_top_bar) && is_top_bar) ? 'os-dropdown-position-left' : 'os-dropdown-position-right'
+div[class="messages-notifications os-dropdown-trigger #{position_class}"]
+  i.os-icon.os-icon-mail-14
+  .new-messages-count 12
+  .os-dropdown.light.message-list
+    ul
+      li
+        a href="#"
+          .user-avatar-w
+            img alt="" src="img/avatar1.jpg"
+          .message-content
+            h6.message-from John Mayers
+            h6.message-title Account Update
+      li
+        a href="#"
+          .user-avatar-w
+            img alt="" src="img/avatar2.jpg"
+          .message-content
+            h6.message-from Phil Jones
+            h6.message-title Secutiry Updates
+      li
+        a href="#"
+          .user-avatar-w
+            img alt="" src="img/avatar3.jpg"
+          .message-content
+            h6.message-from Bekky Simpson
+            h6.message-title Vacation Rentals
+      li
+        a href="#"
+          .user-avatar-w
+            img alt="" src="img/avatar4.jpg"
+          .message-content
+            h6.message-from Alice Priskon
+            h6.message-title Payment Confirmation
+/!
+  ------------------
+  END - Messages Link in secondary top menu
+  ------------------

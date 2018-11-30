@@ -1,0 +1,108 @@
+doctype html
+html
+  include ../_partials/_header_meta.slim
+
+  - body_class = "menu-position-#{menu_settings['position']}"
+  - body_class += (defined?(menu_settings['side']) && (menu_settings['position'] == 'side')) ? " menu-side-#{menu_settings['side']}" : ''
+  - body_class += (defined?(full_screen) && full_screen) ? ' full-screen' : ''
+  - body_class += defined?(color_scheme_dark) ? ' color-scheme-dark' : ''
+  - body_class += defined?(content_panel_file) ? ' with-content-panel' : ''
+  - show_color_scheme_selector = true
+
+  body[class="#{body_class}"]
+    - all_wrapper_class = "all-wrapper"
+    - all_wrapper_class += defined?(content_panel_file) ? ' with-side-panel' : ''
+    - all_wrapper_class += defined?(no_padding) ? ' no-padding-content' : ''
+    - all_wrapper_class += defined?(white_bg) ? ' white-bg-content' : ''
+    - all_wrapper_class += defined?(all_solid_bg) ? ' solid-bg-all' : ''
+
+    div[class="#{all_wrapper_class}"]
+      - if top_bar_settings['above_menu']
+        include ../_partials/_top_bar.slim
+      - if defined? show_onboarding
+        include ../_partials/onboarding/_onboarding_modal.slim
+      - if defined? show_onboarding_large
+        include ../_partials/onboarding/_onboarding_modal_large.slim
+      - if true
+        include ../_partials/_search_with_suggestions.slim
+      .layout-w
+        /!
+          ------------------
+          START - Mobile Menu
+          ------------------
+        include ../_partials/_menu_mobile.slim
+        /!
+          ------------------
+          END - Mobile Menu
+          ------------------
+        /!
+          ------------------
+          START - Main Menu
+          ------------------
+        include ../_partials/_menu.slim
+        /!
+          ------------------
+          END - Main Menu
+          ------------------
+        .content-w
+          / Top bar
+          - if !top_bar_settings['above_menu']
+            include ../_partials/_top_bar.slim
+          / Breadcrumbs
+          - unless defined?(no_breadcrumbs)
+            include ../_partials/_breadcrumbs.slim
+
+          - if defined? content_panel_file
+            .content-panel-toggler
+              i.os-icon.os-icon-grid-squares-22
+              span Sidebar
+          .content-i
+            .content-box
+              == Slim::Template.new(content_box_file).render(Object.new, 'template_vars' => template_vars)
+              - if defined? show_color_scheme_selector
+                /!
+                  ------------------
+                  START - Color Scheme Toggler
+                  ------------------
+                include ../misc/_color_scheme_toggler.slim
+                /!
+                  ------------------
+                  END - Color Scheme Toggler
+                  ------------------
+              - if defined? show_demo_customizer && show_demo_customizer
+                /!
+                  ------------------
+                  START - Demo Customizer
+                  ------------------
+                include ../misc/_demo_customizer.slim
+                /!
+                  ------------------
+                  END - Demo Customizer
+                  ------------------
+              /!
+                ------------------
+                START - Chat Popup Box
+                ------------------
+              include ../misc/_content_chat.slim
+              /!
+                ------------------
+                END - Chat Popup Box
+                ------------------
+            - if defined? content_panel_file
+              - content_panel_class = 'content-panel'
+              - content_panel_class += defined?(content_panel_compact) ? ' compact' : ''
+              - content_panel_class += defined?(content_panel_color_scheme_dark) ? ' color-scheme-dark' : ''
+              /!
+                ------------------
+                START - Sidebar
+                ------------------
+              div[class="#{content_panel_class}"]
+                .content-panel-close
+                  i.os-icon.os-icon-close
+                == Slim::Template.new(content_panel_file).render()
+              /!
+                ------------------
+                END - Sidebar
+                ------------------
+      .display-type
+    include ../_partials/_footer.slim

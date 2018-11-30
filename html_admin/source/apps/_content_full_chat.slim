@@ -1,0 +1,118 @@
+.full-chat-w
+  .full-chat-i
+    .full-chat-left
+      .os-tabs-w
+        ul.nav.nav-tabs.upper.centered
+          li.nav-item
+            a.nav-link.active data-toggle="tab" href="#tab_overview" 
+              i.os-icon.os-icon-mail-14
+              span Chats
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#tab_sales" 
+              i.os-icon.os-icon-ui-93
+              span Contacts
+          li.nav-item
+            a.nav-link data-toggle="tab" href="#tab_sales" 
+              i.os-icon.os-icon-ui-02
+              span Favorites
+      .chat-search
+        .element-search
+          input type="text" placeholder="Search users by name..."/
+      .user-list
+        - users = [['avatar' => 'avatar1.jpg', 'date' => '12 min', 'name' => 'John Mayers', 'message' => 'What is going on, are we...'],
+                    ['avatar' => 'avatar2.jpg', 'date' => '2 hours', 'name' => 'Bill Railey', 'message' => 'Yes, I\'ve sent you details...'],
+                    ['avatar' => 'avatar3.jpg', 'date' => '24 min', 'name' => 'Simon Backs', 'message' => 'What is going on, are we...'],
+                    ['avatar' => 'avatar1.jpg', 'date' => '7 min', 'name' => 'Kelley Brooks', 'message' => 'Can you send me this...'],
+                    ['avatar' => 'avatar7.jpg', 'date' => '4 hours', 'name' => 'Vinie Jones', 'message' => 'What is going on, are we...'],
+                    ['avatar' => 'avatar1.jpg', 'date' => '2 days', 'name' => 'Brad Pitt', 'message' => 'They have submitted users...']]
+        - users.each do |user|
+          .user-w
+            .avatar.with-status.status-green
+              img src="img/#{user[0]['avatar']}" alt=""/
+            .user-info
+              .user-date= user[0]['date']
+              .user-name= user[0]['name']
+              .last-message= user[0]['message']
+
+    .full-chat-middle
+      .chat-head
+        .user-info
+          span To:
+          a href="#" John Mayers
+        .user-actions
+          a href="#"
+            i.os-icon.os-icon-mail-07
+          a href="#"
+            i.os-icon.os-icon-phone-18
+          a href="#"
+            i.os-icon.os-icon-phone-15
+      .chat-content-w
+        .chat-content
+          .chat-message
+            .chat-message-content-w
+              .chat-message-content Hi, my name is Mike, I will be happy to assist you
+            .chat-message-avatar
+              img src="img/avatar3.jpg" alt=""/
+            .chat-message-date 9:12am
+          .chat-date-separator
+            span Yesterday
+          .chat-message.self
+            .chat-message-content-w
+              .chat-message-content That walls over which the drawers. Gone studies to titles have audiences of and concepts was motivator
+            .chat-message-date 1:23pm
+            .chat-message-avatar
+              img src="img/avatar1.jpg" alt=""/
+          .chat-message
+            .chat-message-content-w
+              .chat-message-content Slept train nearby a its is design size agreeable. And check cons, but countries the was to such any founding company
+            .chat-message-avatar
+              img src="img/avatar3.jpg" alt=""/
+            .chat-message-date 3:45am
+      .chat-controls
+        .chat-input
+          input type="text" placeholder="Type your message here..."/
+        .chat-input-extra
+          .chat-extra-actions
+            a href="#"
+              i.os-icon.os-icon-mail-07
+            a href="#"
+              i.os-icon.os-icon-phone-18
+            a href="#"
+              i.os-icon.os-icon-phone-15
+          .chat-btn
+            a.btn.btn-primary.btn-sm href="#" Reply
+    .full-chat-right
+      .user-intro
+        .avatar
+          img src="img/avatar1.jpg" alt=""/
+        .user-intro-info
+          h5.user-name John Mayers
+          .user-sub San Francisco, CA
+          .user-social
+            a href="#"
+              i.os-icon.os-icon-twitter
+            a href="#"
+              i.os-icon.os-icon-facebook
+      .chat-info-section
+        .ci-header
+          i.os-icon.os-icon-documents-03
+          span Shared Files
+        .ci-content
+          .ci-file-list
+            ul
+              li
+                a href="#" Annual Revenue.pdf
+              li
+                a href="#" Expenses.xls
+              li
+                a href="#" Business Plan.doc
+      .chat-info-section
+        .ci-header
+          i.os-icon.os-icon-documents-07
+          span Shared Photos
+        .ci-content
+          .ci-photos-list
+            img src="img/portfolio9.jpg" alt=""/
+            img src="img/portfolio2.jpg" alt=""/
+            img src="img/portfolio12.jpg" alt=""/
+            img src="img/portfolio14.jpg" alt=""/

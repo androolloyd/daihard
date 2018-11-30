@@ -1,0 +1,200 @@
+.row
+  .col-sm-5
+    .user-profile.compact
+      .up-head-w[style="background-image:url(img/profile_bg1.jpg)"]
+
+
+        // SOCIAL ICONS
+
+        .up-social
+          a href="#"
+            i.os-icon.os-icon-twitter
+          a href="#"
+            i.os-icon.os-icon-facebook
+
+
+
+        // MAIN HEADER INFO
+
+        .up-main-info
+          h2.up-header John Mayers
+          h6.up-sub-header Product Designer at Facebook
+        <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g transform="translate(-381.000000, -362.000000)" fill="#FFFFFF">
+            <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+          </g>
+        </svg>
+
+
+
+      // PROFILE CONTROLS 
+
+      .up-controls
+        .row
+          .col-sm-6
+            .value-pair
+              .label Status:
+              .value.badge.badge-pill.badge-success Online
+          .col-sm-6.text-right
+            a.btn.btn-primary.btn-sm href=""
+              i.os-icon.os-icon-link-3
+              span Add to Friends
+
+
+      .up-contents
+
+        // PROFILE STATISTICS
+
+        .m-b
+          .row.m-b
+            .col-sm-6.b-r.b-b
+              .el-tablo.centered.padded-v
+                .value 25
+                .label Products Sold
+            .col-sm-6.b-b
+              .el-tablo.centered.padded-v
+                .value 315
+                .label Friends
+          .padded
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Profile Completion
+                  span.positive +10
+                .bar-label-right
+                  span.info 72/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 80%"]
+                  .bar-level-3[style="width: 30%"]
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Status Unlocked
+                  span.positive +5
+                .bar-label-right
+                  span.info 45/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 30%"]
+                  .bar-level-3[style="width: 10%"]
+            .os-progress-bar.primary
+              .bar-labels
+                .bar-label-left
+                  span Followers
+                  span.negative -12
+                .bar-label-right
+                  span.info 74/100
+              .bar-level-1[style="width: 100%"]
+                .bar-level-2[style="width: 80%"]
+                  .bar-level-3[style="width: 60%"]
+    
+    .element-wrapper
+      .element-box
+        h6.element-header User Activity
+        .timed-activities.compact
+          .timed-activity
+            .ta-date 
+              span 21st Jan, 2017
+            .ta-record-w
+              .ta-record
+                .ta-timestamp <strong>11:55</strong> am
+                .ta-activity Created a post called <a href="#">Register new symbol</a> in Rogue
+              .ta-record
+                .ta-timestamp <strong>2:34</strong> pm
+                .ta-activity Commented on story <a href="#">How to be a leader</a> in <a href="#">Financial</a> category
+              .ta-record
+                .ta-timestamp <strong>7:12</strong> pm
+                .ta-activity Added <a href="#">John Silver</a> as a friend
+          .timed-activity
+            .ta-date 
+              span 3rd Feb, 2017
+            .ta-record-w
+              .ta-record
+                .ta-timestamp <strong>9:32</strong> pm
+                .ta-activity Added <a href="#">John Silver</a> as a friend
+              .ta-record
+                .ta-timestamp <strong>5:14</strong> pm
+                .ta-activity Commented on story <a href="#">How to be a leader</a> in <a href="#">Financial</a> category
+      
+  .col-sm-7
+
+    .element-wrapper
+      .element-box
+        form#formValidate
+          .element-info
+            .element-info-with-icon
+              .element-info-icon
+                .os-icon.os-icon-wallet-loaded
+              .element-info-text
+                h5.element-inner-header Profile Settings
+                .element-inner-desc Validation of the form is made possible using powerful validator plugin for bootstrap. <a href="http://1000hz.github.io/bootstrap-validator/" target="_blank">Learn more about Bootstrap Validator</a>
+          .form-group
+            label for=""  Email address
+            input.form-control placeholder=("Enter email") type="email" required="required" data-error="Your email address is invalid" /
+            .help-block.form-text.with-errors.form-control-feedback
+          .row
+            .col-sm-6
+              .form-group
+                label for=""  Password
+                input.form-control placeholder="Password" type="password" required="required" data-minlength="6" /
+                .help-block.form-text.text-muted.form-control-feedback Minimum of 6 characters
+            .col-sm-6
+              .form-group
+                label for="" Confirm Password
+                input.form-control placeholder="Confirm Password" type="password" required="required" data-match-error="Passwords don't match" /
+                .help-block.form-text.with-errors.form-control-feedback
+          .form-group
+            label for=""  Regular select
+            select.form-control
+              option value="New York" New York
+              option value="California" California
+              option value="Boston" Boston
+              option value="Texas" Texas
+              option value="Colorado" Colorado
+          .form-group
+            label for=""  Multiselect
+            select.form-control.select2 multiple="true"
+              option selected="true" New York
+              option selected="true" California
+              option Boston
+              option Texas
+              option Colorado
+
+          fieldset.form-group
+            legend 
+              span Section Example
+            .row
+              .col-sm-6
+                .form-group
+                  label for=""  First Name
+                  input.form-control placeholder="First Name" type="text" required="required" data-error="Please input your First Name" /
+                  .help-block.form-text.with-errors.form-control-feedback
+              .col-sm-6
+                .form-group
+                  label for="" Last Name
+                  input.form-control placeholder="Last Name" type="text" required="required" data-error="Please input your Last Name" /
+                  .help-block.form-text.with-errors.form-control-feedback
+            .row
+              .col-sm-6
+                .form-group
+                  label for=""  Date of Birth
+                  input.single-daterange.form-control placeholder="Date of birth" type="text" value="04/12/1978" /
+              .col-sm-6
+                .form-group
+                  label for="" Twitter Username
+                  .input-group
+                    .input-group-prepend
+                      .input-group-text @
+                    input.form-control placeholder="Twitter Username" type="text" /
+            .form-group
+              label for="" Date Range Picker
+              input.multi-daterange.form-control type="text" value="03/31/2017 - 04/06/2017"/
+            .form-group
+              label  Example textarea
+              textarea.form-control rows="3" 
+
+          .form-check
+            label.form-check-label
+              input.form-check-input type="checkbox" /
+              | I agree to terms and conditions
+          .form-buttons-w
+            button.btn.btn-primary type="submit"  Submit

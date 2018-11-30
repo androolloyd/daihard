@@ -1,0 +1,74 @@
+/!
+  ------------------
+  START - Support Agents
+  ------------------
+- support_agents = [['name' => 'John Mayers', 'status' => 'Online Now', 'tickets' => '12', 'response' => '2 hours', 'btn_class' => 'success', 'avatar' => 'avatar1.jpg'],
+                    ['name' => 'Ben Gossman', 'status' => 'Offline', 'tickets' => '9', 'response' => '3 hours', 'btn_class' => 'secondary', 'avatar' => 'avatar3.jpg'],
+                    ['name' => 'Ken Sorrons', 'status' => 'Offline', 'tickets' => '17', 'response' => '1 hour', 'btn_class' => 'danger', 'avatar' => 'avatar2.jpg']]
+.element-wrapper
+  h6.element-header Support Agents
+  .element-box-tp
+    - support_agents.each do |agent|
+      .profile-tile
+        a.profile-tile-box href="users_profile_small.html"
+          .pt-avatar-w
+            img src="img/#{agent[0]['avatar']}" alt=""/
+          .pt-user-name= agent[0]['name']
+        .profile-tile-meta
+          ul
+            li
+              | Last Login:
+              strong= agent[0]['status']
+            li
+              | Tickets:
+              strong
+                a href="apps_support_index.html"
+                  = agent[0]['tickets']
+            li
+              | Response Time:
+              strong= agent[0]['response']
+          .pt-btn
+            a[class="btn btn-#{agent[0]['btn_class']} btn-sm" href="apps_full_chat.html"] Send Message
+/!
+  ------------------
+  END - Support Agents
+  ------------------
+
+.element-wrapper
+  h6.element-header Side Tables
+  .element-box
+    h5.form-header Table in white box
+    .form-desc You can put a table tag inside an <code>.element-box</code> class wrapper and add <code>.table</code> class to it to get something like this:
+
+    .controls-above-table
+      .row
+        .col-sm-12
+          a.btn.btn-sm.btn-primary href="#" Download CSV
+          a.btn.btn-sm.btn-danger href="#" Delete
+    .table-responsive
+      table.table.table-lightborder
+        thead
+          tr
+            th Customer
+            th.text-center Status
+        tbody
+          tr
+            td John Mayers
+            td.text-center 
+              .status-pill.green data-toggle="tooltip" data-title="Complete"
+          tr
+            td Kelly Brans
+            td.text-center 
+              .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+          tr
+            td Tim Howard
+            td.text-center 
+              .status-pill.green data-toggle="tooltip" data-title="Complete"
+          tr
+            td Joe Trulli
+            td.text-center 
+              .status-pill.yellow data-toggle="tooltip" data-title="Pending"
+          tr
+            td Fred Kolton
+            td.text-center 
+              .status-pill.green data-toggle="tooltip" data-title="Complete"

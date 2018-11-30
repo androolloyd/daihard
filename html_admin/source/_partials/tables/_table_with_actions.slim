@@ -1,0 +1,154 @@
+/!
+  ------------------
+  START - Controls Above Table
+  ------------------
+.controls-above-table
+  .row
+    .col-sm-6
+      a.btn.btn-sm.btn-secondary href="#" Download CSV
+      a.btn.btn-sm.btn-secondary href="#" Archive
+      a.btn.btn-sm.btn-danger href="#" Delete
+    .col-sm-6
+      form.form-inline.justify-content-sm-end
+        input.form-control.form-control-sm.rounded.bright type="text" placeholder="Search"
+        select.form-control.form-control-sm.rounded.bright
+          option value="" selected="selected" Select Status
+          option value="Pending" Pending
+          option value="Active" Active
+          option value="Cancelled" Cancelled
+/!
+  ------------------
+  END - Controls Above Table
+  ------------------          
+/!
+  ------------------
+  START - Table with actions
+  ------------------  
+.table-responsive
+  table.table.table-bordered.table-lg.table-v2.table-striped
+    thead
+      tr
+        th.text-center
+          input type="checkbox" class="form-control"
+        th Customer Name
+        th Country
+        th Order Total
+        th Referral
+        th Status
+        th Actions
+    tbody
+      tr
+        td.text-center
+          input type="checkbox" class="form-control"
+        td John Mayers
+        td
+          img src="img/flags-icons/us.png" alt="" width="25px"
+        td.text-right $245
+        td Organic
+        td.text-center 
+          .status-pill.green data-toggle="tooltip" data-title="Complete"
+        td.row-actions
+          a href="#"
+            i.os-icon.os-icon-ui-49
+          a href="#"
+            i.os-icon.os-icon-grid-10
+          a.danger href="#"
+            i.os-icon.os-icon-ui-15
+
+      tr
+        td.text-center
+          input type="checkbox" class="form-control"
+        td Mike Astone
+        td
+          img src="img/flags-icons/fr.png" alt="" width="25px"
+        td.text-right $154
+        td Organic
+        td.text-center 
+          .status-pill.red data-toggle="tooltip" data-title="Cancelled"
+        td.row-actions
+          a href="#"
+            i.os-icon.os-icon-ui-49
+          a href="#"
+            i.os-icon.os-icon-grid-10
+          a.danger href="#"
+            i.os-icon.os-icon-ui-15
+      tr
+        td.text-center
+          input type="checkbox" class="form-control"
+        td Kira Knight
+        td
+          img src="img/flags-icons/us.png" alt="" width="25px"
+        td.text-right $23
+        td Adwords
+        td.text-center 
+          .status-pill.green data-toggle="tooltip" data-title="Complete"
+        td.row-actions
+          a href="#"
+            i.os-icon.os-icon-ui-49
+          a href="#"
+            i.os-icon.os-icon-grid-10
+          a.danger href="#"
+            i.os-icon.os-icon-ui-15
+      tr
+        td.text-center
+          input type="checkbox" class="form-control"
+        td Jessica Bloom
+        td
+          img src="img/flags-icons/ca.png" alt="" width="25px"
+        td.text-right $112
+        td Organic
+        td.text-center 
+          .status-pill.green data-toggle="tooltip" data-title="Complete"
+        td.row-actions
+          a href="#"
+            i.os-icon.os-icon-ui-49
+          a href="#"
+            i.os-icon.os-icon-grid-10
+          a.danger href="#"
+            i.os-icon.os-icon-ui-15
+      tr
+        td.text-center
+          input type="checkbox" class="form-control"
+        td Gary Lineker
+        td
+          img src="img/flags-icons/ca.png" alt="" width="25px"
+        td.text-right $64
+        td Organic
+        td.text-center 
+          .status-pill.yellow data-toggle="tooltip" data-title="Pending"
+        td.row-actions
+          a href="#"
+            i.os-icon.os-icon-ui-49
+          a href="#"
+            i.os-icon.os-icon-grid-10
+          a.danger href="#"
+            i.os-icon.os-icon-ui-15
+/!
+  ------------------
+  END - Table with actions
+  ------------------            
+/!
+  ------------------
+  START - Controls below table
+  ------------------  
+.controls-below-table
+  .table-records-info
+    | Showing records 1 - 5
+  .table-records-pages
+    ul
+      li
+        a href="#" Previous
+      li
+        a.current href="#" 1
+      li
+        a href="#" 2
+      li
+        a href="#" 3
+      li
+        a href="#" 4
+      li
+        a href="#" Next
+/!
+  ------------------
+  END - Controls below table
+  ------------------

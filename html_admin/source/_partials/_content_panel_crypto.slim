@@ -1,0 +1,153 @@
+.element-wrapper
+  .element-actions.actions-only
+    a.element-action.element-action-fold href="#"
+      i.os-icon.os-icon-minus-circle
+  h6.element-header Quick Conversion
+  .element-box-tp
+    form action=""
+      .row
+        .col-6
+          .form-group
+            label for="" From
+            select.form-control
+              option Bitcoins
+              option Litecoins
+              option Ripple
+              option Dogecoin
+        .col-6
+          .form-group
+            label for="" To
+            select.form-control
+              option USD
+              option Litecoins
+              option Ripple
+              option Dogecoin
+      .row
+        .col-6
+          .form-group
+            label for="" Amount
+            .input-group
+              input.form-control placeholder="Amount..." type="text" value="1.37" /
+              .input-group-append
+                .input-group-text BTC
+        .col-6
+          .form-group
+            label for="" Price per BTC
+            .input-group
+              input.form-control type="text" value="8,284" /
+              .input-group-append
+                .input-group-text USD
+      button.btn.btn-primary.btn-block.btn-lg
+        i.os-icon.os-icon-refresh-ccw
+        span Transfer Now
+.element-wrapper.compact
+  .element-actions.actions-only
+    a.element-action.element-action-fold href="#"
+      i.os-icon.os-icon-minus-circle
+  h6.element-header Order History
+  .element-box-tp
+    table.table.table-compact.smaller.text-faded.mb-0
+      thead
+        tr
+          th Type
+          th.text-center Date
+          th.text-right Amount
+          th.text-right Fee
+      tbody
+        tr
+          td
+            span BTC
+            i.os-icon.os-icon-repeat.icon-separator
+            span USD
+          td.text-center 01.08
+          td.text-right.text-bright $25.38
+          td.text-right.text-danger -$1.23
+        tr
+          td
+            span RPX
+            i.os-icon.os-icon-repeat.icon-separator
+            span ETH
+          td.text-center 01.07
+          td.text-right.text-bright $15.21
+          td.text-right.text-danger -$1.13
+        tr
+          td
+            span LTC
+            i.os-icon.os-icon-repeat.icon-separator
+            span BTC
+          td.text-center 01.05
+          td.text-right.text-bright $17.43
+          td.text-right.text-danger -$2.14
+        tr
+          td
+            span PRX
+            i.os-icon.os-icon-repeat.icon-separator
+            span LTC
+          td.text-center 01.05
+          td.text-right.text-bright $23.18
+          td.text-right.text-danger -$3.17
+        tr
+          td
+            span ETH
+            i.os-icon.os-icon-repeat.icon-separator
+            span USD
+          td.text-center 01.04
+          td.text-right.text-bright $35.42
+          td.text-right.text-danger -$3.12
+        tr
+          td
+            span BTC
+            i.os-icon.os-icon-repeat.icon-separator
+            span ETH
+          td.text-center 01.02
+          td.text-right.text-bright $72.62
+          td.text-right.text-danger -$4.15
+        tr
+          td
+            span RPX
+            i.os-icon.os-icon-repeat.icon-separator
+            span USD
+          td.text-center 12.29
+          td.text-right.text-bright $25.38
+          td.text-right.text-danger -$1.23
+        tr
+          td
+            span ETH
+            i.os-icon.os-icon-repeat.icon-separator
+            span BTC
+          td.text-center 12.28
+          td.text-right.text-bright $52.11
+          td.text-right.text-danger -$4.72
+    a.centered-load-more-link.smaller href="#" 
+      span Load More Transactions
+.element-wrapper.compact
+  .element-actions.actions-only
+    a.element-action.element-action-fold href="#"
+      i.os-icon.os-icon-minus-circle
+  h6.element-header Profile Completion
+  .element-box-tp
+    .fancy-progress-with-label
+      .fpl-label 65%
+      .fpl-progress-w
+        .fpl-progress-i style="width: 65%;"
+    .todo-list
+      a.todo-item.complete href="#"
+        .ti-info
+          .ti-header Connect Bank Account
+          .ti-sub-header You have connected 2 accounts
+        .ti-icon
+          i.os-icon.os-icon-check
+      a.todo-item.complete href="#"
+        .ti-info
+          .ti-header Upload Tax Documents
+          .ti-sub-header You uploaded W-2 and 1099
+        .ti-icon
+          i.os-icon.os-icon-check
+      a.todo-item href="#"
+        .ti-info
+          .ti-header Deposit Money
+          .ti-sub-header You can deposit from your bank
+        .ti-icon
+          i.os-icon.os-icon-arrow-right7
+.d-xxl-none
+  include ../_partials/elements/_cta_2.slim

@@ -1,0 +1,29 @@
+.property-item
+  a.item-media-w href="rentals_single.html" 
+    .item-media style="background-image: url(img/#{property[0]['img']})"
+    
+  .item-info
+    .item-features
+      .feature= "#{property[0]['bedrooms']} Bedrooms"
+      .feature Entire Home
+    h3.item-title
+      a href="rentals_single.html"
+        = property[0]['title']
+    .item-reviews
+      .reviews-stars
+        select.item-star-rating
+          option value="1" 1
+          option value="2" 2
+          option value="3" 3
+          option selected="yes" value="4" 4
+          option value="5" 5
+      .reviews-count= "#{property[0]['reviews']} Reviews"
+    .item-price-buttons
+      .item-price
+        strong= property[0]['price']
+        span 
+          | /per night
+      .item-buttons
+        a.btn.btn-outline-primary href="rentals_single.html"
+          span Details
+          i.os-icon.os-icon-arrow-2-right
