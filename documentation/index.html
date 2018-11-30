@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Light Admin | Premium HTML Bootstrap Theme | User Manual</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div class="all-wrapper" id="top_anchor">
+      <div class="intro-box">
+        <h5>Osetin Themes | 2017</h5>
+        <h1><span>User Manual</span><br/>HTML Template "Light Admin"</h1>
+        <h3>Extensive documentation guide <span>version 1.0.0</span></h3>
+        <div class="social-box">
+          <a href="https://twitter.com/pinsupreme"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/pinsupreme/"><i class="fa fa-facebook"></i></a>
+          <a href="https://dribbble.com/osetin"><i class="fa fa-dribbble"></i></a>
+        </div>
+      </div>
+      <h2><span>Welcome</span></h2>
+      <p>Thank you for the purchase of our premium HTML template Light Admin. We will walk you through the installation and setup of this template. Hold tight, it will be quick and easy.</p>
+
+      <h2 id="headingTopics"><span>Topics:</span></h2>
+      <ul class="topics">
+        <li><a href="#hFolderStructure">Folder Structure</a></li>
+        <li><a href="#hBootstrap">Bootstrap Integration</a></li>
+        <li><a href="#hBower">Bower Components</a></li>
+        <li><a href="#hFaq">Frequently asked questions</a></li>
+        <li><a href="#hChangelog">Changelog</a></li>
+      </ul>
+
+
+
+
+
+      <div class="topic-block">
+        <h2 id="hFolderStructure"><span>Folder Structure</span></h2>
+        <p><img class="screenshot-img" src="img/files.png" alt=""></p>
+        <p>Your download will include two folders: <strong>dist</strong> and <strong>source</strong>. The <strong>dist</strong> folder includes the generated html and asset files that you should not edit ideally. These files are meant for production environment.</p>
+        <p>To edit the template you would need to edit files inside the <strong>source</strong> folder.</p>
+        <p>Inside the <strong>source</strong> folder you will find a set of files and folders. Most of the files have a <strong>.slim</strong> extension. These are the files that generate <strong>html</strong> files in the <strong>dist</strong> folder. Don't get surprised with a <strong>.slim</strong> file extension. It is a very powerful and popular template engine language called <strong>Slim Lang</strong>, you can read more about it <a href="http://slim-lang.com/">by clicking here</a>.</p>
+        <p>We used <a href="https://codekitapp.com/">CodeKit</a> app to compile <strong>.slim</strong> and <strong>.scss</strong> files, but you can use any 
+        <strong>scss</strong> compiler that you like. All the scss source files are located in the <strong>source</strong> &gt; <strong>scss</strong> folder.</p>
+        <p><img class="screenshot-img" src="img/files_source.png" alt=""></p>
+        <p>There is a main file called <strong>main.scss</strong> which includes other .scss files to generate a <strong>dist/css/main.css</strong> file. You can see which <strong>scss</strong> files are part of the main file and edit them accordingly.</p>
+
+        <h2 id="hFolderStructure"><span>Folder Structure</span></h2>
+        <p>Our template is using latest version of <a href="http://getbootstrap.com/">Bootstrap CSS framework</a>.</p>
+        <p><img class="screenshot-img" src="img/bootstrap_main.png" alt=""></p>
+        <p>There is a folder <strong>source/scss/bootstrap-override</strong>, it has different scss files that override default Bootstrap files. Most important file there is a <strong>_bootstrap.scss</strong> which is a custom version of the bootstrap.scss file that comes originally with bootstrap.</p>
+        <p>We are using a custom (pretty much duplicated) version so that we can comment out some parts of the bootstrap that we are not going to use. You can comment back those lines. As you can see on a screenshot above some lines are commented out.</p>
+        <p>Another important file is located in <strong>source/scss/bootstrap-override/</strong> folder, called <strong>_variables.scss</strong>. It has all the variables from the original bootstrap file, this way we can always update bootstrap to the latest verison and keep our custom changes to bootstrap variables. If you need to change bootstrap variables - you have to change them in this file.</p>
+        <p>Our template has it's own variables as well. They are located in <strong>source/scss/_theme-variables.scss</strong> file.</p>
+        <p>Responsive Styles are located in <strong>source/scss/_responsive.scss</strong> file.</p>
+        <div class="message-info">If for some reason you can't play an instructional video above, you can follow a step by step guide below which will cover all possible methods of installation in detail. If you have already installed the theme, you can proceed to <a href="#">Setting a Homepage</a> section.</div>
+
+        <h2 id="hBower"><span>Bower Components</span></h2>
+        <p>What is <a href="https://bower.io/">Bower</a>? Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.</p>
+        <p><img class="screenshot-img" src="img/bower.png" alt=""></p>
+        <p>We are using <a href="https://bower.io/">Bower</a> to manage all the different frameworks and plugins that we use in our template. It is an incredible package manager which allows us to separate all the third party/vendor assets from our core template. It allows us to keep all the required libraries and frameworks up to date and not worry about outdated code.</p>
+        <p>You can find a <strong>bower_components</strong> folder in the files you downloaded. Do not make changes inside the libraries you find there, instead you have to override them by your own files. You can also find a <strong>bower.json</strong> file which holds all the settings that bower manager needs.</p>
+        
+
+      </div>
+
+
+
+
+
+      <div class="topic-block">
+        <h2 id="hFaq"><span>Frequently Asked Questions</span></h2>
+        <div class="topic-block">
+          <h2 id="headingFaqs5"><span>How do I compile the source files?</span></h2>
+          <p>We used <a href="https://codekitapp.com/">Codekit app</a> to compile this template, but you can also use <a href="http://gulpjs.com/">GULP</a> to compile the project, we have included all the necessary files so you can just install the gulp and run the <strong>gulp</strong> command in the <strong>html_admin</strong> folder.</p>
+        </div>
+        <div class="topic-block">
+          <h2 id="headingFaqs5"><span>Can I use GULP for compiling?</span></h2>
+          <p>Yes we have included all the necessary gulp task files and you can just enter the template directory in console and run <strong>gulp</strong> command and it will generate the updated <strong>dist</strong> folder.</p>
+        </div>
+        <div class="topic-block">
+          <h2 id="headingFaqs5"><span>How to install &amp; compile with GULP on MacOS?</span></h2>
+          <ul>
+            <li>1. Install Xcode command line tools: <strong>xcode-select --install</strong></li>
+            <li>2. Agree to Xcode service agreement by opening Xcode or running <strong>sudo xcodebuild -license</strong> and hitting <strong>space</strong> until it prompts you to type <strong>“agree”</strong></li>
+            <li>3. Install HomeBrew <a href="https://brew.sh/" target="_blank">https://brew.sh/</a>  *[1]</li>
+            <li>4. Install Node: <strong>brew install node</strong></li>
+            <li>5. Install Gulp CLI by running <strong>npm install --global gulp-cli</strong>  *[2]</li>
+            <li>6. Navigate into html_admin directory and run the following commands: </li>
+              <ul>
+                <li>1. Install local gulp: <strong>npm install --save-dev gulp</strong></li>
+                <li>2. Install NPM Modules by running: <strong>npm install</strong></li>
+                <li>3. Install SLIM gem: <strong>sudo gem install slim</strong></li>
+              </ul>
+            <li>7. Now you can run command <strong>gulp</strong> to compile your assets</li>
+          </ul>
+          <h5>Notes &amp; Tutorials:</h5>
+          <ul>
+          <li>*[1]. Brew, Node. Great tutorial (both Windows and MacOS): <a href="https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/">https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/</a></li>
+          <li>*[2]. Installing Gulp: <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class="topic-block">
+        <h2 id="hChangelog"><span>Changelog &amp; Updates History</span></h2>
+        <p>To see a full changelog <a href="https://pinsupreme.com/changelogs/light-admin-clean-bootstrap-4-dashboard-html-template" target="_blank">click here</a></p>
+      </div>
+
+
+
+
+    </div>
+    <div class="footer">
+      HTML Template Light Admin. All Rights Reserved 2017.
+    </div>
+    <a href="#top_anchor" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/vendor/min/perfect-scrollbar.jquery.min.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

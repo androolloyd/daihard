@@ -1,0 +1,254 @@
+
+
+// CUSTOM FONTS
+
+
+
+
+// MIXINS
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
+}
+
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+
+.transition (@transition) {
+  -webkit-transition: @transition;  
+  -moz-transition:    @transition;
+  -ms-transition:     @transition; 
+  -o-transition:      @transition;  
+}
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+.scale (@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform:    scale(@factor);
+  -ms-transform:     scale(@factor);
+  -o-transform:      scale(@factor);
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+  -o-transform:      rotate(@deg);
+}
+
+.font-bold() {
+  font-weight: 700;
+}
+
+.font-regular() {
+  font-weight: 400;
+}
+
+.my-fa(){
+  display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0)
+}
+
+
+// MAIN STYLES
+
+*,
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+body, html {
+  min-height: 100%;
+}
+
+body {
+  background-color: #f9f9f9;
+  .font-regular();
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "proxima-nova", sans-serif;
+}
+
+
+strong {
+  .font-bold();
+}
+
+a {
+  color: #0658B6;
+}
+
+.top-margin {
+  margin-top: 40px;
+}
+
+h1,h2,h3,h4 {
+  .font-bold();
+}
+
+h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+.text-bigger {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.highlight {
+}
+
+.icon-w {
+  margin-bottom: 40px;
+}
+
+.feature-title {
+  position: relative;
+  margin-bottom: 40px;
+  &:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #111;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.7);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  text-decoration: none;
+  .font-bold();
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+  }
+  &.btn-blue {
+    background-color: #3682EE;
+    .box-shadow(~"inset 1px 1px 1px 0px rgba(255,255,255,0.4), 0px 2px 4px 0px rgba(0,0,0,0.1)");
+    &:hover {
+      background-color: #1F69D2;
+    }
+  }
+}
+
+.feature-separator {
+  height: 2px;
+  background-color: #eee;
+  position: relative;
+  .feature-separator-diamond {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    .transform(translateX(-50%) rotate(45deg));
+    .box-shadow(0px 0px 0px 20px #f9f9f9);
+  }
+}
+
+
+.feature-block {
+  padding: 100px 0px;
+  max-width: 1200px;
+  margin: 0px auto;
+  .clearfix();
+
+  .media-box {
+    text-align: center;
+  }
+
+  &.media-left {
+    .media-box {
+      float: left;
+      width: 60%;
+    }
+    .desc-box {
+      float: right;
+      width: 40%;
+      padding-left: 100px;
+      padding-right: 30px;
+    }
+  }
+  &.media-right {
+    .desc-box {
+      float: left;
+      width: 40%;
+      padding-right: 100px;
+      padding-left: 30px;
+    }
+    .media-box {
+      float: right;
+      width: 60%;
+    }
+  }
+  &.media-center {
+    .desc-box {
+      width: 40%;
+      margin: 0px auto;
+      text-align: center;
+      &.wider {
+        width: 55%;
+      }
+    }
+    .feature-title {
+      &:before {
+        left: 50%;
+        .transform(translateX(-50%));
+      }
+    }
+  }
+}
