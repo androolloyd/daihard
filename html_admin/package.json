@@ -5,7 +5,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'source/bower_components', 'junction') } catch (e) { }\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,37 @@
     "gulp-slim": "^0.3.0"
   },
   "dependencies": {
-    "npm": "^5.6.0"
+    "@bower_components/blueimp-canvas-to-blob": "blueimp/JavaScript-Canvas-to-Blob#>=2.1.1",
+    "@bower_components/blueimp-file-upload": "blueimp/jQuery-File-Upload#^9.18.0",
+    "@bower_components/blueimp-load-image": "blueimp/JavaScript-Load-Image#>=1.13.0",
+    "@bower_components/blueimp-tmpl": "blueimp/JavaScript-Templates#>=2.5.4",
+    "@bower_components/bootstrap": "twbs/bootstrap#v4.0.0",
+    "@bower_components/bootstrap-daterangepicker": "dangrossman/bootstrap-daterangepicker#^2.1.25",
+    "@bower_components/bootstrap-validator": "1000hz/bootstrap-validator#^0.11.9",
+    "@bower_components/chart.js": "chartjs/Chart.js#^2.6.0",
+    "@bower_components/chartist": "gionkunz/chartist-js#^0.11.0",
+    "@bower_components/ckeditor": "ckeditor/ckeditor-releases#^4.6.2",
+    "@bower_components/datatables.net": "DataTables/Dist-DataTables#^1.10.15",
+    "@bower_components/datatables.net-bs": "DataTables/Dist-DataTables-Bootstrap#^2.1.1",
+    "@bower_components/datatables.net-buttons": "DataTables/Dist-DataTables-Buttons#^1.3.1",
+    "@bower_components/datatables.net-buttons-bs": "DataTables/Dist-DataTables-Buttons-Bootstrap#^1.3.1",
+    "@bower_components/dragula.js": "bevacqua/dragula#^3.7.2",
+    "@bower_components/dropzone": "enyo/dropzone#^5.1.1",
+    "@bower_components/editable-table": "mindmup/editable-table#*",
+    "@bower_components/fullcalendar": "fullcalendar/fullcalendar#^3.4.0",
+    "@bower_components/ion.rangeSlider": "IonDen/ion.rangeSlider#^2.2.0",
+    "@bower_components/jquery": "jquery/jquery-dist#1.9.1 - 3",
+    "@bower_components/jquery-bar-rating": "antennaio/jquery-bar-rating#^1.2.2",
+    "@bower_components/moment": "moment/moment#>=2.9.0",
+    "@bower_components/perfect-scrollbar": "noraesae/perfect-scrollbar-bower#^0.7.0",
+    "@bower_components/popper.js": "FezVrasta/popper.js#^1.12.9",
+    "@bower_components/select2": "ivaynberg/select2#^4.0.3",
+    "@bower_components/slick-carousel": "kenwheeler/slick#^1.6.0",
+    "@bower_components/tether": "HubSpot/tether#^1.4.0",
+    "npm": "^5.6.0",
+    "which-pm-runs": "^1.0.0"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
   }
 }
