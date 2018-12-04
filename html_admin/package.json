@@ -6,6 +6,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'source/bower_components', 'junction') } catch (e) { }\""
   },
   "repository": {
@@ -21,7 +23,9 @@
     "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-slim": "^0.3.0"
+    "gulp-slim": "^0.3.0",
+    "slim-lang-loader": "^0.0.7",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "@bower_components/blueimp-canvas-to-blob": "blueimp/JavaScript-Canvas-to-Blob#>=2.1.1",
@@ -51,7 +55,9 @@
     "@bower_components/select2": "ivaynberg/select2#^4.0.3",
     "@bower_components/slick-carousel": "kenwheeler/slick#^1.6.0",
     "@bower_components/tether": "HubSpot/tether#^1.4.0",
+    "@types/webpack": "^4.4.20",
     "npm": "^5.6.0",
+    "webpack": "^4.26.1",
     "which-pm-runs": "^1.0.0"
   },
   "engines": {

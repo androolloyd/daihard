@@ -1,47 +1,47 @@
+/ .row
+/   .col-sm-12
+/     .element-wrapper
+/       .element-actions
+/         form.form-inline.justify-content-sm-end
+/           select.form-control.form-control-sm.rounded
+/             option value="Pending" Today
+/             option value="Active" Last Week 
+/             option value="Cancelled" Last 30 Days
+/       h6.element-header Sales Dashboard
+/       .element-content
+/         .row
+/           .col-sm-4.col-xxxl-3
+/             a.element-box.el-tablo href="#"
+/               .label Products Sold
+/               .value 57
+/               .trending.trending-up-basic
+/                 span 12%
+/                 i.os-icon.os-icon-arrow-up2
+/           .col-sm-4.col-xxxl-3
+/             a.element-box.el-tablo href="#"
+/               .label Gross Profit
+/               .value $457
+/               .trending.trending-down-basic
+/                 span 12%
+/                 i.os-icon.os-icon-arrow-down
+/           .col-sm-4.col-xxxl-3
+/             a.element-box.el-tablo href="#"
+/               .label New Customers
+/               .value 125
+/               .trending.trending-down-basic
+/                 span 9%
+/                 i.os-icon.os-icon-arrow-down
+/           .d-none.d-xxxl-block.col-xxxl-3
+/             a.element-box.el-tablo href="#"
+/               .label Refunds Processed
+/               .value $294
+/               .trending.trending-up-basic
+/                 span 12%
+/                 i.os-icon.os-icon-arrow-up2
 .row
-  .col-sm-12
+  .col-sm-12.col-xxxl-6
     .element-wrapper
-      .element-actions
-        form.form-inline.justify-content-sm-end
-          select.form-control.form-control-sm.rounded
-            option value="Pending" Today
-            option value="Active" Last Week 
-            option value="Cancelled" Last 30 Days
-      h6.element-header Sales Dashboard
-      .element-content
-        .row
-          .col-sm-4.col-xxxl-3
-            a.element-box.el-tablo href="#"
-              .label Products Sold
-              .value 57
-              .trending.trending-up-basic
-                span 12%
-                i.os-icon.os-icon-arrow-up2
-          .col-sm-4.col-xxxl-3
-            a.element-box.el-tablo href="#"
-              .label Gross Profit
-              .value $457
-              .trending.trending-down-basic
-                span 12%
-                i.os-icon.os-icon-arrow-down
-          .col-sm-4.col-xxxl-3
-            a.element-box.el-tablo href="#"
-              .label New Customers
-              .value 125
-              .trending.trending-down-basic
-                span 9%
-                i.os-icon.os-icon-arrow-down
-          .d-none.d-xxxl-block.col-xxxl-3
-            a.element-box.el-tablo href="#"
-              .label Refunds Processed
-              .value $294
-              .trending.trending-up-basic
-                span 12%
-                i.os-icon.os-icon-arrow-up2
-.row
-  .col-sm-8.col-xxxl-6
-    .element-wrapper
-      h6.element-header New Orders
+      h6.element-header Current Subscriptions
       .element-box
         .table-responsive
           table.table.table-lightborder
@@ -53,7 +53,7 @@
                 th.text-right Total
             tbody
               tr
-                td.nowrap John Mayers
+                td.nowrap CoinAPI
                 td
                   .cell-image-list
                     .cell-img style="background-image: url(img/portfolio9.jpg)"
@@ -65,7 +65,7 @@
                   .status-pill.green data-toggle="tooltip" data-title="Complete"
                 td.text-right $354
               tr
-                td.nowrap Kelly Brans
+                td.nowrap Netflix
                 td
                   .cell-image-list
                     .cell-img style="background-image: url(img/portfolio14.jpg)"
@@ -75,7 +75,7 @@
                   .status-pill.red data-toggle="tooltip" data-title="Cancelled"
                 td.text-right $94
               tr
-                td.nowrap Tim Howard
+                td.nowrap Amazon Prime
                 td
                   .cell-image-list
                     .cell-img style="background-image: url(img/portfolio16.jpg)"
@@ -86,7 +86,7 @@
                   .status-pill.green data-toggle="tooltip" data-title="Complete"
                 td.text-right $156
               tr
-                td.nowrap Joe Trulli
+                td.nowrap Spotify
                 td
                   .cell-image-list
                     .cell-img style="background-image: url(img/portfolio1.jpg)"
@@ -98,7 +98,7 @@
                   .status-pill.yellow data-toggle="tooltip" data-title="Pending"
                 td.text-right $1,120
               tr
-                td.nowrap Jerry Lingard
+                td.nowrap Twilio
                 td
                   .cell-image-list
                     .cell-img style="background-image: url(img/portfolio9.jpg)"
@@ -107,40 +107,40 @@
                   .status-pill.green data-toggle="tooltip" data-title="Complete"
                 td.text-right $856
 
-  .col-sm-4.d-xxxl-none
-    /! START - Top Selling Chart
-    .element-wrapper
-      h6.element-header Top Selling Today
-      .element-box
-        .el-chart-w
-          canvas#donutChart width="120" height="120"
-          .inside-donut-chart-label
-            strong 142
-            span Total Orders
-        .el-legend.condensed
-          .row
-            .col-auto.col-xxxxl-6.ml-sm-auto.mr-sm-auto.col-6
-              .legend-value-w
-                .legend-pin.legend-pin-squared style="background-color: #6896f9;"
-                .legend-value 
-                  span Prada
-                  .legend-sub-value 14 Pairs
-              .legend-value-w
-                .legend-pin.legend-pin-squared style="background-color: #85c751;"
-                .legend-value 
-                  span Maui Jim
-                  .legend-sub-value 26 Pairs
-            .col-6.d-lg-none.d-xxl-block
-              .legend-value-w
-                .legend-pin.legend-pin-squared style="background-color: #806ef9;"
-                .legend-value 
-                  span Gucci
-                  .legend-sub-value 17 Pairs
-              .legend-value-w
-                .legend-pin.legend-pin-squared style="background-color: #d97b70;"
-                .legend-value 
-                  span Armani
-                  .legend-sub-value 12 Pairs
+  / .col-sm-4.d-xxxl-none
+  /   /! START - Top Selling Chart
+  /   .element-wrapper
+  /     h6.element-header Top Selling Today
+  /     .element-box
+  /       .el-chart-w
+  /         canvas#donutChart width="120" height="120"
+  /         .inside-donut-chart-label
+  /           strong 142
+  /           span Total Orders
+  /       .el-legend.condensed
+  /         .row
+  /           .col-auto.col-xxxxl-6.ml-sm-auto.mr-sm-auto.col-6
+  /             .legend-value-w
+  /               .legend-pin.legend-pin-squared style="background-color: #6896f9;"
+  /               .legend-value 
+  /                 span Prada
+  /                 .legend-sub-value 14 Pairs
+  /             .legend-value-w
+  /               .legend-pin.legend-pin-squared style="background-color: #85c751;"
+  /               .legend-value 
+  /                 span Maui Jim
+  /                 .legend-sub-value 26 Pairs
+  /           .col-6.d-lg-none.d-xxl-block
+  /             .legend-value-w
+  /               .legend-pin.legend-pin-squared style="background-color: #806ef9;"
+  /               .legend-value 
+  /                 span Gucci
+  /                 .legend-sub-value 17 Pairs
+  /             .legend-value-w
+  /               .legend-pin.legend-pin-squared style="background-color: #d97b70;"
+  /               .legend-value 
+  /                 span Armani
+  /                 .legend-sub-value 12 Pairs
     /! END - Top Selling Chart
 
   .d-none.d-xxxl-block.col-xxxl-6

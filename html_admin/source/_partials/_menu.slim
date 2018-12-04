@@ -17,7 +17,7 @@ div[class="#{menu_class}"]
     .logo-w
       a.logo href="index.html"
         .logo-element
-        .logo-label Clean Admin
+        .logo-label Groundhog
   - if menu_settings['show_user_in_menu']
     .logged-user-w.avatar-inline
       .logged-user-i
@@ -29,14 +29,14 @@ div[class="#{menu_class}"]
         .logged-user-toggler-arrow
           .os-icon.os-icon-chevron-down
         include ../_partials/_user_hover_menu.slim
-  - if menu_settings['show_settings_in_menu'] || menu_settings['show_messages_in_menu']       
-    .menu-actions
-      - if menu_settings['show_messages_in_menu']
-        include ../_partials/top_bar/_messages.slim
-      - if menu_settings['show_settings_in_menu']
-        include ../_partials/top_bar/_settings.slim
-      - if menu_settings['show_notifications_in_menu']
-        include ../_partials/top_bar/_notifications.slim
+  / - if menu_settings['show_settings_in_menu'] || menu_settings['show_messages_in_menu']       
+  /   .menu-actions
+  /     - if menu_settings['show_messages_in_menu']
+  /       include ../_partials/top_bar/_messages.slim
+  /     - if menu_settings['show_settings_in_menu']
+  /       include ../_partials/top_bar/_settings.slim
+  /     - if menu_settings['show_notifications_in_menu']
+  /       include ../_partials/top_bar/_notifications.slim
   - if menu_settings['show_search_in_menu']
     include ../_partials/top_bar/_search.slim
   h1.menu-page-header Page Header
@@ -66,8 +66,8 @@ div[class="#{menu_class}"]
                   li
                     a href="#{sub_menu_item['href']}" 
                       == sub_menu_item['label']
-  .side-menu-magic
-    h4 Light Admin
-    p Clean Bootstrap 4 Template
-    .btn-w
-      a.btn.btn-white.btn-rounded href="#{purchase_url}" target="_blank" Purchase Now
+  / .side-menu-magic
+  /   h4 Light Admin
+  /   p Clean Bootstrap 4 Template
+  /   .btn-w
+  /     a.btn.btn-white.btn-rounded href="#{purchase_url}" target="_blank" Purchase Now

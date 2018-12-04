@@ -23,12 +23,12 @@ div[class="#{top_bar_class}"]
     - is_top_bar = true
     - if top_bar_settings['show_search']
       include ../_partials/top_bar/_search.slim
-    - if top_bar_settings['show_messages']
-      include ../_partials/top_bar/_messages.slim
-    - if top_bar_settings['show_settings']
-      include ../_partials/top_bar/_settings.slim
-    - if top_bar_settings['show_user_info']
-      include ../_partials/top_bar/_user_info.slim
+    / - if top_bar_settings['show_messages']
+    /   iclude ../_partials/top_bar/_messages.slim
+    / - if top_bar_settings['show_settings']
+    /   include ../_partials/top_bar/_settings.slim
+    / - if top_bar_settings['show_user_info']
+    /   include ../_partials/top_bar/_user_info.slim
     - is_top_bar = nil
   /!
     ------------------

@@ -19,10 +19,10 @@ html
     div[class="#{all_wrapper_class}"]
       - if top_bar_settings['above_menu']
         include ../_partials/_top_bar.slim
-      - if defined? show_onboarding
-        include ../_partials/onboarding/_onboarding_modal.slim
-      - if defined? show_onboarding_large
-        include ../_partials/onboarding/_onboarding_modal_large.slim
+      / - if defined? show_onboarding
+      /   include ../_partials/onboarding/_onboarding_modal.slim
+      / - if defined? show_onboarding_large
+      /   include ../_partials/onboarding/_onboarding_modal_large.slim
       - if true
         include ../_partials/_search_with_suggestions.slim
       .layout-w
@@ -46,11 +46,11 @@ html
           ------------------
         .content-w
           / Top bar
-          - if !top_bar_settings['above_menu']
-            include ../_partials/_top_bar.slim
+          / - if !top_bar_settings['above_menu']
+          /   include ../_partials/_top_bar.slim
           / Breadcrumbs
-          - unless defined?(no_breadcrumbs)
-            include ../_partials/_breadcrumbs.slim
+          / - unless defined?(no_breadcrumbs)
+          /   include ../_partials/_breadcrumbs.slim
 
           - if defined? content_panel_file
             .content-panel-toggler
@@ -59,22 +59,22 @@ html
           .content-i
             .content-box
               == Slim::Template.new(content_box_file).render(Object.new, 'template_vars' => template_vars)
-              - if defined? show_color_scheme_selector
+              / - if defined? show_color_scheme_selector
                 /!
                   ------------------
                   START - Color Scheme Toggler
                   ------------------
-                include ../misc/_color_scheme_toggler.slim
+                / include ../misc/_color_scheme_toggler.slim
                 /!
                   ------------------
                   END - Color Scheme Toggler
                   ------------------
-              - if defined? show_demo_customizer && show_demo_customizer
+              / - if defined? show_demo_customizer && show_demo_customizer
                 /!
                   ------------------
                   START - Demo Customizer
                   ------------------
-                include ../misc/_demo_customizer.slim
+                / include ../misc/_demo_customizer.slim
                 /!
                   ------------------
                   END - Demo Customizer
@@ -83,15 +83,15 @@ html
                 ------------------
                 START - Chat Popup Box
                 ------------------
-              include ../misc/_content_chat.slim
+              / include ../misc/_content_chat.slim
               /!
                 ------------------
                 END - Chat Popup Box
                 ------------------
-            - if defined? content_panel_file
-              - content_panel_class = 'content-panel'
-              - content_panel_class += defined?(content_panel_compact) ? ' compact' : ''
-              - content_panel_class += defined?(content_panel_color_scheme_dark) ? ' color-scheme-dark' : ''
+            / - if defined? content_panel_file
+            /   - content_panel_class = 'content-panel'
+            /   - content_panel_class += defined?(content_panel_compact) ? ' compact' : ''
+            /   - content_panel_class += defined?(content_panel_color_scheme_dark) ? ' color-scheme-dark' : ''
               /!
                 ------------------
                 START - Sidebar
