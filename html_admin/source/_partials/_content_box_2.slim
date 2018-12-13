@@ -38,6 +38,48 @@
 /               .trending.trending-up-basic
 /                 span 12%
 /                 i.os-icon.os-icon-arrow-up2
+
+- transactions = [['status_label' => 'Complete', 'status' => 'green', 'time' => '1:52am', 'date' => 'Today', 'img' => 'img/company1.png', 'desc' => 'Banana Shakes LLC', 'category' => [['name' => 'Shopping', 'color' => 'success']], 'amount' => '+ 1,250 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Declined', 'status' => 'red', 'time' => '3:22pm', 'date' => 'Jan 19th', 'img' => 'img/company2.png', 'desc' => 'Stripe Payment Processing', 'category' => [['name' => 'Cafe', 'color' => 'danger']], 'amount' => '+ 952.23 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '7:45am', 'date' => 'Yesterday', 'img' => 'img/company3.png', 'desc' => 'MailChimp Services', 'category' => [['name' => 'Restaurants', 'color' => 'warning']], 'amount' => '- 320 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '2:12pm', 'date' => 'Jan 23rd', 'img' => 'img/company1.png', 'desc' => 'Starbucks Cafe', 'category' => [['name' => 'Shopping', 'color' => 'primary']], 'amount' => '+ 17.99 USD', 'amount_status' => 'text-success'],
+  ['status_label' => 'Complete', 'status' => 'green', 'time' => '9:51am', 'date' => 'Jan 12th', 'img' => 'img/company4.png', 'desc' => 'Ebay Marketplace', 'category' => [['name' => 'Groceries', 'color' => 'danger']], 'amount' => '- 244 USD', 'amount_status' => 'text-danger'],
+  ['status_label' => 'Pending', 'status' => 'yellow', 'time' => '12:45pm', 'date' => 'Jan 9th', 'img' => 'img/company2.png', 'desc' => 'Envato Templates Inc', 'category' => [['name' => 'Business', 'color' => 'primary']], 'amount' => '+ 340 USD', 'amount_status' => 'text-success']]
+/! START - Transactions Table
+.row
+  .col-sm-12.col-xxxl-12
+    .element-wrapper
+      h6.element-header Recent Transactions
+      .element-box-tp
+        .table-responsive
+          table.table.table-padded
+            thead
+              tr
+                th Status
+                th Date
+                th Description
+                th.text-center Category
+                th.text-right Amount
+            tbody
+              - transactions.each do |t|
+                tr
+                  td.nowrap
+                    span[class="status-pill smaller #{t[0]['status']}"]
+                    span= t[0]['status_label']
+                  td
+                    span= t[0]['date'] 
+                    span.smaller.lighter= t[0]['time']
+                  td.cell-with-media
+                    img src="#{t[0]['img']}" alt="" style="height: 25px;"/
+                    span= t[0]['desc']
+                  td.text-center
+                    - t[0]['category'].each do |c|
+                        a href="" class="badge badge-#{c[0]['color']}"
+                          = c[0]['name']
+                  td.text-right.bolder.nowrap
+                    span class="#{t[0]['amount_status']}"
+                      = t[0]['amount']
+/! END - Transactions Table
 .row
   .col-sm-12.col-xxxl-6
     .element-wrapper
@@ -106,6 +148,15 @@
                 td.text-center 
                   .status-pill.green data-toggle="tooltip" data-title="Complete"
                 td.text-right $856
+              tr
+                td.nowrap Planet Fitness
+                td
+                  .cell-image-list
+                    .cell-img style="background-image: url(img/portfolio9.jpg)"
+                
+                td.text-center 
+                  .status-pill.green data-toggle="tooltip" data-title="Complete"
+                td.text-right $24
 
   / .col-sm-4.d-xxxl-none
   /   /! START - Top Selling Chart
