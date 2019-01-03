@@ -14,9 +14,9 @@ export const fuseNavigationConfig = [
       },
       {
         id: "example-component",
-        title: "Test",
+        title: "Wallet",
         type: "item",
-        icon: "whatshot",
+        icon: "account_balance_wallet",
         url: "/test"
       }
     ]

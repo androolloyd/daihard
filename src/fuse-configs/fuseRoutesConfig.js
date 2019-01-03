@@ -2,17 +2,14 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { FuseUtils } from "@fuse/index";
 import { ExampleConfig } from "main/content/example/ExampleConfig";
+import { TestConfig } from "../main/content/example/TestConfig";
 
-const routeConfigs = [ExampleConfig];
+const routeConfigs = [ExampleConfig, TestConfig];
 
 export const routes = [
   ...FuseUtils.generateRoutesFromConfigs(routeConfigs),
   {
-    path: "/example",
+    path: "/",
     component: () => <Redirect to="/example" />
-  },
-  {
-    path: "/test",
-    component: () => <Redirect to="/test" />
-  },
+  }
 ];
