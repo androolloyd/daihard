@@ -1,17 +1,22 @@
-import Example from './Example';
+import Example from "./Example";
+import Test from "./Test"
 
 export const ExampleConfig = {
-    settings: {
-        layout: {
-            config: {}
-        }
+  settings: {
+    layout: {
+      config: {}
+    }
+  },
+  routes: [
+    {
+      path: "/example",
+      component: Example
     },
-    routes  : [
-        {
-            path     : '/example',
-            component: Example
-        }
-    ]
+    {
+      path: "/test",
+      component: Test
+    }
+  ]
 };
 
 /**

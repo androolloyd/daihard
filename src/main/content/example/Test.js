@@ -6,7 +6,7 @@ const styles = theme => ({
   layoutRoot: {}
 });
 
-class Example extends Component {
+class Test extends Component {
   render() {
     const { classes } = this.props;
     return (
@@ -16,7 +16,7 @@ class Example extends Component {
         }}
         header={
           <div className="p-24">
-            <h4>Header</h4>
+            <h4>Test Header</h4>
           </div>
         }
         contentToolbar={
@@ -36,4 +36,4 @@ class Example extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Example);
+export default withStyles(styles, { withTheme: true })(Test);

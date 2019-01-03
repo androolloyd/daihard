@@ -1,113 +1,101 @@
-import React, {Component} from 'react';
-import FuseNavVerticalGroup from './vertical/FuseNavVerticalGroup';
-import FuseNavVerticalCollapse from './vertical/FuseNavVerticalCollapse';
-import FuseNavVerticalItem from './vertical/FuseNavVerticalItem';
-import FuseNavHorizontalGroup from './horizontal/FuseNavHorizontalGroup';
-import FuseNavHorizontalCollapse from './horizontal/FuseNavHorizontalCollapse';
-import FuseNavHorizontalItem from './horizontal/FuseNavHorizontalItem';
-import {Divider, List, Hidden} from '@material-ui/core';
-import {withRouter} from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import FuseNavVerticalGroup from "./vertical/FuseNavVerticalGroup";
+import FuseNavVerticalCollapse from "./vertical/FuseNavVerticalCollapse";
+import FuseNavVerticalItem from "./vertical/FuseNavVerticalItem";
+import FuseNavHorizontalGroup from "./horizontal/FuseNavHorizontalGroup";
+import FuseNavHorizontalCollapse from "./horizontal/FuseNavHorizontalCollapse";
+import FuseNavHorizontalItem from "./horizontal/FuseNavHorizontalItem";
+import { Divider, List, Hidden } from "@material-ui/core";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const propTypes = {
-    navigation: PropTypes.array.isRequired
+  navigation: PropTypes.array.isRequired
 };
 
 const defaultProps = {
-    layout: "vertical"
+  layout: "vertical"
 };
 
 class FuseNavigation extends Component {
-    render()
-    {
-        const {navigation, layout, active} = this.props;
+  render() {
+    const { navigation, layout, active } = this.props;
 
-        const verticalNav = (
-            <List className="whitespace-no-wrap">
-                {
-                    navigation.map((item) => (
+    const verticalNav = (
+      <List className="whitespace-no-wrap">
+        {navigation.map(item => (
+          <React.Fragment key={item.id}>
+            {item.type === "group" && (
+              <FuseNavVerticalGroup
+                item={item}
+                nestedLevel={0}
+                active={active}
+              />
+            )}
 
-                        <React.Fragment key={item.id}>
+            {item.type === "collapse" && (
+              <FuseNavVerticalCollapse
+                item={item}
+                nestedLevel={0}
+                active={active}
+              />
+            )}
 
-                            {item.type === 'group' && (
-                                <FuseNavVerticalGroup item={item} nestedLevel={0} active={active}/>
-                            )}
+            {item.type === "item" && (
+              <FuseNavVerticalItem
+                item={item}
+                nestedLevel={0}
+                active={active}
+              />
+            )}
 
-                            {item.type === 'collapse' && (
-                                <FuseNavVerticalCollapse item={item} nestedLevel={0} active={active}/>
-                            )}
+            {item.type === "divider" && <Divider className="my-16" />}
+          </React.Fragment>
+        ))}
+      </List>
+    );
 
-                            {item.type === 'item' && (
-                                <FuseNavVerticalItem item={item} nestedLevel={0} active={active}/>
-                            )}
+    const horizontalNav = (
+      <List className="whitespace-no-wrap flex p-0">
+        {navigation.map(item => (
+          <React.Fragment key={item.id}>
+            {item.type === "group" && (
+              <FuseNavHorizontalGroup item={item} nestedLevel={0} />
+            )}
 
-                            {item.type === 'divider' && (
-                                <Divider className="my-16"/>
-                            )}
-                        </React.Fragment>
-                    ))
-                }
-            </List>
-        );
+            {item.type === "collapse" && (
+              <FuseNavHorizontalCollapse item={item} nestedLevel={0} />
+            )}
 
-        const horizontalNav = (
-            <List className="whitespace-no-wrap flex p-0">
-                {
-                    navigation.map((item) => (
+            {item.type === "item" && (
+              <FuseNavHorizontalItem item={item} nestedLevel={0} />
+            )}
 
-                        <React.Fragment key={item.id}>
+            {item.type === "divider" && <Divider className="my-16" />}
+          </React.Fragment>
+        ))}
+      </List>
+    );
 
-                            {item.type === 'group' && (
-                                <FuseNavHorizontalGroup item={item} nestedLevel={0}/>
-                            )}
-
-                            {item.type === 'collapse' && (
-                                <FuseNavHorizontalCollapse item={item} nestedLevel={0}/>
-                            )}
-
-                            {item.type === 'item' && (
-                                <FuseNavHorizontalItem item={item} nestedLevel={0}/>
-                            )}
-
-                            {item.type === 'divider' && (
-                                <Divider className="my-16"/>
-                            )}
-                        </React.Fragment>
-                    ))
-                }
-            </List>
-        );
-
-
-        if ( navigation.length > 0 )
-        {
-            switch ( layout )
-            {
-                case 'horizontal':
-                {
-                    return (
-                        <React.Fragment>
-                            <Hidden lgUp>
-                                {verticalNav}
-                            </Hidden>
-                            <Hidden mdDown>
-                                {horizontalNav}
-                            </Hidden>
-                        </React.Fragment>
-                    )
-                }
-                case 'vertical':
-                default:
-                {
-                    return verticalNav;
-                }
-            }
+    if (navigation.length > 0) {
+      switch (layout) {
+        case "horizontal": {
+          return (
+            <React.Fragment>
+              <Hidden lgUp>{verticalNav}</Hidden>
+              <Hidden mdDown>{horizontalNav}</Hidden>
+            </React.Fragment>
+          );
         }
-        else
-        {
-            return '';
+        case "vertical":
+        default: {
+          return verticalNav;
         }
+      }
+    } else {
+      return "";
     }
+  }
 }
 
 FuseNavigation.propTypes = propTypes;
